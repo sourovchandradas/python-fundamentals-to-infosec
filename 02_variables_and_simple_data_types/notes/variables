@@ -1,1 +1,135 @@
+============================================================================================================================================================================================================================================================================
+                                                                              VARIABLES
+============================================================================================================================================================================================================================================================================
 
+1. Introduction to Variables in Python
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* Variable Concept:
+    -> Definition : Every variable holds a value—information associated with that specific name in memory.
+    -> Dynamic Assignment : Variables can store updated data at any point, and Python dynamically tracks the current value.
+* Basic Execution Workflow:
+```python
+message = "Hello Python world!"
+print(message)
+
+```
+
+
+-> Step 1 : Interpreter associates string value `"Hello Python world!"` with variable `message`.
+-> Step 2 : Interpreter evaluates `message` and prints its active value to stdout.
+* Updating Variable Values:
+```python
+message = "Hello Python world!"
+print(message)
+
+message = "Hello Python Crash Course world!"
+print(message)
+
+```
+
+
+-> Output :
+`Hello Python world!`
+`Hello Python Crash Course world!`
+
+📌 Summary
+-> Variables store dynamic values in memory.
+-> Reassigning a variable overwrites its previous reference with the newest assigned value.
+
+✅ Exam Key Points
+-> Execution model: Python executes scripts sequentially from top to bottom.
+-> Output change: Reassigning a variable does not overwrite past printed output, only future references.
+
+2. Naming Rules & Conventions
+
+---
+
+* Mandatory Syntax Rules (Breaking causes errors):
+-> Characters Allowed : Letters, numbers, and underscores (`_`).
+-> Starting Character : Must start with a letter or underscore (`message_1`, `_config`). NEVER start with a number (`1_message`).
+-> Spaces Forbidden   : No spaces inside variable names (`greeting_message` is valid; `greeting message` causes syntax error).
+-> Reserved Keywords  : Do NOT use built-in keywords or functions as variable names (e.g., `print`, `if`, `for`).
+* Best Practice Guidelines:
+-> Case Style   : Use lowercase with underscores (snake_case) for general variables.
+-> Clarity      : Use short yet descriptive names (`student_name` instead of `s_n` or `a_very_long_name_for_student`).
+-> Ambiguity    : Avoid standalone lowercase `l` and uppercase `O` (easily confused with `1` and `0`).
+
+📌 Summary
+-> Rules = Strictly enforced by interpreter (Syntax errors).
+-> Guidelines = Conventions for clean, readable code (PEP 8 standard).
+
+✅ Exam Key Points
+-> Valid starting characters: Letter or underscore (`_`).
+-> Invalid variable name example: `2_message` (Starts with digit).
+
+3. Error Handling & Tracebacks (`NameError`)
+
+---
+
+* Cause of `NameError`:
+-> Occurs when trying to reference a variable that has not been defined or is misspelled.
+* Code Example (Intentional Typo):
+```python
+message = "Hello Python Crash Course reader!"
+print(mesage)  # Misspelled variable
+
+```
+
+
+* Traceback Anatomy:
+```text
+Traceback (most recent call last):
+  File "hello_world.py", line 2, in <module>
+    print(mesage)
+NameError: name 'mesage' is not defined
+
+```
+
+
+* Key Traceback Components:
+-> Location   : Identifies file name and line number (`line 2`).
+-> Context    : Re-displays the specific failing line of code (`print(mesage)`).
+-> Error Type : Specifies exception name and explanation (`NameError: name 'mesage' is not defined`).
+* Consistency vs. English Spelling:
+-> Python does NOT spell-check English words.
+-> If a typo is consistent across assignment and usage, Python executes normally:
+`python mesage = "Hello Python Crash Course reader!" print(mesage)  # Works because spelling matches assignment `
+
+📌 Summary
+-> `NameError` indicates a misspelled or uninitialized variable reference.
+-> Tracebacks pinpoint the exact line, code context, and error class for efficient debugging.
+
+✅ Exam Key Points
+-> Primary cause of `NameError`: Typo in variable name or referencing before initialization.
+-> File and line details: Provided in the first two lines of a standard Python Traceback.
+
+4. Practical Exercises ("Try It Yourself")
+
+---
+
+* Exercise 2-1: Simple Message
+-> Objective : Store a message in a variable and print it.
+-> Code (`simple_message.py`):
+`python message = "This is a simple message." print(message) `
+* Exercise 2-2: Simple Messages
+-> Objective : Store a message, print it, reassign a new message, and print again.
+-> Code (`simple_messages.py`):
+```python
+message = "Initial message."
+print(message)
+```
+ message = "Updated message."
+ print(message)
+ ```
+
+```
+
+
+
+📌 Summary
+-> Standard Python script naming convention: Use lowercase letters and underscores (`simple_message.py`).
+
+# ✅ Exam Key Points
+-> File Naming Convention: Lowercase with underscores (`snake_case.py`).
