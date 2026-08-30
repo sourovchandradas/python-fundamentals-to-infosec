@@ -20,9 +20,9 @@ print(message)
 **Code Example:**
 
 ```python
-message = "Hello Python world!"
+message = "Hello Python World!"
 print(message)
-message = "Hello Python Crash Course world!"
+message = "My goal is to become a cybersecurity engineer."
 print(message)
 
 ```
@@ -31,7 +31,7 @@ print(message)
 
 ```text
 Hello Python world!
-Hello Python Crash Course world!
+My goal is to become a cybersecurity engineer.
 
 ```
 
@@ -63,7 +63,7 @@ Hello Python Crash Course world!
 **Example Code Generating an Error:**
 
 ```python
-message = "Hello Python Crash Course reader!"
+message = "My goal is to become a cybersecurity engineer."
 print(mesage)
 
 ```
@@ -90,7 +90,7 @@ NameError: name 'mesage' is not defined
 * Python does not spellcheck English grammar, but strictly enforces consistency.
 * If a variable name is misspelled in both the assignment and the print statement, it will still run:
 ```python
-mesage = "Hello Python Crash Course reader!"
+mesage = "My goal is to become a cybersecurity engineer."
 print(mesage)
 
 ```
