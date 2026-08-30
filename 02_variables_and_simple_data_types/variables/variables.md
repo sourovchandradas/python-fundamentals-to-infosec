@@ -1,1 +1,111 @@
+# Variables
 
+## 1. Using Variables
+
+* Every variable holds a value, which is the information associated with that variable.
+* When processing code, the Python interpreter associates the value with the variable name on line 1 and prints the value when referenced on line 2.
+
+**Code Example:**
+```python
+message = "Hello Python world!"
+print(message)
+
+```
+
+### Changing Variable Values
+
+* You can change the value of a variable in your program at any time.
+* Python will always keep track of its current value.
+
+**Code Example:**
+
+```python
+message = "Hello Python world!"
+print(message)
+message = "Hello Python Crash Course world!"
+print(message)
+
+```
+
+**Output:**
+
+```text
+Hello Python world!
+Hello Python Crash Course world!
+
+```
+
+### Variables as Labels (Internal Representation)
+
+* Variables are often described as boxes to store values in (helpful initially, but inaccurate internally in Python).
+* It is much better to think of variables as labels that you assign to values, or as referencing a certain value.
+* **Importance:** While this distinction may not matter in initial programs, an accurate understanding helps identify what is happening when encountering unexpected variable behavior later.
+
+---
+
+## 2. Naming and Using Variables
+
+### Rules & Guidelines
+
+* **Allowed Characters:** Variable names can contain only letters, numbers, and underscores. They can start with a letter or an underscore, but not with a number. For instance, you can call a variable `message_1` but not `1_message`.
+* **Spaces:** Spaces are not allowed in variable names, but underscores can be used to separate words in variable names. For example, `greeting_message` works, but `greeting message` will cause errors.
+* **Keywords:** Avoid using Python keywords and function names as variable names; that is, do not use words that Python has reserved for a particular programmatic purpose, such as the word `print`.
+* **Descriptive Names:** Variable names should be short but descriptive (e.g., `name` is better than `n`, `student_name` is better than `s_n`, `name_length` is better than `length_of_persons_name`).
+* **Ambiguous Characters:** Be careful when using the lowercase letter `l` and the uppercase letter `O` because they could be confused with the numbers `1` and `0`.
+* **Convention Note:** Variables should be written in lowercase. Uppercase won't cause errors, but it's best to avoid using them for now.
+
+---
+
+## 3. Avoiding Name Errors When Using Variables
+
+* **Traceback:** A traceback is a record of where the interpreter ran into trouble when trying to execute your code.
+
+**Example Code Generating an Error:**
+
+```python
+message = "Hello Python Crash Course reader!"
+print(mesage)
+
+```
+
+**Traceback Output:**
+
+```text
+Traceback (most recent call last): 
+  File "hello_world.py", line 2, in <module>
+    print(mesage) 
+NameError: name 'mesage' is not defined
+
+```
+
+### NameError Breakdown
+
+* **Line 1 (File location):** Reports the file and line number where the error occurred.
+* **Line 2 (Code snippet):** Shows the exact line of code causing trouble.
+* **Line 3 (Error message):** States the error type (`NameError`) and reason (`'mesage' is not defined`).
+* **Cause:** Usually occurs when forgetting to set a variable's value before using it, or making a spelling typo.
+
+### Spelling Consistency
+
+* Python does not spellcheck English grammar, but strictly enforces consistency.
+* If a variable name is misspelled in both the assignment and the print statement, it will still run:
+```python
+mesage = "Hello Python Crash Course reader!"
+print(mesage)
+
+```
+
+
+* **Result:** Program runs successfully despite the typo.
+
+> **Learning Tip:** Typos happen to all programmers. So, don't get frustrated.
+
+---
+
+## 4. Try It Yourself Exercises
+
+* **File naming standard:** Save each program using lowercase letters and underscores (e.g., `simple_message.py`).
+* **2-1. Simple Message:** Store a message in a variable, and then print that message.
+* **2-2. Simple Messages:** Store a message in a variable, and print that message. Then change the value of your variable to a new message, and print the new message.
+
+---
