@@ -3,7 +3,7 @@
 ====================================================================================================================================================
 
 1. USING VARIABLES
---------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------
 * Every variable holds a value, which is the information associated with that variable.
 * When processing code, the Python interpreter associates the value with the variable name on line 1 and prints the value when referenced on line 2.
 
@@ -32,7 +32,7 @@ Output:
      encountering unexpected variable behavior later.
 
 2. NAMING AND USING VARIABLES
---------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------
 Rules & Guidelines:
   -> Variable names can contain only letters, numbers, and underscores. They can start with a letter or an underscore, but not with a number.
      For instance, you can call a variable message_1 but not 1_message.
@@ -50,7 +50,7 @@ Rules & Guidelines:
 
 
 3. AVOIDING NAME ERRORS WHEN USING VARIABLES
---------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------
 * Traceback:  A traceback is a record of where the interpreter ran into trouble when trying to execute your code. 
 
 Example Code Generating an Error:
@@ -80,7 +80,7 @@ Traceback Output:
 
 
 4. TRY IT YOURSELF EXERCISES
-----------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------
 File naming standard: Save each program using lowercase letters and underscores (e.g., simple_message.py).
 
 - 2-1. Simple Message:
