@@ -71,9 +71,9 @@ print(mesage)
 **Traceback Output:**
 
 ```text
-Traceback (most recent call last): 
-  File "hello_world.py", line 2, in <module>
-    print(mesage) 
+Traceback (most recent call last): 
+  File "hello_world.py", line 2, in <module>
+    print(mesage) 
 NameError: name 'mesage' is not defined
 
 ```
