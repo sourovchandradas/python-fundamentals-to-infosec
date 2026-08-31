@@ -52,8 +52,8 @@ Rules & Guidelines:
 * Traceback: A traceback is a record of where the interpreter ran into trouble when trying to execute your code. 
 
 Example Code Generating an Error:
-  message = "My goal is to become a cybersecurity engineer."
-  print(mesage)
+message = "My goal is to become a cybersecurity engineer."
+print(mesage)
 
 Traceback Output:
   Traceback (most recent call last): 
