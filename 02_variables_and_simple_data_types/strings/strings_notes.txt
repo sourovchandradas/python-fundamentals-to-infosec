@@ -9,10 +9,10 @@
 * Quote Flexibility: Using different quote types allows incorporating quotation marks and apostrophes inside strings without causing syntax errors.
 
 Code Example:
-  string_1 = "This is a string."
-  string_2 = 'This is also a string.'
-  quote_1 = 'I told my friend, "Python is my favorite language!"'
-  quote_2 = "One of Python's strengths is its diverse community."
+string_1 = "This is a string."
+string_2 = 'This is also a string.'
+quote_1 = 'I told my friend, "Python is my favorite language!"'
+quote_2 = "One of Python's strengths is its diverse community."
 
 
 2. CHANGING CASE IN A STRING WITH METHODS
