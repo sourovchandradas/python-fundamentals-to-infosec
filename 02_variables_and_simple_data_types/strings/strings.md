@@ -183,7 +183,7 @@ SyntaxError: invalid syntax
 
 *File naming standard: Use descriptive, lowercase snake_case names (e.g., `personal_message.py`).*
 
-* **2-3. Personal Message:** Store a person's name in a variable and print a personalized message (e.g., *"Hello Eric, would you like to learn some Python today?"*).
+* **2-3. Personal Message:** Store a person's name in a variable and print a personalized message (e.g., *"Hello everyone, would you like to learn some Python today?"*).
 * **2-4. Name Cases:** Store a person's name in a variable, then print that name in lowercase, uppercase, and titlecase.
 * **2-5. Famous Quote:** Find a quote from a famous person. Print the quote and author name, including quotation marks in the output.
 * **2-6. Famous Quote 2:** Repeat Exercise 2-5, but store the author's name in a variable `famous_person` and the quote in a variable `message`. Print the message.
