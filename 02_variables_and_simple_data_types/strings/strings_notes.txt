@@ -18,7 +18,8 @@ Code Example:
 2. CHANGING CASE IN A STRING WITH METHODS
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 * Method Definition: A method is an action that Python performs on a piece of data.
-* Syntax Notation: The dot (.) after a variable tells Python to make the method act on that variable. Parentheses () follow method names to pass arguments if required.
+* Syntax Notation: The dot (.) after a variable tells Python to make the method act on that variable. Parentheses () follow method names to pass
+  arguments if required.
 
 * Methods Overview:
   -> .title(): Capitalizes the first letter of every word (Title Case). Useful for name normalization.
@@ -145,4 +146,5 @@ File naming standard: Use descriptive, lowercase snake_case names (e.g., persona
   Repeat Exercise 2-5, but store the author's name in a variable `famous_person` and the quote in a variable `message`. Print the message.
 
 - 2-7. Stripping Names:
-  Store a person's name with leading/trailing whitespace using `\t` and `\n`. Print the name with whitespace, then print it using `.lstrip()`, `.rstrip()`, and `.strip()`.
+  Store a person's name with leading/trailing whitespace using `\t` and `\n`. Print the name with whitespace, then print it using `.lstrip()`,
+  `.rstrip()`, and `.strip()`.
