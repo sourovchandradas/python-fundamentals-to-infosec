@@ -1,9 +1,9 @@
-====================================================================================================================================================
+=====================================================================================================================================================
                                                                    STRINGS
-====================================================================================================================================================
+=====================================================================================================================================================
 
 1. WHAT IS A STRING?
-----------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------
 * Definition: A string is simply a series of characters.
 * Syntax: Anything inside single ('...') or double ("...") quotes is considered a string in Python.
 * Quote Flexibility: Using different quote types allows incorporating quotation marks and apostrophes inside strings without causing syntax errors.
@@ -16,7 +16,7 @@ Code Example:
 
 
 2. CHANGING CASE IN A STRING WITH METHODS
-----------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------
 * Method Definition: A method is an action that Python performs on a piece of data.
 * Syntax Notation: The dot (.) after a variable tells Python to make the method act on that variable. Parentheses () follow method names to pass arguments if required.
 
@@ -42,7 +42,7 @@ Output:
 
 
 3. COMBINING OR CONCATENATING STRINGS
-----------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------
 * Concatenation: Combining two or more strings using the plus (+) operator.
 * Modern Standard Note: While Python uses + for concatenation, Python 3.6+ f-strings (f"{var}") are preferred for better readability and performance.
 * Application: Useful for stitching together data stored in separate variables into complete messages.
@@ -59,7 +59,7 @@ Output:
 
 
 4. ADDING WHITESPACE TO STRINGS WITH TABS OR NEWLINES
-----------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------
 * Whitespace: Refers to non-printing characters such as spaces, tabs, and line break symbols used to organize output clearly.
 
 * Escape Sequences:
@@ -78,7 +78,7 @@ Output:
 
 
 5. STRIPPING WHITESPACE
-----------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------
 * Concept: To Python, 'python' and 'python ' are two distinct strings due to trailing whitespace.
 * Application: Essential for cleaning up user inputs (e.g., usernames, passwords, form fields) before evaluation or database storage.
 
@@ -111,7 +111,7 @@ Output:
 
 
 6. AVOIDING SYNTAX ERRORS WITH STRINGS
-----------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------
 * Syntax Error: Occurs when the Python interpreter cannot recognize a section of code as valid Python syntax.
 * Common Cause: Improper quote nesting (e.g., using an apostrophe inside single quotes).
 
@@ -129,7 +129,7 @@ Traceback Output:
 
 
 7. TRY IT YOURSELF EXERCISES
-----------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------
 File naming standard: Use descriptive, lowercase snake_case names (e.g., personal_message.py).
 
 - 2-3. Personal Message:
