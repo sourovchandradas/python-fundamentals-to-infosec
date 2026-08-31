@@ -27,15 +27,15 @@ Code Example:
   -> .lower(): Converts all characters in the string to lowercase.
 
 Code Example:
-  name = "information technology"
-  print(name.title())
-  print(name.upper())
-  print(name.lower())
+name = "information technology"
+print(name.title())
+print(name.upper())
+print(name.lower())
 
 Output:
-  Information Technology
-  INFORMATION TECHNOLOGY
-  information technology
+Information Technology
+INFORMATION TECHNOLOGY
+information technology
 
 * Practical Use Case (Data Sanitization):
   -> User input often varies in capitalization (e.g., 'Information', 'INFORMATION', 'information').
@@ -49,14 +49,14 @@ Output:
 * Application: Useful for stitching together data stored in separate variables into complete messages.
 
 Code Example:
-  first_name = "information"
-  last_name = "technology"
-  full_name = first_name + " " + last_name
-  message = "Hello, " + full_name.title() + "!"
-  print(message)
+first_name = "information"
+last_name = "technology"
+full_name = first_name + " " + last_name
+message = "Hello, " + full_name.title() + "!"
+print(message)
 
 Output:
-  Hello, Information Technology!
+Hello, Information Technology!
 
 
 4. ADDING WHITESPACE TO STRINGS WITH TABS OR NEWLINES
@@ -69,13 +69,13 @@ Output:
   -> \n\t : Moves text to a new line and indents it with a tab.
 
 Code Example:
-  print("Languages:\n\tPython\n\tC\n\tJavaScript")
+print("Languages:\n\tPython\n\tC\n\tJavaScript")
 
 Output:
-  Languages:
-      Python
-      C
-      JavaScript
+Languages:
+    Python
+    C
+    JavaScript
 
 
 5. STRIPPING WHITESPACE
@@ -93,22 +93,22 @@ Output:
   -> To make the change permanent, reassign the stripped value back to the variable.
 
 Code Example:
-  favorite_language = "  python  "
+favorite_language = "  python  "
   
-  # Temporary removal
-  print("Right stripped:", favorite_language.rstrip())
-  print("Left stripped:", favorite_language.lstrip())
-  print("Both stripped:", favorite_language.strip())
+# Temporary removal
+print("Right stripped:", favorite_language.rstrip())
+print("Left stripped:", favorite_language.lstrip())
+print("Both stripped:", favorite_language.strip())
   
-  # Permanent removal via reassignment
-  favorite_language = favorite_language.strip()
-  print("Permanently cleaned:", favorite_language)
+# Permanent removal via reassignment
+favorite_language = favorite_language.strip()
+print("Permanently cleaned:", favorite_language)
 
 Output:
-  Right stripped: '  python'
-  Left stripped: 'python  '
-  Both stripped: 'python'
-  Permanently cleaned: 'python'
+Right stripped: '  python'
+Left stripped: 'python  '
+Both stripped: 'python'
+Permanently cleaned: 'python'
 
 
 6. AVOIDING SYNTAX ERRORS WITH STRINGS
