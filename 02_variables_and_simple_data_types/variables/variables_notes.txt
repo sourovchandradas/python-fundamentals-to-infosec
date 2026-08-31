@@ -8,22 +8,22 @@
 * When processing code, the Python interpreter associates the value with the variable name on line 1 and prints the value when referenced on line 2.
 
 Code Example:
-  message = "Hello Python world!"
-  print(message)
+message = "Hello Python world!"
+print(message)
 
 * Changing Variable Values:
   -> You can change the value of a variable in your program at any time.
   -> Python will always keep track of its current value.
 
 Code Example:
-  message = "Hello Python world!"
-  print(message)
-  message = "My goal is to become a cybersecurity engineer."
-  print(message)
+message = "Hello Python world!"
+print(message)
+message = "My goal is to become a cybersecurity engineer."
+print(message)
 
 Output:
-  Hello Python world!
-  My goal is to become a cybersecurity engineer.
+Hello Python world!
+My goal is to become a cybersecurity engineer.
 
 * Variables as Labels (Internal Representation):
   -> Variables are often described as boxes to store values in (helpful initially, but inaccurate internally in Python).
