@@ -1,11 +1,11 @@
-====================================================================================================================================================
-                                                                     VARIABLES
-====================================================================================================================================================
+=====================================================================================================================================================
+                                                                    VARIABLES
+=====================================================================================================================================================
 
 1. USING VARIABLES
-----------------------------------------------------------------------------------------------------------------------------------------------------
-* Every variable holds a value, which is the information associated with that variable.
-* When processing code, the Python interpreter associates the value with the variable name on line 1 and prints the value when referenced on line 2.
+---------------------------------------------------------------------------------------------------------------------
+* Definition: Every variable holds a value, which is the information associated with that variable.
+* Concept: When processing code, the Python interpreter associates the value with the variable name on line 1 and prints the value when referenced on line 2.
 
 Code Example:
 message = "Hello Python world!"
@@ -31,35 +31,42 @@ My goal is to become a cybersecurity engineer.
   -> Importance: While this distinction may not matter in initial programs, an accurate understanding helps identify what is happening when
      encountering unexpected variable behavior later.
 
+
 2. NAMING AND USING VARIABLES
-----------------------------------------------------------------------------------------------------------------------------------------------------
-Rules & Guidelines:
+---------------------------------------------------------------------------------------------------------------------
+* Rules & Guidelines:
+
   -> Variable names can contain only letters, numbers, and underscores. They can start with a letter or an underscore, but not with a number.
      For instance, you can call a variable message_1 but not 1_message.
+
   -> Spaces are not allowed in variable names, but underscores can be used to separate words in variable names. For example, greeting_message
      works, but greeting message will cause errors.
+
   -> Avoid using Python keywords and function names as variable names; that is, do not use words that Python has reserved for a particular
      programmatic purpose, such as the word print.
+
   -> Descriptive Names: Variable names should be short but descriptive (e.g., 'name' is better than 'n', 'student_name' is better than 's_n',
      'name_length' is better than 'length_of_persons_name').
+
   -> Ambiguous Characters: Be careful when using the lowercase letter l and the uppercase letter O because they could be confused with the numbers
      1 and 0.
+
   -> Convention Note: Variables should be written in lowercase. Uppercase won't cause errors, but it's best to avoid using them for now.
 
 
 3. AVOIDING NAME ERRORS WHEN USING VARIABLES
-----------------------------------------------------------------------------------------------------------------------------------------------------
-* Traceback: A traceback is a record of where the interpreter ran into trouble when trying to execute your code. 
+---------------------------------------------------------------------------------------------------------------------
+* Traceback: A traceback is a record of where the interpreter ran into trouble when trying to execute your code.
 
-Example Code Generating an Error:
+Incorrect Code Example:
 message = "My goal is to become a cybersecurity engineer."
 print(mesage)
 
-Traceback Output:
-  Traceback (most recent call last): 
-    File "hello_world.py", line 2, in <module>
-      print(mesage) 
-  NameError: name 'mesage' is not defined
+* Error Output:
+Traceback (most recent call last):
+  File "hello_world.py", line 2, in <module>
+    print(mesage)
+NameError: name 'mesage' is not defined
 
 * NameError Breakdown:
   -> Line 1 (File location): Reports the file and line number where the error occurred.
@@ -70,15 +77,15 @@ Traceback Output:
 * Spelling Consistency:
   -> Python does not spellcheck English grammar, but strictly enforces consistency.
   -> If a variable name is misspelled in both the assignment and the print statement, it will still run:
-      mesage = "My goal is to become a cybersecurity engineer."
-      print(mesage)
+     mesage = "My goal is to become a cybersecurity engineer."
+     print(mesage)
   -> Result: Program runs successfully despite the typo.
 
 * Learning Tip: Typos happen to all programmers. So, don't get frustrated.
 
 
 4. TRY IT YOURSELF EXERCISES
-----------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
 File naming standard: Save each program using lowercase letters and underscores (e.g., simple_message.py).
 
 - 2-1. Simple Message:
