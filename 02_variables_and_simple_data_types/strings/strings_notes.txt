@@ -2,6 +2,14 @@
                                                                     STRINGS
 =====================================================================================================================================================
 
+OVERVIEW
+---------------------------------------------------------------------------------------------------------------------
+Strings are one of the simplest data types in Python. They represent text data and are fundamental to nearly 
+all programs. From storing user messages to processing input data, strings are used everywhere in programming. 
+In this section, we'll explore how to create, manipulate, and work with strings effectively, including methods 
+for changing case, combining strings, handling whitespace, and avoiding common syntax errors.
+
+
 1. WHAT IS A STRING?
 ---------------------------------------------------------------------------------------------------------------------
 * Definition: A string is simply a series of characters.
