@@ -1,1 +1,165 @@
+=====================================================================================================================================================
+                                                                    NUMBERS
+=====================================================================================================================================================
 
+OVERVIEW
+---------------------------------------------------------------------------------------------------------------------
+Numbers are used quite often in programming to keep score in games, represent data in visualizations, store 
+information in web applications, and so on. Python treats numbers in several different ways, depending on how 
+they are being used. Let's first look at how Python manages integers, because they are the simplest to work with.
+
+
+1. INTEGERS
+---------------------------------------------------------------------------------------------------------------------
+* Definition: Whole numbers without decimal points.
+* Basic Operations: You can add (+), subtract (-), multiply (*), and divide (/) integers in Python.
+
+Code Example:
+>>> 2 + 3
+5
+>>> 3 - 2
+1
+>>> 2 * 3
+6
+>>> 3 / 2
+1.5
+
+* Exponents: Python uses two multiplication symbols (**) to represent exponents.
+
+Code Example:
+>>> 3 ** 2
+9
+>>> 3 ** 3
+27
+>>> 10 ** 6
+1000000
+
+* Order of Operations: Python supports the order of operations, so you can use multiple operations in one 
+  expression. You can also use parentheses to modify the order of operations so Python can evaluate your 
+  expression in the order you specify.
+
+Code Example:
+>>> 2 + 3*4
+14
+>>> (2 + 3) * 4
+20
+
+* Note: The spacing in these examples has no effect on how Python evaluates the expressions; it simply helps 
+  you more quickly spot the operations that have priority when you're reading through the code.
+
+
+2. FLOATS
+---------------------------------------------------------------------------------------------------------------------
+* Definition: Python calls any number with a decimal point a float. This term is used in most programming 
+  languages, and it refers to the fact that a decimal point can appear at any position in a number.
+
+* Basic Behavior: For the most part, you can use decimals without worrying about how they behave. Simply enter 
+  the numbers you want to use, and Python will most likely do what you expect.
+
+Code Example:
+>>> 0.1 + 0.1
+0.2
+>>> 0.2 + 0.2
+0.4
+>>> 2 * 0.1
+0.2
+>>> 2 * 0.2
+0.4
+
+* Floating-Point Precision Issues: Be aware that you can sometimes get an arbitrary number of decimal places 
+  in your answer.
+
+Code Example:
+>>> 0.2 + 0.1
+0.30000000000000004
+>>> 3 * 0.1
+0.30000000000000004
+
+* Important Note: This happens in all programming languages and is of little concern. Python tries to find a 
+  way to represent the result as precisely as possible, which is sometimes difficult given how computers have 
+  to represent numbers internally. Just ignore the extra decimal places for now; you'll learn ways to deal 
+  with the extra places when you need to in projects later.
+
+
+3. AVOIDING TYPE ERRORS WITH THE str() FUNCTION
+---------------------------------------------------------------------------------------------------------------------
+* Problem: Often, you'll want to use a variable's value within a message. For example, you might want to print 
+  a birthday greeting using an age variable.
+
+Code Example (INCORRECT):
+age = 23
+message = "Happy " + age + "rd Birthday!"
+print(message)
+
+* Error Output:
+Traceback (most recent call last):
+  File "birthday.py", line 2, in <module>
+    message = "Happy " + age + "rd Birthday!"
+TypeError: Can't convert 'int' object to str implicitly
+
+* Explanation: This is a type error. It means Python can't recognize the kind of information you're using. 
+  Python sees that you're using a variable that has an integer value (int), but it's not sure how to 
+  interpret that value. Python knows that the variable could represent either the numerical value 23 or 
+  the characters 2 and 3.
+
+* Solution: When you use integers within strings, you need to specify explicitly that you want Python to 
+  use the integer as a string of characters. You can do this by wrapping the variable in the str() function, 
+  which tells Python to represent non-string values as strings.
+
+Code Example (CORRECT):
+age = 23
+message = "Happy " + str(age) + "rd Birthday!"
+print(message)
+
+Output:
+Happy 23rd Birthday!
+
+* General Tip: When working with numbers in Python, if you're getting unexpected results, check whether 
+  Python is interpreting your numbers the way you want it to, either as a numerical value or as a string value.
+
+
+4. INTEGERS IN PYTHON 2 (Legacy Information)
+---------------------------------------------------------------------------------------------------------------------
+* Different Division Behavior: Python 2 returns a slightly different result when you divide two integers.
+
+Code Example (Python 2.7):
+>>> 3 / 2
+1
+
+* Explanation: Instead of 1.5, Python returns 1. Division of integers in Python 2 results in an integer 
+  with the remainder truncated. Note that the result is not a rounded integer; the remainder is simply 
+  omitted.
+
+* Workaround: To avoid this behavior in Python 2, make sure that at least one of the numbers is a float. 
+  By doing so, the result will be a float as well.
+
+Code Example (Python 2.7):
+>>> 3 / 2
+1
+>>> 3.0 / 2
+1.5
+>>> 3 / 2.0
+1.5
+>>> 3.0 / 2.0
+1.5
+
+* Important Note: This division behavior is a common source of confusion when people who are used to Python 3 
+  start using Python 2, or vice versa. If you use or create code that mixes integers and floats, watch out 
+  for irregular behavior.
+
+
+5. TRY IT YOURSELF EXERCISES
+---------------------------------------------------------------------------------------------------------------------
+File naming standard: Use descriptive, lowercase snake_case names (e.g., numbers_eight.py).
+
+- 2-8. Number Eight:
+  Write addition, subtraction, multiplication, and division operations that each result in the number 8.
+  Be sure to enclose your operations in print statements to see the results.
+  You should create four lines that look like this:
+  print(5 + 3)
+  Your output should simply be four lines with the number 8 appearing once on each line.
+
+- 2-9. Favorite Number:
+  Store your favorite number in a variable.
+  Then, using that variable, create a message that reveals your favorite number.
+  Print that message.
