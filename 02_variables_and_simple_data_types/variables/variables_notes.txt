@@ -2,6 +2,14 @@
                                                                     VARIABLES
 =====================================================================================================================================================
 
+OVERVIEW
+---------------------------------------------------------------------------------------------------------------------
+Variables are containers for storing data values. They are the foundation of programming, allowing us to store, 
+retrieve, and manipulate information throughout our programs. In this section, we'll learn how to create variables, 
+follow naming conventions, understand how Python manages variables internally, and avoid common errors like 
+NameErrors that occur from typos or undefined variables.
+
+
 1. USING VARIABLES
 ---------------------------------------------------------------------------------------------------------------------
 * Definition: Every variable holds a value, which is the information associated with that variable.
