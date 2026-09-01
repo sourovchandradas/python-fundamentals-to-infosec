@@ -86,7 +86,7 @@ Code Example:
 * Problem: Often, you'll want to use a variable's value within a message. For example, you might want to print 
   a birthday greeting using an age variable.
 
-Code Example (INCORRECT):
+Incorrect Code Example:
 age = 23
 message = "Happy " + age + "rd Birthday!"
 print(message)
@@ -106,7 +106,7 @@ TypeError: Can't convert 'int' object to str implicitly
   use the integer as a string of characters. You can do this by wrapping the variable in the str() function, 
   which tells Python to represent non-string values as strings.
 
-Code Example (CORRECT):
+Correct Code Example:
 age = 23
 message = "Happy " + str(age) + "rd Birthday!"
 print(message)
