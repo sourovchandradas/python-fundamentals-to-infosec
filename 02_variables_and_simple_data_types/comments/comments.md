@@ -96,8 +96,8 @@ print(f"Hello, {name}!")
 
 ## Related Topics
 
-* [Variables](https://www.google.com/search?q=../variables/variables.md) - Storing values efficiently
-* [Strings](https://www.google.com/search?q=../strings/strings.md) - Formatting text output
+* [Variables](variables/variables.md) - Storing values efficiently
+* [Strings](strings/strings.md) - Formatting text output
 
 ---
 
