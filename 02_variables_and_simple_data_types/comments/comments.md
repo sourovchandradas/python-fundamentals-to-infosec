@@ -77,8 +77,8 @@ File naming convention: Use descriptive, lowercase names with underscores (e.g.,
 # Date: 2026-09-02
 # Description: Demonstrates basic string formatting with f-strings.
 
-name = "Ada"
-print(f"Hello, {name}!")
+name = "Ankita"
+print("Hello, " + name + "!")
 
 ```
 
