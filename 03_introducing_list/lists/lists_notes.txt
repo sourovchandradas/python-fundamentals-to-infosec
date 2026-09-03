@@ -1,1 +1,105 @@
+=============================================================================================================================================================
+                                                              INTRODUCING LISTS & AVOIDING INDEX ERRORS
+=============================================================================================================================================================
 
+OVERVIEW
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+A list is a collection of items in a particular order. You can include letters, digits, or names in a list. 
+The items do not have to be related in any particular way. Because a list usually contains more than one element, 
+it is best practice to make the name of your list plural (e.g., letters, digits, bicycles).
+
+
+1. WHAT IS A LIST?
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+* Definition: Square brackets ([]) indicate a list, and individual elements are separated by commas.
+
+Code Example:
+>>> bicycles = ['trek', 'cannondale', 'redline', 'specialized']
+>>> print(bicycles)
+['trek', 'cannondale', 'redline', 'specialized']
+
+* Note: Printing a list directly returns its raw representation, including square brackets and quotes.
+
+
+2. ACCESSING ELEMENTS IN A LIST
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+* Definition: Lists are ordered collections. You access any element by providing its position or index in square brackets.
+* String Methods: You can apply string methods (like title(), upper(), lower()) directly to list elements.
+
+Code Example:
+>>> bicycles = ['trek', 'cannondale', 'redline', 'specialized']
+>>> print(bicycles[0])
+trek
+>>> print(bicycles[0].title())
+Trek
+
+
+3. INDEX POSITIONS START AT 0, NOT 1
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+* Zero-Based Indexing: Python starts counting list items at index 0, not 1.
+  - First item: Index 0
+  - Second item: Index 1
+  - Fourth item: Index 3 (subtract 1 from position)
+* Negative Indexing: Index -1 always returns the last item in a list.
+  - Last item: Index -1
+  - Second from end: Index -2
+  - Third from end: Index -3
+
+Code Example:
+>>> bicycles = ['trek', 'cannondale', 'redline', 'specialized']
+>>> print(bicycles[1])
+cannondale
+>>> print(bicycles[3])
+specialized
+>>> print(bicycles[-1])
+specialized
+
+
+4. USING INDIVIDUAL VALUES FROM A LIST
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+* Usage: Individual list items can be used just like any other variable (e.g., in string concatenation or f-strings).
+
+Code Example:
+>>> bicycles = ['trek', 'cannondale', 'redline', 'specialized']
+>>> message = "My first bicycle was a " + bicycles[0].title() + "."
+>>> print(message)
+My first bicycle was a Trek.
+
+
+5. AVOIDING INDEX ERRORS WHEN WORKING WITH LISTS
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+* Common Cause: Requesting an index that does not exist results in an IndexError (off-by-one counting error).
+  Example: Asking for index 3 in a list with 3 elements (indices 0, 1, 2).
+
+Code Example (IndexError):
+>>> motorcycles = ['honda', 'yamaha', 'suzuki']
+>>> print(motorcycles[3])
+Traceback (most recent call last):
+  File "motorcycles.py", line 2, in <module>
+    print(motorcycles[3])
+IndexError: list index out of range
+
+* Special Edge Case: Using index -1 on an empty list [] also results in an IndexError because there are no items.
+* Troubleshooting Tip: If an index error occurs, try printing the list or printing len(list) to see its actual size.
+
+
+6. TRY IT YOURSELF EXERCISES
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+File naming standard: Use descriptive, lowercase snake_case names.
+
+- 3-1. Names:
+  Store the names of a few of your friends in a list called names. Print each person's name by accessing 
+  each element in the list, one at a time.
+
+- 3-2. Greetings:
+  Start with the list used in Exercise 3-1, but instead of just printing each person's name, print a message 
+  to them. The text of each message should be the same, but personalized with the person's name.
+
+- 3-3. Your Own List:
+  Think of your favorite mode of transportation (e.g., motorcycle or car) and make a list of examples. 
+  Print a series of statements about these items (e.g., "I would like to own a Honda motorcycle.").
+
+- 3-11. Intentional Error:
+  If you haven't received an index error yet, modify an index in one of your programs to produce an 
+  IndexError. Correct the error before closing the program.
+=============================================================================================================================================================
