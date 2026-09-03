@@ -99,7 +99,7 @@ File naming standard: Use descriptive, lowercase snake_case names.
   Think of your favorite mode of transportation (e.g., motorcycle or car) and make a list of examples. 
   Print a series of statements about these items (e.g., "I would like to own a Honda motorcycle.").
 
-- 3-11. Intentional Error:
+- 3-4. Intentional Error:
   If you haven't received an index error yet, modify an index in one of your programs to produce an 
   IndexError. Correct the error before closing the program.
 =============================================================================================================================================================
