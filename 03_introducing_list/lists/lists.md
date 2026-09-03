@@ -124,7 +124,7 @@ File naming standard: Use descriptive, lowercase `snake_case` names.
 * **3-1. Names (`names.py`):** Store friends' names in a list `names`. Print each person's name by accessing each element individually.
 * **3-2. Greetings (`greetings.py`):** Send a personalized greeting message to each person using the `names` list.
 * **3-3. Your Own List (`your_own_list.py`):** Create a list of preferred modes of transportation and print statements about them.
-* **3-11. Intentional Error (`intentional_error.py`):** Modify an index in a program to intentionally trigger an `IndexError`, then correct it.
+* **3-4. Intentional Error (`intentional_error.py`):** Modify an index in a program to intentionally trigger an `IndexError`, then correct it.
 
 ---
 
