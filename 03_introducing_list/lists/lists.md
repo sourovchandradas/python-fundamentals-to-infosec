@@ -150,7 +150,11 @@ File naming standard: Use descriptive, lowercase `snake_case` names.
 ## Additional Resources
 
 * [Python Official Documentation: Data Structures](https://docs.python.org/3/tutorial/datastructures.html)
-* [Real Python: Python Lists and Tuples](https://realpython.com/python-lists-tuples/)
+* [Real Python: Lists in Python](https://realpython.com/python-lists-tuples/)
+
+---
+
+*Last Updated: 2026-09-03*
 
 ---
 
