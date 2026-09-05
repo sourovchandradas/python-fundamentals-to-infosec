@@ -111,7 +111,7 @@ countries = ['india', 'sweden', 'canada', 'morocco']
 
 # Building a message using list element
 message = f"I want to visit {countries[0].title()}."
-print(message))
+print(message)
 ```
 
 **Output:**
@@ -128,7 +128,7 @@ An `IndexError` occurs when you request an index that does not exist in the list
 
 ```python
 countries = ['india', 'sweden', 'canada', 'morocco']
-print(country[4])
+print(countries[4])
 ```
 
 **Error Output:**
@@ -173,17 +173,17 @@ Modify an index in a program to intentionally trigger an `IndexError`, then corr
 
 | Concept | Syntax Example | Description |
 | --- | --- | --- |
-| **List Declaration** | `bicycles = ['a', 'b']` | Creates a list with elements |
-| **First Element** | `bicycles[0]` | Accesses the 1st item |
-| **Last Element** | `bicycles[-1]` | Accesses the last item safely |
-| **String Method** | `bicycles[0].title()` | Applies string method to item |
-| **String Formatting** | `f"{bicycles[0]}"` | Embeds element in f-string |
+| **List Declaration** | `countries = ['a', 'b']` | Creates a list with elements |
+| **First Element** | `countries[0]` | Accesses the 1st item |
+| **Last Element** | `countries[-1]` | Accesses the last item safely |
+| **String Method** | `countries[0].title()` | Applies string method to item |
+| **String Formatting** | `f"{countries[0]}"` | Embeds element in f-string |
 
 ---
 
 ## Related Topics
 
-* [Modifying Lists](../modifying_elements/modifying_elements.md) - Adding, inserting, and deleting list items
+* [Modifying Elements](../modifying_elements/modifying_elements.md) - Adding, inserting, and deleting list items
 * [Organizing Lists](../organizing_lists/organizing_lists.md) - Sorting, reversing, and counting elements
 
 ---
@@ -193,6 +193,6 @@ Modify an index in a program to intentionally trigger an `IndexError`, then corr
 * [Python Official Documentation: Data Structures](https://docs.python.org/3/tutorial/datastructures.html)
 * [Real Python: Lists in Python](https://realpython.com/python-lists-tuples/)
 
---
+---
 
 *Last Updated: 05 September,2026*
