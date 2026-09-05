@@ -1,1 +1,121 @@
+=============================================================================================================================================================
+                                                                  ORGANIZING LISTS
+=============================================================================================================================================================
 
+OVERVIEW
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+Often, your lists will be created in an unpredictable order, because you can't always control the order in which 
+your users provide their data. Although this is unavoidable in most circumstances, you'll frequently want to present 
+your information in a particular order. Sometimes you'll want to preserve the original order of your list, and 
+other times you'll want to change the original order. Python provides a number of different ways to organize your 
+lists, depending on the situation.
+
+
+1. SORTING A LIST PERMANENTLY WITH THE sort() METHOD
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+* Basic Alphabetical Sorting: Python's sort() method changes the order of a list permanently. Once applied, 
+  the list is stored in alphabetical order and cannot be reverted to its original order.
+
+Code Example:
+>>> cars = ['bmw', 'audi', 'toyota', 'subaru']
+>>> cars.sort()
+>>> print(cars)
+['audi', 'bmw', 'subaru', 'toyota']
+
+* Reverse Alphabetical Sorting: You can sort a list in reverse alphabetical order by passing the argument 
+  reverse=True to the sort() method. This also changes the list order permanently.
+
+Code Example:
+>>> cars = ['bmw', 'audi', 'toyota', 'subaru']
+>>> cars.sort(reverse=True)
+>>> print(cars)
+['toyota', 'subaru', 'bmw', 'audi']
+
+* Note on Capitalization: Sorting a list alphabetically is a bit more complicated when all the values are not in 
+  lowercase. Specifying the exact order with mixed case can be more complex, but most approaches build directly 
+  on what you learn here.
+
+
+2. SORTING A LIST TEMPORARILY WITH THE sorted() FUNCTION
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+* Concept: To maintain the original order of a list but present it in a sorted order, you can use the sorted() 
+  function. It displays your list in a particular order without affecting the actual stored order of the list.
+
+Code Example:
+>>> cars = ['bmw', 'audi', 'toyota', 'subaru']
+>>> print("Here is the original list:")
+>>> print(cars)
+['bmw', 'audi', 'toyota', 'subaru']
+>>> print("\nHere is the sorted list:")
+>>> print(sorted(cars))
+['audi', 'bmw', 'subaru', 'toyota']
+>>> print("\nHere is the original list again:")
+>>> print(cars)
+['bmw', 'audi', 'toyota', 'subaru']
+
+* Temporary Reverse Sorting: The sorted() function can also accept a reverse=True argument to display a list in 
+  reverse alphabetical order without altering the original list.
+
+Code Example:
+>>> print(sorted(cars, reverse=True))
+['toyota', 'subaru', 'bmw', 'audi']
+
+
+3. PRINTING A LIST IN REVERSE ORDER WITH THE reverse() METHOD
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+* Concept: To reverse the original order of a list, use the reverse() method. It does not sort backward 
+  alphabetically; it simply reverses the physical order of the list items.
+
+Code Example:
+>>> cars = ['bmw', 'audi', 'toyota', 'subaru']
+>>> print(cars)
+['bmw', 'audi', 'toyota', 'subaru']
+>>> cars.reverse()
+>>> print(cars)
+['subaru', 'toyota', 'audi', 'bmw']
+
+* Reverting Order: The reverse() method changes the order of a list permanently, but you can revert to the 
+  original order anytime by applying reverse() to the same list a second time.
+
+
+4. FINDING THE LENGTH OF A LIST WITH THE len() FUNCTION
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+* Concept: You can quickly find the length of a list by using the len() function.
+
+Code Example:
+>>> cars = ['bmw', 'audi', 'toyota', 'subaru']
+>>> len(cars)
+4
+
+* Practical Uses: Useful for identifying the number of aliens left in a game, determining data amounts in a 
+  visualization, or figuring out registered user counts on a website.
+
+* Note: Python counts items in a list starting with one (1-based count), so you won't run into off-by-one errors 
+  when determining list length.
+
+
+5. TRY IT YOURSELF EXERCISES
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+File naming standard: Use descriptive, lowercase snake_case names (e.g., seeing_the_world.py).
+
+- 3-8. Seeing the World:
+  Think of at least five places in the world you'd like to visit.
+  * Store the locations in a list. Make sure the list is not in alphabetical order.
+  * Print your list in its original order. Don't worry about printing the list neatly, just print it as a raw Python list.
+  * Use sorted() to print your list in alphabetical order without modifying the actual list.
+  * Show that your list is still in its original order by printing it.
+  * Use sorted() to print your list in reverse alphabetical order without changing the order of the original list.
+  * Show that your list is still in its original order by printing it again.
+  * Use reverse() to change the order of your list. Print the list to show that its order has changed.
+  * Use reverse() to change the order of your list again. Print the list to show it's back to its original order.
+  * Use sort() to change your list so it's stored in alphabetical order. Print the list to show that its order has been changed.
+  * Use sort() to change your list so it's stored in reverse alphabetical order. Print the list to show that its order has changed.
+
+- 3-9. Dinner Guests:
+  Working with one of the programs from Exercises 3-4 through 3-7, use len() to print a message indicating 
+  the number of people you are inviting to dinner.
+
+- 3-10. Every Function:
+  Think of something you could store in a list (e.g., mountains, rivers, countries, cities, languages, or 
+  anything else). Write a program that creates a list containing these items and then uses each function 
+  introduced in this chapter at least once.
