@@ -4,6 +4,12 @@
 
 Python lists are dynamic data structures. Elements can be added, modified, or removed at runtime as program state changes.
 
+This guide covers:
+- **Modifying Elements** - Overwriting existing list items by index
+- **Adding Elements** - Using `append()` for end-insertions and `insert()` for position-specific additions
+- **Removing Elements** - Deleting items using `del`, `pop()`, and `remove()`
+- **Decision Rules** - Choosing the right removal method based on use case
+
 ---
 
 ## Table of Contents
@@ -23,11 +29,15 @@ Python lists are dynamic data structures. Elements can be added, modified, or re
 To change an element's value, reference its index position and assign a new value.
 
 ```python
-motorcycles = ['honda', 'yamaha', 'suzuki']
-motorcycles[0] = 'ducati'
+oceans = ['pacific', 'atlantic', 'arctic']
+oceans[0] = 'indian'
+print(oceans)
+```
 
-print(motorcycles)  # Output: ['ducati', 'yamaha', 'suzuki']
+**Output:**
 
+```
+['indian', 'atlantic', 'arctic']
 ```
 
 ---
@@ -39,18 +49,23 @@ print(motorcycles)  # Output: ['ducati', 'yamaha', 'suzuki']
 Adds an element to the end of a list without altering existing items. Useful for dynamically building lists from scratch.
 
 ```python
-# Appending to an existing list
-motorcycles = ['honda', 'yamaha', 'suzuki']
-motorcycles.append('ducati')
-print(motorcycles)  # Output: ['honda', 'yamaha', 'suzuki', 'ducati']
+oceans = ['pacific', 'atlantic', 'arctic']
+oceans.append('indian')
+print(oceans)
 
 # Building a list dynamically
-motorcycles = []
-motorcycles.append('honda')
-motorcycles.append('yamaha')
-motorcycles.append('suzuki')
-print(motorcycles)  # Output: ['honda', 'yamaha', 'suzuki']
+oceans = []
+oceans.append('pacific')
+oceans.append('atlantic')
+oceans.append('arctic')
+print(oceans)
+```
 
+**Output:**
+
+```
+['pacific', 'atlantic', 'arctic', 'indian']
+['pacific', 'atlantic', 'arctic']
 ```
 
 ### 2. Inserting Elements (`insert()`)
@@ -58,11 +73,15 @@ print(motorcycles)  # Output: ['honda', 'yamaha', 'suzuki']
 Inserts an element at a specified index position, shifting subsequent elements one position to the right.
 
 ```python
-motorcycles = ['honda', 'yamaha', 'suzuki']
-motorcycles.insert(0, 'ducati')
+oceans = ['pacific', 'atlantic', 'arctic']
+oceans.insert(0,'indian')
+print(oceans)
+```
 
-print(motorcycles)  # Output: ['ducati', 'honda', 'yamaha', 'suzuki']
+**Output:**
 
+```
+['indian', 'pacific', 'atlantic', 'arctic']
 ```
 
 ---
@@ -74,11 +93,15 @@ print(motorcycles)  # Output: ['ducati', 'honda', 'yamaha', 'suzuki']
 Permanently deletes an item at a specified index when the removed value is no longer needed.
 
 ```python
-motorcycles = ['honda', 'yamaha', 'suzuki']
-del motorcycles[0]
+oceans = ['pacific', 'atlantic', 'arctic']
+del oceans[1]
+print(oceans)
+```
 
-print(motorcycles)  # Output: ['yamaha', 'suzuki']
+**Output:**
 
+```
+['pacific', 'arctic']
 ```
 
 ### 2. Removing and Retaining (`pop()`)
@@ -89,18 +112,24 @@ Removes an item from a list while allowing its value to be stored in a variable 
 * **By Index (`pop(index)`):** Removes an item at a specific index.
 
 ```python
-motorcycles = ['honda', 'yamaha', 'suzuki']
+oceans = ['pacific', 'atlantic', 'arctic']
 
-# Pop last item
-popped_motorcycle = motorcycles.pop()
-print(motorcycles)          # Output: ['honda', 'yamaha']
-print(popped_motorcycle)    # Output: suzuki
+# Pop list item
+popped_ocean = oceans.pop()
+print(ocean)
+print(popped_ocean)
 
 # Pop by index
-first_owned = motorcycles.pop(0)
-print(f"The first motorcycle I owned was a {first_owned.title()}.")
-# Output: The first motorcycle I owned was a Honda.
+first_ocean = oceans.pop(0)
+print(f"The largest ocean in the world is the {first_ocean.title()} Ocean.")
+```
 
+**Output:**
+
+```
+['pacific', 'atlantic']
+arctic
+The largest ocean in the world is the Pacific Ocean.
 ```
 
 > **Decision Rule:** Use `del` when an item should be permanently deleted without reuse. Use `pop()` when the removed item's value is needed after removal.
@@ -110,13 +139,19 @@ print(f"The first motorcycle I owned was a {first_owned.title()}.")
 Deletes an item by value when its exact position is unknown.
 
 ```python
-motorcycles = ['honda', 'yamaha', 'suzuki', 'ducati']
-too_expensive = 'ducati'
+oceans = ['pacific', 'atlantic', 'arctic','indian']
+too_deep = 'pacific'
 
-motorcycles.remove(too_expensive)
-print(motorcycles)  # Output: ['honda', 'yamaha', 'suzuki']
-print(f"\nA {too_expensive.title()} is too expensive for me.")
+oceans.remove(too_deep)
+print(oceans)
+print(f"The deepest part of the world's oceans is the Challenger Deep in the Mariana Trench, located in the {too_deep.title()} Ocean.")
+```
 
+**Output:**
+
+```
+['atlantic', 'arctic', 'indian']
+The deepest part of the world's oceans is the Challenger Deep in the Mariana Trench,located in the Pacific Ocean.
 ```
 
 > **Note:** `remove()` deletes only the **first occurrence** of the specified value. A loop is required if duplicate values need to be removed.
@@ -125,10 +160,23 @@ print(f"\nA {too_expensive.title()} is too expensive for me.")
 
 ## Exercises
 
-* **3-4. Guest List (`guest_list.py`):** Create an initial dinner invitation list and send invitations to each guest.
-* **3-5. Changing Guest List (`changing_guest_list.py`):** Replace an unavailable guest with a new guest and re-issue invitations.
-* **3-6. More Guests (`more_guests.py`):** Expand the list using `insert()` and `append()` to add three new guests after acquiring a larger table.
-* **3-7. Shrinking Guest List (`shrinking_guest_list.py`):** Use `pop()` to reduce the guest list to two people, notifying removed guests, and clean up the list using `del`.
+File naming convention: Use descriptive, lowercase names with underscores (e.g., `guest_list.py`).
+
+### Exercise 3-4: Guest List
+
+Create an initial dinner invitation list and send invitations to each guest.
+
+### Exercise 3-5: Changing Guest List
+
+Replace an unavailable guest with a new guest and re-issue invitations.
+
+### Exercise 3-6: More Guests
+
+Expand the list using `insert()` and `append()` to add three new guests after acquiring a larger table.
+
+### Exercise 3-7: Shrinking Guest List
+
+Use `pop()` to reduce the guest list to two people, notifying removed guests, and clean up the list using `del`.
 
 ---
 
@@ -136,12 +184,12 @@ print(f"\nA {too_expensive.title()} is too expensive for me.")
 
 | Operation / Method | Syntax | Description |
 | --- | --- | --- |
-| **Modify Element** | `list[i] = value` | Overwrites item at index `i` |
-| **`append()`** | `list.append(item)` | Adds `item` to end of list |
-| **`insert()`** | `list.insert(i, item)` | Inserts `item` at index `i` |
-| **`del`** | `del list[i]` | Deletes item at index `i` permanently |
-| **`pop()`** | `var = list.pop(i)` | Removes and returns item at index `i` (default: last) |
-| **`remove()`** | `list.remove(value)` | Removes first matching `value` |
+| **Modify Element** | `oceans[i] = value` | Overwrites item at index `i` |
+| **`append()`** | `oceans.append(item)` | Adds `item` to end of list |
+| **`insert()`** | `oceans.insert(i, item)` | Inserts `item` at index `i` |
+| **`del`** | `del oceans[i]` | Deletes item at index `i` permanently |
+| **`pop()`** | `var = oceans.pop(i)` | Removes and returns item at index `i` (default: last) |
+| **`remove()`** | `oceans.remove(value)` | Removes first matching `value` |
 
 ---
 
@@ -159,4 +207,4 @@ print(f"\nA {too_expensive.title()} is too expensive for me.")
 
 ---
 
-*Last Updated: 2026-09-04*
+*Last Updated: 05 September,2026*
