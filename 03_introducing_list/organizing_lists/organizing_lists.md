@@ -225,8 +225,8 @@ Create a list of items (e.g., rivers, countries, languages) and write a program 
 
 ## Related Topics
 
-* [Introducing Lists](../introducing_lists/introducing_lists.md) - List creation, indexing, and access
-* [Modifying Lists](../modifying_lists/modifying_lists.md) - Adding, inserting, and removing items
+* [Introducing Lists](../lists/lists.md) - List creation, indexing, and access
+* [Modifying Lists](../modifying_elements/modifying_elements.md) - Adding, inserting, and removing items
 * [Working with Lists](../working_with_lists/working_with_lists.md) - Looping and numerical lists
 
 ---
