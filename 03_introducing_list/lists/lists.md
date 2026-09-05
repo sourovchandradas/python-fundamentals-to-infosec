@@ -2,7 +2,7 @@
 
 ## Overview
 
-A list is a collection of items in a particular order. You can include letters, digits, or names in a list. The items do not have to be related in any particular way. Because a list usually contains more than one element, it is best practice to make the name of your list plural (e.g., `letters`, `digits`, `bicycles`).
+A list is a collection of items in a particular order. You can include letters, digits, or names in a list. The items do not have to be related in any particular way. Because a list usually contains more than one element, it is best practice to make the name of your list plural (e.g., `letters`, `digits`, `countries`).
 
 This guide covers:
 - **What is a List?** - Definition, square bracket syntax, and raw representation
