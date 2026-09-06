@@ -162,19 +162,19 @@ The deepest part of the world's oceans is the Challenger Deep in the Mariana Tre
 
 File naming convention: Use descriptive, lowercase names with underscores (e.g., `guest_list.py`).
 
-### Exercise 3-4: Guest List
+### Exercise 3-5: Guest List
 
 Create an initial dinner invitation list and send invitations to each guest.
 
-### Exercise 3-5: Changing Guest List
+### Exercise 3-6: Changing Guest List
 
 Replace an unavailable guest with a new guest and re-issue invitations.
 
-### Exercise 3-6: More Guests
+### Exercise 3-7: More Guests
 
 Expand the list using `insert()` and `append()` to add three new guests after acquiring a larger table.
 
-### Exercise 3-7: Shrinking Guest List
+### Exercise 3-8: Shrinking Guest List
 
 Use `pop()` to reduce the guest list to two people, notifying removed guests, and clean up the list using `del`.
 
