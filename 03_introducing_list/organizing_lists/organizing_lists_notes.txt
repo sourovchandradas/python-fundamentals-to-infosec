@@ -98,7 +98,7 @@ Code Example:
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 File naming standard: Use descriptive, lowercase snake_case names (e.g., seeing_the_world.py).
 
-- 3-8. Seeing the World:
+- 3-9. Seeing the World:
   Think of at least five places in the world you'd like to visit.
   * Store the locations in a list. Make sure the list is not in alphabetical order.
   * Print your list in its original order. Don't worry about printing the list neatly, just print it as a raw Python list.
@@ -111,11 +111,11 @@ File naming standard: Use descriptive, lowercase snake_case names (e.g., seeing_
   * Use sort() to change your list so it's stored in alphabetical order. Print the list to show that its order has been changed.
   * Use sort() to change your list so it's stored in reverse alphabetical order. Print the list to show that its order has changed.
 
-- 3-9. Dinner Guests:
+- 3-10. Dinner Guests:
   Working with one of the programs from Exercises 3-4 through 3-7, use len() to print a message indicating 
   the number of people you are inviting to dinner.
 
-- 3-10. Every Function:
+- 3-11. Every Function:
   Think of something you could store in a list (e.g., mountains, rivers, countries, cities, languages, or 
   anything else). Write a program that creates a list containing these items and then uses each function 
   introduced in this chapter at least once.
