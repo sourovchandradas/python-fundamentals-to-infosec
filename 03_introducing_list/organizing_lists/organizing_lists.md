@@ -187,7 +187,7 @@ The `len()` function is essential when tracking items dynamically, such as count
 
 File naming convention: Use descriptive, lowercase names with underscores (e.g., `seeing_the_world.py`).
 
-### Exercise 3-8: Seeing the World
+### Exercise 3-9: Seeing the World
 
 1. Store at least five locations in a list in non-alphabetical order.
 2. Print the list in original order.
@@ -200,11 +200,11 @@ File naming convention: Use descriptive, lowercase names with underscores (e.g.,
 9. Use `sort()` to order list alphabetically permanently and print.
 10. Use `sort(reverse=True)` to order list in reverse alphabetical order permanently and print.
 
-### Exercise 3-9: Dinner Guests
+### Exercise 3-10: Dinner Guests
 
 Use `len()` to print a message stating the number of guests invited in Exercises 3-4 through 3-7.
 
-### Exercise 3-10: Every Function
+### Exercise 3-11: Every Function
 
 Create a list of items (e.g., rivers, countries, languages) and write a program using every function/method introduced in this chapter (`append()`, `insert()`, `del`, `pop()`, `remove()`, `sort()`, `sorted()`, `reverse()`, `len()`).
 
@@ -238,4 +238,4 @@ Create a list of items (e.g., rivers, countries, languages) and write a program 
 
 ---
 
-*Last Updated: 2026-09-05*
+*Last Updated: 7th September,2026*
