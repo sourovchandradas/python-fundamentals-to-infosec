@@ -99,14 +99,14 @@ A Ducati is too expensive for me.
 ---------------------------------------------------------------------------------------------------------------------
 File naming standard: Use descriptive, lowercase snake_case names (e.g., guest_list.py).
 
-- 3-4. Guest List:
+- 3-5. Guest List:
   Create an initial dinner invitation list and send invitations to each guest.
 
-- 3-5. Changing Guest List:
+- 3-6. Changing Guest List:
   Replace an unavailable guest with a new guest and re-issue invitations.
 
-- 3-6. More Guests:
+- 3-7. More Guests:
   Expand the list using insert() and append() to add three new guests after acquiring a larger table.
 
-- 3-7. Shrinking Guest List:
+- 3-8. Shrinking Guest List:
   Use pop() to reduce the guest list to two people, notifying removed guests, and clean up the list using del.
