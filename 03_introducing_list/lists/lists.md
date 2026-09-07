@@ -135,7 +135,7 @@ print(countries[4])
 
 ```
 Traceback (most recent call last):
-  File "country.py", line 2, in <module>
+  File "countries.py", line 2, in <module>
     print(countries[4])
 IndexError: list index out of range
 ```
