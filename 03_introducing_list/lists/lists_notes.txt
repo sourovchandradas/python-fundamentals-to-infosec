@@ -52,7 +52,7 @@ sweden
 >>> print(countries[3])
 morocco
 >>> print(countries[-1])
-moroco
+morocco
 
 
 4. USING INDIVIDUAL VALUES FROM A LIST
@@ -76,8 +76,8 @@ Code Example (IndexError):
 >>> countries = ['india', 'sweden', 'canada', 'morocco']
 >>> print(countries[4])
 Traceback (most recent call last):
-  File "motorcycles.py", line 2, in <module>
-    print(motorcycles[4])
+  File "countries.py", line 2, in <module>
+    print(countries[4])
 IndexError: list index out of range
 
 * Special Edge Case: Using index -1 on an empty list [] also results in an IndexError because there are no items.
