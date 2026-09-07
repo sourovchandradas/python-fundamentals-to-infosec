@@ -1,4 +1,4 @@
-# Looping Through an Entire List
+# Looping Through an Entire List in Python : Core Concepts & Best Practice
 
 ## Overview
 
