@@ -280,8 +280,8 @@ Think of at least three different animals that have a common characteristic. Sto
 
 ## Related Topics
 
-* [Lists Overview](../03_introducing_lists/lists.md) - Fundamentals of list data structures
-* [Modifying Elements](../03_introducing_elements/modifying_elements.md) - Adding, modifying, and removing list items
+* [Lists Overview](../03_introducing_list/lists.md) - Fundamentals of list data structures
+* [Modifying Elements](../03_introducing_list/modifying_elements.md) - Adding, modifying, and removing list items
 * [Numerical Lists](./numerical_lists.md) - Using `range()` and working with numbers in loops
 
 ---
