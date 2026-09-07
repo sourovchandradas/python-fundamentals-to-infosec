@@ -14,10 +14,10 @@ how Python handles updating list contents dynamically.
 * Concept: To change an element's value, reference its index position and assign a new value.
 
 Code Example:
->>> motorcycles = ['honda', 'yamaha', 'suzuki']
->>> motorcycles[0] = 'ducati'
->>> print(motorcycles)
-['ducati', 'yamaha', 'suzuki']
+>>> oceans = ['pacific', 'atlantic', 'arctic']
+>>> oceans[0] = 'indian'
+>>> print(oceans)
+['indian', 'atlantic', 'arctic']
 
 
 2. ADDING ELEMENTS TO A LIST
@@ -26,27 +26,28 @@ Code Example:
   This is useful for dynamically building lists from scratch.
 
 Code Example:
->>> motorcycles = ['honda', 'yamaha', 'suzuki']
->>> motorcycles.append('ducati')
->>> print(motorcycles)
-['honda', 'yamaha', 'suzuki', 'ducati']
+>>> oceans = ['pacific', 'atlantic', 'arctic']
+>>> oceans.append('indian')
+>>> print(oceans)
+['pacific', 'atlantic', 'arctic', 'indian']
 
-* Building a List Dynamically:
->>> motorcycles = []
->>> motorcycles.append('honda')
->>> motorcycles.append('yamaha')
->>> motorcycles.append('suzuki')
->>> print(motorcycles)
-['honda', 'yamaha', 'suzuki']
+* Building a list dynamically
+>>> oceans = []
+>>> oceans.append('pacific')
+>>> oceans.append('atlantic')
+>>> oceans.append('arctic')
+>>> print(oceans)
+['pacific', 'atlantic', 'arctic']
+
 
 * Inserting Elements: The insert() method inserts an element at a specified index position, shifting subsequent 
   elements one position to the right.
 
 Code Example:
->>> motorcycles = ['honda', 'yamaha', 'suzuki']
->>> motorcycles.insert(0, 'ducati')
->>> print(motorcycles)
-['ducati', 'honda', 'yamaha', 'suzuki']
+>>> oceans = ['pacific', 'atlantic', 'arctic']
+>>> oceans.insert(0,'indian')
+>>> print(oceans)
+['indian', 'pacific', 'atlantic', 'arctic']
 
 
 3. REMOVING ELEMENTS FROM A LIST
@@ -55,26 +56,28 @@ Code Example:
   longer needed.
 
 Code Example:
->>> motorcycles = ['honda', 'yamaha', 'suzuki']
->>> del motorcycles[0]
->>> print(motorcycles)
-['yamaha', 'suzuki']
+>>> oceans = ['pacific', 'atlantic', 'arctic']
+>>> del oceans[1]
+>>> print(oceans)
+['pacific', 'arctic']
 
 * Removing and Retaining (pop()): The pop() method removes an item from a list while allowing its value to be 
   stored in a variable for further use.
 
 Code Example:
->>> motorcycles = ['honda', 'yamaha', 'suzuki']
->>> popped_motorcycle = motorcycles.pop()
->>> print(motorcycles)
-['honda', 'yamaha']
->>> print(popped_motorcycle)
-suzuki
+>>> oceans = ['pacific', 'atlantic', 'arctic']
 
-* Popping by Index:
->>> first_owned = motorcycles.pop(0)
->>> print("The first motorcycle I owned was a " + first_owned.title() + ".")
-The first motorcycle I owned was a Honda.
+* Pop list item
+>>> popped_ocean = oceans.pop()
+>>> print(oceans)
+>>> print(popped_ocean)
+['pacific', 'atlantic']
+arctic
+
+* Pop by index
+>>> first_ocean = oceans.pop(0)
+>>> print(f"The largest ocean in the world is the {first_ocean.title()} Ocean.")
+The largest ocean in the world is the Pacific Ocean.
 
 * Decision Rule: Use del when an item should be permanently deleted without reuse. Use pop() when the 
   removed item's value is needed after removal.
@@ -82,14 +85,13 @@ The first motorcycle I owned was a Honda.
 * Removing by Value (remove()): Deletes an item by value when its exact position is unknown.
 
 Code Example:
->>> motorcycles = ['honda', 'yamaha', 'suzuki', 'ducati']
->>> too_expensive = 'ducati'
->>> motorcycles.remove(too_expensive)
->>> print(motorcycles)
-['honda', 'yamaha', 'suzuki']
->>> print("\nA " + too_expensive.title() + " is too expensive for me.")
-
-A Ducati is too expensive for me.
+>>> oceans = ['pacific', 'atlantic', 'arctic','indian']
+>>> too_deep = 'pacific'
+>>> oceans.remove(too_deep)
+>>> print(oceans)
+>>> print(f"The deepest part of the world's oceans is the Challenger Deep in the Mariana Trench, located in the {too_deep.title()} Ocean.")
+['atlantic', 'arctic', 'indian']
+The deepest part of the world's oceans is the Challenger Deep in the Mariana Trench,located in the Pacific Ocean.
 
 * Note: The remove() method deletes only the first occurrence of the specified value. A loop is required if 
   duplicate values need to be removed.
