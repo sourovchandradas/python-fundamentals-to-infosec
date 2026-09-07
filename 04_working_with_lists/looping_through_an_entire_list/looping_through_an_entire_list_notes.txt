@@ -50,8 +50,8 @@ for item in list_of_items:
 Code Example:
 >>> developers = ['alice', 'bob', 'charlie', 'david']
 >>> for developer in developers:
->>>     print(f"Hello, {developer}! Welcome to the team.")
->>>     print(f"{developer}, we are excited to have you on board!\n")
+>>>     print(f"Hello, {developer.title()}! Welcome to the team.")
+>>>     print(f"{developer.title()}, we are excited to have you on board!\n")
 
 Output:
 Hello, Alice! Welcome to the team.
@@ -73,8 +73,8 @@ David, we are excited to have you on board!
 Code Example:
 >>> developers = ['alice', 'bob', 'charlie', 'david']
 >>> for developer in developers:
->>>     print(f"Hello, {developer}! Welcome to the team.")
->>>     print(f"{developer}, we are excited to have you on board!\n")
+>>>     print(f"Hello, {developer.title()}! Welcome to the team.")
+>>>     print(f"{developer.title()}, we are excited to have you on board!\n")
     
 >>> print("All developers have been welcomed!")
 
@@ -113,8 +113,8 @@ IndentationError: expected an indented block after 'for' statement on line 2
 Incorrect Code Example:
 >>> developers = ['alice', 'bob', 'charlie', 'david']
 >>> for developer in developers:
->>>     print(f"Hello, {developer}! Welcome to the team.")
->>> print(f"{developer}, we are excited to have you on board!\n")
+>>>     print(f"Hello, {developer.title()}! Welcome to the team.")
+>>> print(f"{developer.title()}, we are excited to have you on board!\n")
 
 * Logical Error Output:
 Hello, Alice! Welcome to the team.
@@ -141,27 +141,27 @@ IndentationError: unexpected indent
 Incorrect Code Example:
 >>> developers = ['alice', 'bob', 'charlie', 'david']
 >>> for developer in developers:
->>>     print(f"Hello, {developer}! Welcome to the team.")
->>>     print(f"{developer}, we are excited to have you on board!\n")
->>>     print("All developers have been welcomd to the team!")
+>>>     print(f"Hello, {developer.title()}! Welcome to the team.")
+>>>     print(f"{developer.title()}, we are excited to have you on board!\n")
+>>>     print("All developers have been welcome to the team!")
 
 * Logical Error Output:
 Hello, Alice! Welcome to the team.
 Alice, we are excited to have you on board!
 
-All developers have been welcomd to the team!
+All developers have been welcome to the team!
 Hello, Bob! Welcome to the team.
 Bob, we are excited to have you on board!
 
-All developers have been welcomd to the team!
+All developers have been welcome to the team!
 Hello, Charlie! Welcome to the team.
 Charlie, we are excited to have you on board!
 
-All developers have been welcomd to the team!
+All developers have been welcome to the team!
 Hello, David! Welcome to the team.
 David, we are excited to have you on board!
 
-All developers have been welcomd to the team!
+All developers have been welcome to the team!
 
 
 * 5.5 Forgetting the Colon: Omitting the colon (:) at the end of a for statement raises a SyntaxError.
