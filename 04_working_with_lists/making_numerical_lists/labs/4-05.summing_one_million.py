@@ -1,5 +1,5 @@
-# Exercise 4-04: One Million
-# Generating a list of numbers from 1 to 1 million and printing them.
+# Exercise 4-05:  Summing One Million
+# Generating a list of numbers from 1 to 1 million and printing them, find minimum number, find maximum number and calculate the total sum.
 
 numbers = list(range(1, 1000001))
 
