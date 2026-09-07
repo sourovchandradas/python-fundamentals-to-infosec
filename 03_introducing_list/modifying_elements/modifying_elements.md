@@ -116,7 +116,7 @@ oceans = ['pacific', 'atlantic', 'arctic']
 
 # Pop list item
 popped_ocean = oceans.pop()
-print(ocean)
+print(oceans)
 print(popped_ocean)
 
 # Pop by index
