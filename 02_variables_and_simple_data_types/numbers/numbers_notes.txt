@@ -3,14 +3,14 @@
 =====================================================================================================================================================
 
 OVERVIEW
----------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------
 Numbers are used quite often in programming to keep score in games, represent data in visualizations, store 
 information in web applications, and so on. Python treats numbers in several different ways, depending on how 
 they are being used. Let's first look at how Python manages integers, because they are the simplest to work with.
 
 
 1. INTEGERS
----------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------
 * Definition: Whole numbers without decimal points.
 * Basic Operations: You can add (+), subtract (-), multiply (*), and divide (/) integers in Python.
 
@@ -49,7 +49,7 @@ Code Example:
 
 
 2. FLOATS
----------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------
 * Definition: Python calls any number with a decimal point a float. This term is used in most programming 
   languages, and it refers to the fact that a decimal point can appear at any position in a number.
 
@@ -82,7 +82,7 @@ Code Example:
 
 
 3. AVOIDING TYPE ERRORS WITH THE str() FUNCTION
----------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------
 * Problem: Often, you'll want to use a variable's value within a message. For example, you might want to print 
   a birthday greeting using an age variable.
 
@@ -119,7 +119,7 @@ Happy 23rd Birthday!
 
 
 4. INTEGERS IN PYTHON 2 (Legacy Information)
----------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------
 * Different Division Behavior: Python 2 returns a slightly different result when you divide two integers.
 
 Code Example (Python 2.7):
@@ -149,7 +149,7 @@ Code Example (Python 2.7):
 
 
 5. TRY IT YOURSELF EXERCISES
----------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------
 File naming standard: Use descriptive, lowercase snake_case names (e.g., numbers_eight.py).
 
 - 2-8. Number Eight:
