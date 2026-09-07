@@ -14,9 +14,9 @@ it is best practice to make the name of your list plural (e.g., letters, digits,
 * Definition: Square brackets ([]) indicate a list, and individual elements are separated by commas.
 
 Code Example:
->>> bicycles = ['trek', 'cannondale', 'redline', 'specialized']
->>> print(bicycles)
-['trek', 'cannondale', 'redline', 'specialized']
+>>> countries = ['india', 'sweden', 'canada', 'morocco']
+>>> print(countries)
+['india', 'sweden', 'canada', 'morocco']
 
 * Note: Printing a list directly returns its raw representation, including square brackets and quotes.
 
@@ -27,11 +27,11 @@ Code Example:
 * String Methods: You can apply string methods (like title(), upper(), lower()) directly to list elements.
 
 Code Example:
->>> bicycles = ['trek', 'cannondale', 'redline', 'specialized']
->>> print(bicycles[0])
-trek
->>> print(bicycles[0].title())
-Trek
+>>> countries = ['india', 'sweden', 'canada', 'morocco']
+>>> print(countries[0])
+india
+>>> print(countries[0].title())
+India
 
 
 3. INDEX POSITIONS START AT 0, NOT 1
@@ -46,13 +46,13 @@ Trek
   - Third from end: Index -3
 
 Code Example:
->>> bicycles = ['trek', 'cannondale', 'redline', 'specialized']
->>> print(bicycles[1])
-cannondale
->>> print(bicycles[3])
-specialized
->>> print(bicycles[-1])
-specialized
+>>> countries = ['india', 'sweden', 'canada', 'morocco']
+>>> print(countries[1])
+sweden
+>>> print(countries[3])
+morocco
+>>> print(countries[-1])
+moroco
 
 
 4. USING INDIVIDUAL VALUES FROM A LIST
@@ -60,10 +60,11 @@ specialized
 * Usage: Individual list items can be used just like any other variable (e.g., in string concatenation or f-strings).
 
 Code Example:
->>> bicycles = ['trek', 'cannondale', 'redline', 'specialized']
->>> message = "My first bicycle was a " + bicycles[0].title() + "."
+>>> countries = ['india', 'sweden', 'canada', 'morocco']
+
+>>> message = f"I want to visit {countries[0].title()}."
 >>> print(message)
-My first bicycle was a Trek.
+I want to visit India.
 
 
 5. AVOIDING INDEX ERRORS WHEN WORKING WITH LISTS
@@ -72,11 +73,11 @@ My first bicycle was a Trek.
   Example: Asking for index 3 in a list with 3 elements (indices 0, 1, 2).
 
 Code Example (IndexError):
->>> motorcycles = ['honda', 'yamaha', 'suzuki']
->>> print(motorcycles[3])
+>>> countries = ['india', 'sweden', 'canada', 'morocco']
+>>> print(countries[4])
 Traceback (most recent call last):
   File "motorcycles.py", line 2, in <module>
-    print(motorcycles[3])
+    print(motorcycles[4])
 IndexError: list index out of range
 
 * Special Edge Case: Using index -1 on an empty list [] also results in an IndexError because there are no items.
