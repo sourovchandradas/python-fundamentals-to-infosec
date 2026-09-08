@@ -13,15 +13,35 @@ subsets of data efficiently without modifying the original collection.
 * Basic Syntax: list_name[start_index:stop_index]. Python stops one item before the stop_index (off-by-one mechanism).
 
 Code Example:
-players = ['charles', 'martina', 'michael', 'florence', 'eli']
-print(players[0:3])
+>>> players = ['charles', 'martina', 'michael', 'florence', 'eli']
+>>> print(players[0:3])
 
 Output:
 ['charles', 'martina', 'michael']
 
-* Starting from Beginning: Omitting the first index defaults to index 0 ([:4]).
-* Slicing to the End: Omitting the second index slices through the end of the list ([2:]).
-* Negative Indices: Use negative values to slice relative to the end (e.g., [-3:] gets the last 3 elements).
+* Starting from Beginning: Omitting the first index defaults to index 0.
+
+Code Example:
+>>> print(players[:4])
+
+Output:
+['charles', 'martina', 'michael', 'florence']
+
+* Slicing to the End: Omitting the second index slices through the end of the list.
+
+Code Example:
+>>> print(players[2:])
+
+Output:
+['michael', 'florence', 'eli']
+
+* Negative Indices: Use negative values to slice relative to the end of the list.
+
+Code Example:
+>>> print(players[-3:])
+
+Output:
+['michael', 'florence', 'eli']
 
 
 2. LOOPING THROUGH A SLICE
@@ -29,11 +49,13 @@ Output:
 * Subsets in Loops: You can use a slice directly in a for loop to iterate over a subset instead of the entire list.
 
 Code Example:
-players = ['charles', 'martina', 'michael', 'florence', 'eli']
-for player in players[:3]:
-    print(player.title())
+>>> players = ['charles', 'martina', 'michael', 'florence', 'eli']
+>>> print("Here are the first three players on my team:")
+>>> for player in players[:3]:
+>>>     print(player.title())
 
 Output:
+Here are the first three players on my team:
 Charles
 Martina
 Michael
@@ -41,17 +63,15 @@ Michael
 
 3. COPYING A LIST
 -----------------------------------------------------------------------------------------------------------------------------------------------------
-* Correct Copying Syntax: Use entire list slice ([:]) to make a true independent copy of a list.
+* Correct Copying Syntax: Use an entire list slice ([:]) to make a true independent copy of a list.
 
 Code Example:
-my_foods = ['pizza', 'falafel', 'carrot cake']
-friend_foods = My_foods[:]
-
-my_foods.append('cannoli')
-friend_foods.append('ice cream')
-
-print(my_foods)
-print(friend_foods)
+>>> my_foods = ['pizza', 'falafel', 'carrot cake']
+>>> friend_foods = my_foods[:]
+>>> my_foods.append('cannoli')
+>>> friend_foods.append('ice cream')
+>>> print(my_foods)
+>>> print(friend_foods)
 
 Output:
 ['pizza', 'falafel', 'carrot cake', 'cannoli']
@@ -59,16 +79,29 @@ Output:
 
 * Reference Warning: Setting friend_foods = my_foods makes both variables point to the exact same list in memory (modifying one alters both).
 
+Code Example:
+>>> friend_foods = my_foods
+>>> my_foods.append('cannoli')
+>>> friend_foods.append('ice cream')
+>>> print(my_foods)
+>>> print(friend_foods)
+
+Output:
+['pizza', 'falafel', 'carrot cake', 'cannoli', 'ice cream']
+['pizza', 'falafel', 'carrot cake', 'cannoli', 'ice cream']
+
 
 4. TRY IT YOURSELF EXERCISES
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 File naming standard: Use descriptive, lowercase snake_case names (e.g., slices.py).
 
 - 4-10. Slices:
-  Print the first three, middle three, and last three items of a list using slice notation.
+  Using one of the programs you wrote in this chapter, add several lines to the end of the program to print the first three items, three middle 
+  items, and last three items using slices.
 
 - 4-11. My Pizzas, Your Pizzas:
-  Copy a pizza list using [:], add distinct pizzas to each list, and print both using for loops to prove independence.
+  Make a copy of the list of pizzas using [:]. Add a new pizza to the original list and a different pizza to friend_pizzas. Use for loops to print 
+  both lists and prove they are separate.
 
 - 4-12. More Loops:
-  Write two for loops to print elements from copied food lists.
+  Choose a version of foods.py and write two for loops to print each list of foods.
