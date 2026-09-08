@@ -1,4 +1,4 @@
-# Exercise 4-7: Threes
+# Exercise 4-07: Threes
 # Creating a list of multiples of 3 from 3 to 30 and printing each item using a for loop.
 
 threes = list(range(3, 31, 3))
