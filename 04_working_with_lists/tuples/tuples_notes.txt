@@ -1,1 +1,92 @@
+=====================================================================================================================================================
+                                                                 TUPLES
+=====================================================================================================================================================
 
+OVERVIEW
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+Lists work well for storing sets of items that can change throughout the life of a program. However, sometimes you need to create a collection of 
+items that cannot change. Python refers to values that cannot change as immutable, and an immutable list is called a tuple.
+
+
+1. DEFINING A TUPLE
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+* Parentheses Syntax: A tuple looks just like a list except you use parentheses () instead of square brackets [].
+
+* Accessing Elements: Access individual elements using zero-based indexing, exactly like a list.
+
+Code Example:
+>>> dimensions = (200, 50)
+>>> print(dimensions[0])
+>>> print(dimensions[1])
+
+Output:
+200
+50
+
+* Immutability (Type Error): Python prevents item assignment on tuples. Trying to change a tuple item raises a TypeError.
+
+Code Example (Error Handling):
+>>> dimensions = (200, 50)
+>>> dimensions[0] = 250
+
+Output:
+Traceback (most recent call last):
+  File "dimensions.py", line 2, in <module>
+    dimensions[0] = 250
+TypeError: 'tuple' object does not support item assignment
+
+* Single-Element Tuples: To define a tuple with a single element, you must include a trailing comma (e.g., my_tuple = (3,)). Without the comma, 
+  Python evaluates parentheses as a standard mathematical grouping operator rather than a tuple.
+
+
+2. LOOPING THROUGH ALL VALUES IN A TUPLE
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+* Iteration: You can loop over all values in a tuple using a standard for loop, just like with a list.
+
+Code Example:
+>>> dimensions = (200, 50)
+>>> for dimension in dimensions:
+>>>     print(dimension)
+
+Output:
+200
+50
+
+
+3. WRITING OVER A TUPLE
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+* Variable Reassignment: Although individual tuple elements cannot be modified, you can reassign a new tuple to the variable holding the tuple.
+
+Code Example:
+>>> dimensions = (200, 50)
+>>> print("Original dimensions:")
+>>> for dimension in dimensions:
+>>>     print(dimension)
+
+>>> dimensions = (400, 100)
+>>> print("\nModified dimensions:")
+>>> for dimension in dimensions:
+>>>     print(dimension)
+
+Output:
+Original dimensions:
+200
+50
+
+Modified dimensions:
+400
+100
+
+* Best Practice Usage: Compared to lists, tuples are simpler and safer data structures. Use tuples to store a collection of values that should not 
+  be modified throughout the lifecycle of your program.
+
+
+4. TRY IT YOURSELF EXERCISES
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+File naming standard: Use descriptive, lowercase snake_case names (e.g., buffet.py).
+
+- 4-13. Buffet:
+  A buffet-style restaurant offers five basic foods stored in a tuple.
+  1. Store five simple foods in a tuple. Use a for loop to print each food offered.
+  2. Attempt to modify one of the items to confirm Python raises an item assignment TypeError.
+  3. Rewrite the tuple with a revised menu (replacing two items) and use a for loop to print the revised items.
