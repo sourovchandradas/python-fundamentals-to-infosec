@@ -1,1 +1,136 @@
+=====================================================================================================================================================
+                                                        MAKING NUMERICAL LISTS
+=====================================================================================================================================================
 
+OVERVIEW
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+Lists are ideal for storing sets of numbers such as character positions in games, player high scores, and data visualizations (temperatures, 
+distances, population sizes, or coordinates). Python provides built-in tools to manage numerical lists efficiently, even when working 
+with millions of items.
+
+
+1. USING THE RANGE() FUNCTION
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+* Off-by-One Behavior: Python's range() function generates a sequence of numbers starting at the first argument and stopping one value before 
+  the second argument.
+
+Code Example:
+>>> for value in range(1, 5):
+>>>    print(value)
+
+Output:
+1
+2
+3
+4
+
+* Adjusting End Value: To print numbers 1 through 5, adjust the stop value to 6.
+
+Code Example:
+>>> for value in range(1, 6):
+>>>    print(value)
+
+Output:
+1
+2
+3
+4
+5
+
+
+2. USING RANGE() TO MAKE A LIST OF NUMBERS
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+* Converting Range to List: Wrap list() around range() to convert the generated sequence into a list object.
+
+Code Example:
+>>> numbers = list(range(1, 6))
+>>> print(numbers)
+
+Output:
+[1, 2, 3, 4, 5]
+
+* Skipping Numbers (Step Size): Pass a third argument to range() to define the step size added to each value.
+
+Code Example:
+>>> even_numbers = list(range(2, 11, 2))
+>>> print(even_numbers)
+
+Output:
+[2, 4, 6, 8, 10]
+
+* Building Numerical Lists (Square Numbers):
+Code Example:
+>>> squares = []
+>>> for value in range(1, 11):
+>>>     square = value ** 2
+>>>     squares.append(square)
+
+>>> print(squares)
+
+* Concise Version (Omitting Temporary Variable):
+>>> squares = []
+>>> for value in range(1, 11):
+>>>     squares.append(value ** 2)
+
+>>> print(squares)
+
+Output:
+[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+
+
+3. SIMPLE STATISTICS WITH A LIST OF NUMBERS
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+* Built-in Functions: Use min(), max(), and sum() to quickly perform statistical calculations on numerical lists.
+
+Code Example:
+>>> digits = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+
+>>> print(min(digits))
+>>> print(max(digits))
+>>> print(sum(digits))
+
+Output:
+0
+9
+45
+
+
+4. LIST COMPREHENSIONS
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+* Definition: A list comprehension combines the for loop and element creation into a single line, automatically appending each element.
+
+Code Example:
+>>> squares = [value ** 2 for value in range(1, 11)]
+>>> print(squares)
+
+Output:
+[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+
+* Syntax Structure: Open square brackets `[...]`, define the expression (`value ** 2`), write the for loop (`for value in range(1, 11)`), and
+  close brackets. No colon is used at the end of the for statement.
+
+
+5. TRY IT YOURSELF EXERCISES
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+File naming standard: Use descriptive, lowercase snake_case names (e.g., counting_to_twenty.py).
+
+- 4-3. Counting to Twenty:
+  Use a for loop to print the numbers from 1 to 20, inclusive.
+
+- 4-4. One Million:
+  Make a list of the numbers from one to one million, and then use a for loop to print the numbers.
+
+- 4-5. Summing a Million:
+  Make a list of numbers from 1 to 1,000,000, then use min() and max() to verify boundaries, and sum() to calculate total sum.
+
+- 4-6. Odd Numbers:
+  Use the third argument of range() to make a list of odd numbers from 1 to 20. Use a for loop to print each number.
+
+- 4-7. Threes:
+  Make a list of multiples of 3 from 3 to 30. Use a for loop to print the numbers in your list.
+
+- 4-8. Cubes:
+  Make a list of the first 10 cubes (1 through 10) and use a for loop to print each value.
+
+- 4-9. Cube Comprehension:
+  Use a list comprehension to generate a list of the first 10 cubes.
