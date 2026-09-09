@@ -29,18 +29,16 @@ This guide covers:
 A tuple looks just like a list except you use parentheses `()` instead of square brackets `[]`. Once defined, individual elements are accessed using zero-based indexing.
 
 ```python
-dimensions = (200, 50)
+dimensions = (94, 20)
 print(dimensions[0])
 print(dimensions[1])
-
 ```
 
 **Output:**
 
 ```text
-200
-50
-
+94
+20
 ```
 
 ### Immutability & Item Assignment Error
@@ -48,9 +46,8 @@ print(dimensions[1])
 Tuples are immutable, meaning Python prohibits modifying individual elements after creation. Attempting to assign a new value to an index raises a `TypeError`.
 
 ```python
-dimensions = (200, 50)
-dimensions[0] = 250
-
+dimensions = (94, 20)
+dimensions[0] = 00
 ```
 
 **Output:**
@@ -58,9 +55,8 @@ dimensions[0] = 250
 ```text
 Traceback (most recent call last):
   File "dimensions.py", line 2, in <module>
-    dimensions[0] = 250
+    dimensions[0] = 00
 TypeError: 'tuple' object does not support item assignment
-
 ```
 
 > **Note:** Raising an error on item assignment is intentional—it ensures that values defined as fixed dimensions or settings cannot be accidentally mutated elsewhere in your code.
@@ -75,7 +71,6 @@ my_tuple = (3,)
 
 # Incorrect (evaluates to integer 3)
 not_a_tuple = (3)
-
 ```
 
 ---
@@ -85,18 +80,16 @@ not_a_tuple = (3)
 You can iterate through all items in a tuple using a standard `for` loop, exactly as you would with a list.
 
 ```python
-dimensions = (200, 50)
+dimensions = (94, 00)
 for dimension in dimensions:
     print(dimension)
-
 ```
 
 **Output:**
 
 ```text
-200
-50
-
+94
+0
 ```
 
 ---
@@ -106,30 +99,28 @@ for dimension in dimensions:
 Although individual tuple elements cannot be altered, you can assign a completely new tuple to a variable that holds an existing tuple.
 
 ```python
-dimensions = (200, 50)
+dimensions = (94, 20)
 print("Original dimensions:")
 for dimension in dimensions:
     print(dimension)
 
 # Reassigning the variable with a new tuple object
-dimensions = (400, 100)
+dimensions = (94, 00)
 print("\nModified dimensions:")
 for dimension in dimensions:
     print(dimension)
-
 ```
 
 **Output:**
 
 ```text
 Original dimensions:
-200
-50
+94
+20
 
 Modified dimensions:
-400
-100
-
+94
+0
 ```
 
 ### When to Use Tuples vs. Lists
@@ -169,9 +160,9 @@ A buffet-style restaurant offers only five basic foods. Store them in a tuple an
 
 ## Related Topics
 
-* [Introducing Lists](https://www.google.com/search?q=../../03_introducing_list/lists/lists.md) - Working with mutable list collections
-* [Looping Through Lists](https://www.google.com/search?q=../looping_through_an_entire_list/looping_through_an_entire_list.md) - Standard `for` loop iteration syntax
-* [Slicing Lists](https://www.google.com/search?q=../working_with_part_of_a_list/slicing_a_list.md) - Sub-section extraction and independent list copying
+* [Introducing Lists](../../03_introducing_list/lists/lists.md) - Working with mutable list collections
+* [Looping Through Lists](../looping_through_an_entire_list/looping_through_an_entire_list.md) - Standard `for` loop iteration syntax
+* [Slicing Lists](../slicing_a_list/slicing_a_list.md) - Sub-section extraction and independent list copying
 
 ---
 
@@ -182,4 +173,4 @@ A buffet-style restaurant offers only five basic foods. Store them in a tuple an
 
 ---
 
-*Last Updated: 8th September, 2026*
+*Last Updated: 9th September, 2026*
