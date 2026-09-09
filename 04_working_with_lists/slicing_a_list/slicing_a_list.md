@@ -31,14 +31,12 @@ To make a slice, specify the index of the first element and the index of one ite
 ```python
 players = ['charles', 'martina', 'michael', 'florence', 'eli']
 print(players[0:3])
-
 ```
 
 **Output:**
 
 ```text
 ['charles', 'martina', 'michael']
-
 ```
 
 **How It Works:**
@@ -51,14 +49,12 @@ To output a subset from the middle of a list, start at the target element's inde
 ```python
 players = ['charles', 'martina', 'michael', 'florence', 'eli']
 print(players[1:4])
-
 ```
 
 **Output:**
 
 ```text
 ['martina', 'michael', 'florence']
-
 ```
 
 ### Slicing Shortcuts
@@ -76,7 +72,6 @@ print(players[2:])
 
 # 3. Negative Indexing ([-3:]) -> Slices relative to the end of the list
 print(players[-3:])
-
 ```
 
 **Output:**
@@ -85,7 +80,6 @@ print(players[-3:])
 ['charles', 'martina', 'michael', 'florence']
 ['michael', 'florence', 'eli']
 ['michael', 'florence', 'eli']
-
 ```
 
 ---
@@ -100,7 +94,6 @@ players = ['charles', 'martina', 'michael', 'florence', 'eli']
 print("Here are the first three players on my team:")
 for player in players[:3]:
     print(player.title())
-
 ```
 
 **Output:**
@@ -138,7 +131,6 @@ print(my_foods)
 
 print("\nMy friend's favorite foods are:")
 print(friend_foods)
-
 ```
 
 **Output:**
@@ -149,7 +141,6 @@ My favorite foods are:
 
 My friend's favorite foods are:
 ['pizza', 'falafel', 'carrot cake']
-
 ```
 
 #### Step 2: Modifying Both Lists to Prove Independence
@@ -166,7 +157,6 @@ print(my_foods)
 
 print("\nMy friend's favorite foods are:")
 print(friend_foods)
-
 ```
 
 **Output:**
@@ -177,7 +167,6 @@ My favorite foods are:
 
 My friend's favorite foods are:
 ['pizza', 'falafel', 'carrot cake', 'ice cream']
-
 ```
 
 > **Note:** `'cannoli'` only appears in `my_foods`, and `'ice cream'` only appears in `friend_foods`, confirming that two separate list objects exist in memory.
@@ -200,7 +189,6 @@ print(my_foods)
 
 print("\nMy friend's favorite foods are:")
 print(friend_foods)
-
 ```
 
 **Output:**
@@ -211,7 +199,6 @@ My favorite foods are:
 
 My friend's favorite foods are:
 ['pizza', 'falafel', 'carrot cake', 'cannoli', 'ice cream']
-
 ```
 
 > **Note:** Because both variables point to the same memory space, adding an item through either variable mutates the shared list.
@@ -258,7 +245,7 @@ Choose a version of `foods.py` and write two `for` loops to print each list of f
 ## Related Topics
 
 * [Looping Through an Entire List](../looping_through_an_entire_list/looping_through_an_entire_list.md) - Iterating through list items with `for` loops
-* [Numerical Lists](../making_numerical_lists/making_numerical_lists.md) - Generating numerical ranges and statistical evaluations
+* [Making Numerical Lists](../making_numerical_lists/making_numerical_lists.md) - Generating numerical ranges and statistical evaluations
 * [Tuples](../tuples/tuples.md) - Working with immutable list structures
 
 ---
@@ -270,4 +257,4 @@ Choose a version of `foods.py` and write two `for` loops to print each list of f
 
 ---
 
-*Last Updated: 8th September, 2026*
+*Last Updated: 9th September, 2026*
