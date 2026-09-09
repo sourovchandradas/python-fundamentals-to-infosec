@@ -103,7 +103,6 @@ Here are the first three players on my team:
 Charles
 Martina
 Michael
-
 ```
 
 ### Real-World Applications
