@@ -1,1 +1,167 @@
+=====================================================================================================================================================
+                                                                  CONDITIONAL TESTS
+=====================================================================================================================================================
 
+OVERVIEW
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+At the heart of every if statement is an expression that can be evaluated as True or False and is called a conditional test. Python uses the
+values True and False to decide whether the code in an if statement should be executed. If a conditional test evaluates to True, Python executes
+the code following the if statement. If the test evaluates to False, Python ignores the code following the if statement.
+
+
+1. CHECKING FOR EQUALITY AND CASE SENSITIVITY
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+* Equality Operator (==): Most conditional tests compare the current value of a variable to a specific value of interest. Returns True if the
+  values on the left and right side match, and False if they don't.
+* Assignment vs. Comparison: Single equal sign (=) assigns a value ("Set car equal to 'audi'"), whereas double equal sign (==) asks a question
+  ("Is car 'bmw'?").
+
+Code Example:
+>>> car = 'bmw'
+>>> print(car == 'bmw')
+True
+>>> car = 'audi'
+>>> print (car == 'bmw')
+False
+
+* Case Sensitivity: String comparisons are case-sensitive in Python ('Audi' == 'audi' evaluates to False).
+* Case-Insensitive Comparison: Use the .lower() method to compare strings without changing the original variable.
+
+Code Example:
+>>> car = 'Audi'
+>>> print(car == 'audi')
+False
+>>> print(car.lower() == 'audi')
+True
+>>> print(car)
+'Audi'
+
+* Real-World Application: Websites convert new usernames to lowercase before comparing them against existing accounts to prevent duplicate
+  registrations (e.g., rejecting 'John' if 'john' already exists).
+
+
+2. CHECKING FOR INEQUALITY AND NUMERICAL COMPARISONS
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+* Inequality Operator (!=): When you want to determine whether two values are not equal, you can combine an exclamation point and an equal sign
+or inequality operator (!=) . The exclamation point represents not, as it does in many programming languages.
+
+Code Example:
+>>> requested_topping = 'mushrooms'
+>>> if requested_topping != 'anchovies':
+>>>     print("Hold the anchovies!")
+
+Output:
+Hold the anchovies!
+
+* Numerical Tests: Supports testing equality (==), inequality (!=) and mathematical expressions(>, >=, <, <=).
+
+2-1. Equality:
+Code Example:
+>>> age = 17
+>>> age == 17
+True
+
+2-2. Inequality:
+Code Example:
+answer = 20
+if answer != 94:
+    print("That is not the correct answer. Please try again!")
+
+Output:
+That is not the correct answer. Please try again!
+
+2-3. Mathematical Expressions: You can include various mathematical expressions in your conditional statements as well, such as we
+
+>>> age = 19
+>>> age < 21
+True
+>>> age <= 21
+True
+>>> age > 21
+False
+>>> age >= 21
+False
+
+
+3. CHECKING MULTIPLE CONDITIONS (AND / OR)
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+* Logical AND: Evaluates to True only if ALL individual conditions pass. Returns False if any test fails.
+* Readability Tip: Wrapping individual sub-expressions in optional parentheses (e.g., (age_0 >= 21) and (age_1 >= 21)) improves code scanning.
+
+Code Example:
+>>> age_0 = 22
+>>> age_1 = 18
+>>> age_0 >= 21 and age_1 >= 21
+False
+>>> age_1 = 22
+>>> age_0 >= 21 and age_1 >= 21
+True
+
+* Logical OR: Evaluates to True if AT LEAST ONE condition passes. Fails (returns False) only when all conditions fail.
+
+Code Example:
+>>> age_0 = 22
+>>> age_1 = 18
+>>> age_0 >= 21 or age_1 >= 21
+True
+>>> age_0 = 18
+>>> age_0 >= 21 or age_1 >= 21
+False
+
+
+4. CHECKING MEMBERSHIP (IN / NOT IN)
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+* Checking Presence (in): Tests whether a specific item exists in a list or sequence.
+* Real-World Application: Used to verify if a username already exists during registration or if a location exists in a mapping project list.
+
+Code Example:
+>>> requested_toppings = ['mushrooms', 'onions', 'pineapple']
+>>> 'mushrooms' in requested_toppings
+True
+>>> 'pepperoni' in requested_toppings
+False
+
+* Checking Absence (not in): Tests whether an item does NOT exist inside a list or sequence.
+
+Script Example (banned_users.py):
+banned_users = ['andrew', 'carolina', 'david']
+user = 'marie'
+if user not in banned_users:
+    print(user.title() + ", you can post a response if you wish.")
+
+Output:
+Marie, you can post a response if you wish.
+
+
+5. BOOLEAN EXPRESSIONS
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+* Definition: A Boolean expression is another name for a conditional test, returning either True or False.
+* State Tracking: Used to track program states or permissions (e.g., game loop activity or edit access).
+
+Code Example:
+game_active = True
+can_edit = False
+
+
+6. TRY IT YOURSELF EXERCISES
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+File naming standard: Use descriptive, lowercase snake_case names (e.g., conditional_tests.py).
+
+- 5-1. Conditional Tests:
+  Write a series of conditional tests. Print a statement describing each test and your prediction for the results of each test.
+  Example structure:
+    car = 'subaru'
+    print("Is car == 'subaru'? I predict True.")
+    print(car == 'subaru')
+    print("\nIs car == 'audi'? I predict False.")
+    print(car == 'audi')
+  Requirements: Create at least 10 tests (at least 5 evaluating to True and 5 evaluating to False).
+
+- 5-2. More Conditional Tests:
+  Have at least one True and one False result for each of the following:
+  * Tests for equality and inequality with strings
+  * Tests using the lower() function
+  * Numerical tests involving equality and inequality, greater than and less than, greater than or equal to, and less than or equal to
+  * Tests using the and keyword and the or keyword
+  * Test whether an item is in a list
+  * Test whether an item is not in a list
