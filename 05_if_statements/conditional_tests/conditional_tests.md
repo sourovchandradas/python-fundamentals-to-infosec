@@ -69,7 +69,7 @@ Most conditional tests compare the current value of a variable to a specific val
 
 ```python
 car = 'bmw'
-car == 'bmw'
+print(car == 'bmw')
 ```
 
 **Output:**
