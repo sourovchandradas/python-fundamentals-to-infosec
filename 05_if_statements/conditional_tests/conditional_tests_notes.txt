@@ -70,8 +70,10 @@ if answer != 94:
 Output:
 That is not the correct answer. Please try again!
 
-2-3. Mathematical Expressions: You can include various mathematical expressions in your conditional statements as well, such as we
+2-3. Mathematical Expressions: You can include various mathematical comparisons in your conditional statements as well, such as less than(<),
+     less than or equal to(<=), greater than(>) and greater than or equal to(>=). 
 
+Code Example:
 >>> age = 19
 >>> age < 21
 True
@@ -123,7 +125,7 @@ False
 
 * Checking Absence (not in): Tests whether an item does NOT exist inside a list or sequence.
 
-Script Example (banned_users.py):
+Code Example:
 banned_users = ['andrew', 'carolina', 'david']
 user = 'marie'
 if user not in banned_users:
