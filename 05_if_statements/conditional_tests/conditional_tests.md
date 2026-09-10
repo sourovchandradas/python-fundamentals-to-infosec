@@ -362,7 +362,7 @@ Write a series of conditional tests. Print a statement describing each test and 
 Your code should follow this structure:
 
 ```python
-car = 'subaru'
+car = 'mercedes-benz'
 print("Is car == 'mercedes-benz'? I predict True.")
 print(car == 'mercedes-benz')
 
