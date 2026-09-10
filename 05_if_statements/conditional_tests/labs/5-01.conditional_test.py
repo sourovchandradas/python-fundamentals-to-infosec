@@ -1,4 +1,4 @@
-# Exercise 5-1: Conditional Tests
+# Exercise 5-01: Conditional Tests
 
 car = 'mercedes-benz'
 print("Is car == 'mercedes-benz'? I predict True.")
