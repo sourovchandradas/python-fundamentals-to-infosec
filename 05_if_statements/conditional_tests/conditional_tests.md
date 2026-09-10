@@ -68,10 +68,13 @@ Most conditional tests compare the current value of a variable to a specific val
 - **Double Equal Sign (`==`)**: A question that compares values (e.g., "Is the value of `car` equal to `'bmw'`?"). Returns `True` if values on the left and right match, and `False` if they do not match.
 
 ```python
->>> car = 'bmw'
->>> car == 'bmw'
-True
+car = 'bmw'
+car == 'bmw'
+```
 
+**Output:**
+```
+True
 ```
 
 When the value of `car` is anything other than `'bmw'`, the equality test returns `False`:
