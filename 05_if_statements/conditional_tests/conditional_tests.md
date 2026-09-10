@@ -80,10 +80,13 @@ True
 When the value of `car` is anything other than `'bmw'`, the equality test returns `False`:
 
 ```python
->>> car = 'audi'
->>> car == 'bmw'
-False
+car = 'audi'
+print(car == 'bmw')
+```
 
+**Output:**
+```
+False
 ```
 
 > **Note:** Most programming languages use single and double equal signs in this exact manner.
@@ -95,21 +98,27 @@ False
 Testing for equality is **case sensitive** in Python. Values with different capitalization are not considered equal:
 
 ```python
->>> car = 'Audi'
->>> car == 'audi'
-False
+car = 'Audi'
+print(car == 'audi')
+```
 
+**Output:**
+```
+False
 ```
 
 If case matters for your logic, this behavior is advantageous. However, if case does not matter and you simply want to test the value of a variable, you can convert the variable's value to lowercase using `.lower()` before performing the comparison:
 
 ```python
->>> car = 'Audi'
->>> car.lower() == 'audi'
-True
->>> car
-'Audi'
+car = 'Audi'
+print(car.lower() == 'audi')
+print(car)
+```
 
+**Output:**
+```
+True
+Audi
 ```
 
 ### Key Behaviors
@@ -137,14 +146,12 @@ requested_topping = 'mushrooms'
 
 if requested_topping != 'anchovies':
     print("Hold the anchovies!")
-
 ```
 
 **Output:**
 
 ```text
 Hold the anchovies!
-
 ```
 
 **Execution Step:**
@@ -166,29 +173,28 @@ Testing numerical values in Python supports direct equality, inequality, and sta
 Checking if a person is 18 years old:
 
 ```python
->>> age = 18
->>> age == 18
-True
-
+age = 18
+print(age == 18)
 ```
 
+**Output:**
+```
+True
+```
 Testing if a numerical answer is incorrect:
 
-### Example Script: `magic_number.py`
 
 ```python
-answer = 17
+answer = 20
 
-if answer != 42:
+if answer != 94:
     print("That is not the correct answer. Please try again!")
-
 ```
 
 **Output:**
 
 ```text
 That is not the correct answer. Please try again!
-
 ```
 
 Because `answer` (`17`) is not equal to `42`, the test passes (`True`) and the indented block executes.
@@ -198,18 +204,23 @@ Because `answer` (`17`) is not equal to `42`, the test passes (`True`) and the i
 Mathematical comparison operators can detect exact threshold conditions inside `if` statements:
 
 ```python
->>> age = 19
->>> age < 21
-True
->>> age <= 21
-True
->>> age > 21
-False
->>> age >= 21
-False
+age = 19
+print(age < 21)
 
+print(age <= 21)
+
+print(age > 21)
+
+print(age >= 21)
 ```
 
+**Output:**
+```
+True
+True
+False
+False
+```
 ---
 
 ## Checking Multiple Conditions
@@ -224,15 +235,18 @@ To require two conditions to be `True` simultaneously, combine them with `and`.
 * Evaluates to **`False`** if **either test fails or if both tests fail**.
 
 ```python
->>> age_0 = 22
->>> age_1 = 18
->>> age_0 >= 21 and age_1 >= 21
+age_0 = 22
+age_1 = 18
+print (age_0 >= 21 and age_1 >= 21)
+
+age_1 = 22
+age_0 >= 21 and age_1 >= 21
+```
+
+**Output:**
+```
 False
-
->>> age_1 = 22
->>> age_0 >= 21 and age_1 >= 21
 True
-
 ```
 
 **Step-by-Step Logic:**
@@ -251,17 +265,19 @@ The `or` keyword passes when **either or both** individual tests pass.
 * Evaluates to **`False`** **only when both individual tests fail**.
 
 ```python
->>> age_0 = 22
->>> age_1 = 18
->>> age_0 >= 21 or age_1 >= 21
-True
+age_0 = 22
+age_1 = 18
+print(age_0 >= 21 or age_1 >= 21)
 
->>> age_0 = 18
->>> age_0 >= 21 or age_1 >= 21
-False
-
+age_0 = 18
+print(age_0 >= 21 or age_1 >= 21)
 ```
 
+**Output:**
+```
+True
+False
+```
 **Step-by-Step Logic:**
 
 1. First test: `age_0` (`22`) passes `>= 21`, so the overall expression immediately evaluates to `True`.
@@ -279,12 +295,15 @@ Checking whether a list contains a specific value before taking action is common
 To test for item existence in a list, use the keyword **`in`**:
 
 ```python
->>> requested_toppings = ['mushrooms', 'onions', 'pineapple']
->>> 'mushrooms' in requested_toppings
-True
->>> 'pepperoni' in requested_toppings
-False
+requested_toppings = ['mushrooms', 'onions', 'pineapple']
+print('mushrooms' in requested_toppings)
+'pepperoni' in requested_toppings
+```
 
+**Output:**
+```
+True
+False
 ```
 
 This technique allows you to define a list of essential values and easily verify whether a candidate value matches any item in the list.
@@ -305,14 +324,12 @@ user = 'marie'
 
 if user not in banned_users:
     print(user.title() + ", you can post a response if you wish.")
-
 ```
 
 **Output:**
 
 ```text
 Marie, you can post a response if you wish.
-
 ```
 
 Because `'marie'` is not in `banned_users`, the condition evaluates to `True` and the indented message is printed.
@@ -328,7 +345,6 @@ Boolean values are widely used as **flags** to track state or permissions within
 ```python
 game_active = True
 can_edit = False
-
 ```
 
 Boolean flags provide an efficient way to monitor program states (such as whether a game loop is running) or user authorization privileges (such as whether a user can edit web content).
