@@ -363,11 +363,11 @@ Your code should follow this structure:
 
 ```python
 car = 'subaru'
-print("Is car == 'subaru'? I predict True.")
-print(car == 'subaru')
+print("Is car == 'mercedes-benz'? I predict True.")
+print(car == 'mercedes-benz')
 
-print("\nIs car == 'audi'? I predict False.")
-print(car == 'audi')
+print("\nIs car == 'nissan'? I predict False.")
+print(car == 'nissan')
 
 ```
 
