@@ -397,8 +397,8 @@ You don't have to limit your tests to 10. Write more tests and add them to `cond
 
 ## Related Topics
 
-* [Making Numerical Lists](../../04_working_with_lists/making_numerical_lists/making_numerical_lists.md) - 
-* [Tuples](https://www.google.com/search?q=../tuples/tuples.md) - Immutable sequence structures and membership testing
+* [Making Numerical Lists](../../04_working_with_lists/making_numerical_lists/making_numerical_lists.md) - Using range() and working with numbers in loops
+* [Tuples](../tuples/tuples.md) - Immutable sequence structures and membership testing
 * [If Statements](../if_statements/if_statements.md) - Implementing `if-else` and `if-elif-else` control flow blocks
 
 ---
