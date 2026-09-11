@@ -210,9 +210,7 @@ Ordinal numbers indicate their position in a list, such as `1st` or `2nd`. Most 
 
 * [Python Documentation: Truth Value Testing](https://docs.python.org/3/library/stdtypes.html#truth-value-testing)
 * [Real Python: Python's `in` Operator](https://realpython.com/python-in-operator/)
-
-
-*Last Updated: 11th September, 2026* 
+ 
 ---
 
 *Last Updated: 11th September, 2026*
