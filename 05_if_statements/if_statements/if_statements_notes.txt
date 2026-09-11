@@ -1,1 +1,137 @@
+=====================================================================================================================================================
+                                                               IF STATEMENTS
+=====================================================================================================================================================
 
+OVERVIEW
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+When you understand conditional tests, you can start writing if statements. Several different kinds of if statements exist, and your choice
+depends on the number of conditions you need to test.
+
+
+1. SIMPLE IF STATEMENTS
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+* Concept: Has one test and one action.
+* Syntax:
+  if conditional_test:
+      do something
+* Indentation: Indentation plays the same role in the `if statements` as it did in for loops. All indented lines after an if statement will be
+  executed if the test passes (evaluates to True). If False, Python ignores the block.
+
+Code Example:
+>>> age = 19
+>>> if age >= 18:
+>>>     print("You are old enough to vote!")
+>>>     print("Have you registered to vote yet?")
+
+Output:
+You are old enough to vote!
+Have you registered to vote yet?
+
+
+2. IF-ELSE STATEMENTS
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+* Concept: Used when you want to take one action when a conditional test passes and a different action in all other cases (two possible situations).
+
+Code Example:
+>>> age = 17
+>>> if age >= 18:
+>>>    print("You are old enough to vote!")
+>>>    print("Have you registered to vote yet?")
+>>> else:
+>>>    print("Sorry, you are too young to vote.")
+>>>    print("Please register to vote as soon as you turn 18!")
+
+Output:
+Sorry, you are too young to vote.
+Please register to vote as soon as you turn 18!
+
+Note : The if-else structure works well in situations in which you want Python to always execute one of two possible actions. In a simple if-else        chain like this, one of the two actions will always be executed.
+
+3. THE IF-ELIF-ELSE CHAIN
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+* Concept: Used to test more than two possible situations. Python executes ONLY ONE block in an if-elif-else chain. It runs tests in order until
+  one passes, then skips the rest.
+
+Code Example (Determining Admission Price):
+>>> age = 12
+>>> if age < 4:
+>>>    price = 0
+>>> elif age < 18:
+>>>     price = 5
+>>> else:
+>>>     price = 10
+
+>>> print("Your admission cost is $" + str(price) + ".")
+
+Output:
+Your admission cost is $5.
+
+
+4. USING MULTIPLE ELIF BLOCKS & OMITTING THE ELSE BLOCK
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+* Multiple elif Blocks: You can use as many elif blocks as needed (e.g., adding senior discounts).
+* Omitting else: Python does not require an else block at the end. The else block is a catchall that matches anything (including invalid/unexpected data).
+  Using an extra explicit elif (e.g., elif age >= 65:) is often clearer and safer.
+
+Code Example (Omitting else):
+>>> age = 12
+>>> if age < 4:
+>>>    price = 0
+>>> elif age < 18:
+>>>     price = 5
+>>> elif age < 65:
+>>>    price = 10
+>>> elif age >= 65:
+>>>    price = 5
+
+>>> print("Your admission cost is $" + str(price) + ".")
+
+
+5. TESTING MULTIPLE CONDITIONS (INDEPENDENT IF STATEMENTS)
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+* Concept: Use a series of simple independent if statements (no elif or else) when more than one condition could be True and you want to act on
+  EVERY condition that passes.
+
+Code Example (Pizzeria Toppings):
+>>> requested_toppings = ['mushrooms', 'extra cheese']
+
+>>> if 'mushrooms' in requested_toppings:
+>>>     print("Adding mushrooms.")
+>>> if 'pepperoni' in requested_toppings:
+>>>     print("Adding pepperoni.")
+>>> if 'extra cheese' in requested_toppings:
+>>>     print("Adding extra cheese.")
+
+>>> print("\nFinished making your pizza!")
+
+Output:
+Adding mushrooms.
+Adding extra cheese.
+
+Finished making your pizza!
+
+* In summery, if you want only one block of code to run, use an if-elif-else chain. If more than one block of code needs to run, use a series of    independent if statements.
+
+6. TRY IT YOURSELF EXERCISES
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+- 5-3. Alien Colors #1:
+  Create alien_color = 'green' | 'yellow' | 'red'.
+  * Write an if statement to test if alien color is green; if so, print 5 points earned.
+  * Write one version passing the test and one failing (no output).
+
+- 5-4. Alien Colors #2:
+  Write an if-else chain.
+  * If green -> 5 points; otherwise -> 10 points.
+  * Write one version running if block, another running else block.
+
+- 5-5. Alien Colors #3:
+  Convert to if-elif-else chain.
+  * Green -> 5 points, Yellow -> 10 points, Red -> 15 points.
+  * Write three versions testing each color.
+
+- 5-6. Stages of Life:
+  Set variable age and evaluate stage: <2 (baby), 2-3 (toddler), 4-12 (kid), 13-19 (teenager), 20-64 (adult), 65+ (elder).
+
+- 5-7. Favorite Fruit:
+  Create list favorite_fruits with 3 fruits. Write 5 independent if statements checking for specific fruits.
+=====================================================================================================================================================
