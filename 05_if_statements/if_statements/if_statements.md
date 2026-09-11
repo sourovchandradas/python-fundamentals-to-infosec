@@ -12,31 +12,31 @@ When you understand conditional tests, you can start writing **`if` statements**
 ### Architectural Flow: Decision Structure Execution
 
 ```text
-                                             +---------------------------------------+
-                                             |       Evaluate Conditional Test       |
-                                             +---------------------------------------+
-                                                                 |
-                                                                 v
-                                                      /---------------------\
-                                                     /     Is Condition      \
-                                                    <       True or False?    >
-                                                     \                       /
-                                                      \---------------------/
-                                                         /               \
-                                                  True  /                 \  False
-                                                       /                   \
-                                                      v                     v
-                                         +--------------------+   +--------------------+
-                                         |  Execute Indented  |   | Skip Block / Check |
-                                         |   Code Block(s)    |   |  Next elif / else  |
-                                         +--------------------+   +--------------------+
-                                                     |                     |
-                                                     +----------+----------+
-                                                                |
-                                                                v
-                                                     +----------------------+
-                                                     | Continue Execution   |
-                                                     +----------------------+
+                         +---------------------------------------+
+                         |       Evaluate Conditional Test       |
+                         +---------------------------------------+
+                                             |
+                                             v
+                                  /---------------------\
+                                 /     Is Condition      \
+                                <       True or False?    >
+                                 \                       /
+                                  \---------------------/
+                                     /               \
+                              True  /                 \  False
+                                   /                   \
+                                  v                     v
+                       +--------------------+   +--------------------+
+                       |  Execute Indented  |   | Skip Block / Check |
+                       |   Code Block(s)    |   |  Next elif / else  |
+                       +--------------------+   +--------------------+
+                                  |                     |
+                                  +----------+----------+
+                                             |
+                                             v
+                                  +----------------------+
+                                  | Continue Execution   |
+                                  +----------------------+
 ```
 
 This guide covers:
@@ -303,131 +303,37 @@ Because `'mushrooms'` passes first, Python short-circuits the rest of the chain,
 
 ## Exercises
 
-File naming standard: Use descriptive, lowercase snake_case names (e.g., `alien_colors.py`).
-
 ### Exercise 5-3: Alien Colors #1
-
-Create a variable `alien_color` and assign it `'green'`, `'yellow'`, or `'red'`.
-
-```python
-# alien_colors_pass.py
-alien_color = 'green'
-
-if alien_color == 'green':
-    print("You just earned 5 points!")
-```
-
-**Output:**
-```text
-You just earned 5 points!
-```
-
-```python
-# alien_colors_fail.py
-alien_color = 'red'
-
-if alien_color == 'green':
-    print("You just earned 5 points!")
-```
-
-**Output:**
-```text
-(No output produced)
-```
+Imagine an alien was just shot down in a game. Create a variable called `alien_color` and assign it a value of `'green'`, `'yellow'`, or `'red'`.
+- Write an `if` statement to test whether the alien's color is green. If it is, print a message that the player just earned 5 points.
+- Write one version of this program that passes the `if` test and another that fails. (The version that fails will have no output.)
 
 ### Exercise 5-4: Alien Colors #2
-
-Choose a color for an alien and write an `if-else` chain.
-
-```python
-# alien_colors_2.py
-alien_color = 'green'
-
-if alien_color == 'green':
-    print("You earned 5 points for shooting the alien!")
-else:
-    print("You earned 10 points!")
-```
-
-**Output:**
-```text
-You earned 5 points for shooting the alien!
-```
+Choose a color for an alien as you did in Exercise 5-3, and write an `if-else` chain.
+- If the alien's color is green, print a statement that the player just earned 5 points for shooting the alien.
+- If the alien's color isn't green, print a statement that the player just earned 10 points.
+- Write one version of this program that runs the `if` block and another that runs the `else` block.
 
 ### Exercise 5-5: Alien Colors #3
-
-Convert the `if-else` chain into an `if-elif-else` chain.
-
-```python
-# alien_colors_3.py
-alien_color = 'yellow'
-
-if alien_color == 'green':
-    print("You earned 5 points.")
-elif alien_color == 'yellow':
-    print("You earned 10 points.")
-elif alien_color == 'red':
-    print("You earned 15 points.")
-```
-
-**Output:**
-```text
-You earned 10 points.
-```
+Turn your `if-else` chain from Exercise 5-4 into an `if-elif-else` chain.
+- If the alien is green, print a message that the player earned 5 points.
+- If the alien is yellow, print a message that the player earned 10 points.
+- If the alien is red, print a message that the player earned 15 points.
+- Write three versions of this program, making sure each message is printed for the appropriate color alien.
 
 ### Exercise 5-6: Stages of Life
-
-Determine a person's stage of life based on their `age`.
-
-```python
-# stages_of_life.py
-age = 25
-
-if age < 2:
-    print("The person is a baby.")
-elif age < 4:
-    print("The person is a toddler.")
-elif age < 13:
-    print("The person is a kid.")
-elif age < 20:
-    print("The person is a teenager.")
-elif age < 65:
-    print("The person is an adult.")
-else:
-    print("The person is an elder.")
-```
-
-**Output:**
-```text
-The person is an adult.
-```
+Write an `if-elif-else` chain that determines a person's stage of life. Set a value for the variable `age`, and then:
+- If the person is less than 2 years old, print a message that the person is a baby.
+- If the person is at least 2 years old but less than 4, print a message that the person is a toddler.
+- If the person is at least 4 years old but less than 13, print a message that the person is a kid.
+- If the person is at least 13 years old but less than 20, print a message that the person is a teenager.
+- If the person is at least 20 years old but less than 65, print a message that the person is an adult.
+- If the person is age 65 or older, print a message that the person is an elder.
 
 ### Exercise 5-7: Favorite Fruit
-
-Make a list of favorite fruits and write independent `if` checks.
-
-```python
-# favorite_fruit.py
-favorite_fruits = ['mango', 'banana', 'sweet lime']
-
-if 'mango' in favorite_fruits:
-    print("You really like mangoes!")
-if 'apple' in favorite_fruits:
-    print("You really like apples!")
-if 'banana' in favorite_fruits:
-    print("You really like bananas!")
-if 'strawberry' in favorite_fruits:
-    print("You really like strawberries!")
-if 'sweet lime' in favorite_fruits:
-    print("You really like sweet limes!")
-```
-
-**Output:**
-```text
-You really like mangoes!
-You really like bananas!
-You really like sweet limes!
-```
+Make a list of your favorite fruits, and then write a series of independent `if` statements that check for certain fruits in your list.
+- Make a list of your three favorite fruits and call it `favorite_fruits`.
+- Write five `if` statements. Each should check whether a certain kind of fruit is in your list. If the fruit is in your list, the `if` block should print a statement, such as *You really like bananas!*
 
 ---
 
