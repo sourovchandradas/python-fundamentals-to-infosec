@@ -11,39 +11,39 @@ Combining **lists** and **`if` statements** unlocks dynamic decision-making in P
 ### Architectural Flow: List Validation & Processing
 
 ```text
-                     +-----------------------------------+
-                     |      Input List Evaluation        |
-                     +-----------------------------------+
-                                       |
-                                       v
-                            /---------------------\
-                           /    Is List Non-Empty? \
-                          <     (Implicit Boolean)  >
-                           \                       /
-                            \---------------------/
-                               /               \
-                        True  /                 \  False
-                             /                   \
-                            v                     v
-                 +--------------------+   +--------------------+
-                 | Iterate List via   |   | Execute Fallback   |
-                 | 'for' Loop         |   | (else Block)       |
-                 +--------------------+   +--------------------+
-                            |
-                            v
-                 /---------------------\
-                /   Does Item Match     \
-               <   Filter Condition?    >
-                \  (e.g., 'in' lookup)  /
-                 \---------------------/
-                    /               \
-             True  /                 \  False
-                  /                   \
-                 v                     v
-      +--------------------+   +--------------------+
-      |  Special Handling  |   | Standard Processing|
-      |   (if Branch)      |   |   (else Branch)    |
-      +--------------------+   +--------------------+
+                                 +-----------------------------------+
+                                 |      Input List Evaluation        |
+                                 +-----------------------------------+
+                                                   |
+                                                   v
+                                        /---------------------\
+                                       /    Is List Non-Empty? \
+                                      <     (Implicit Boolean)  >
+                                       \                       /
+                                        \---------------------/
+                                           /               \
+                                    True  /                 \  False
+                                         /                   \
+                                        v                     v
+                             +--------------------+   +--------------------+
+                             | Iterate List via   |   | Execute Fallback   |
+                             | 'for' Loop         |   | (else Block)       |
+                             +--------------------+   +--------------------+
+                                      |
+                                      v
+                           /---------------------\
+                          /   Does Item Match     \
+                         <    Filter Condition?    >
+                          \  (e.g., 'in' lookup)  /
+                           \---------------------/
+                              /               \
+                       True  /                 \  False
+                            /                   \
+                           v                     v
+               +--------------------+   +--------------------+
+               |  Special Handling  |   | Standard Processing|
+               |   (if Branch)      |   |   (else Branch)    |
+               +--------------------+   +--------------------+
 ```
 
 ---
