@@ -12,31 +12,31 @@ When you understand conditional tests, you can start writing **`if` statements**
 ### Architectural Flow: Decision Structure Execution
 
 ```text
-                         +---------------------------------------+
-                         |       Evaluate Conditional Test       |
-                         +---------------------------------------+
-                                             |
-                                             v
-                                  /---------------------\
-                                 /     Is Condition      \
-                                <       True or False?    >
-                                 \                       /
-                                  \---------------------/
-                                     /               \
-                              True  /                 \  False
-                                   /                   \
-                                  v                     v
-                       +--------------------+   +--------------------+
-                       |  Execute Indented  |   | Skip Block / Check |
-                       |   Code Block(s)    |   |  Next elif / else  |
-                       +--------------------+   +--------------------+
-                                  |                     |
-                                  +----------+----------+
-                                             |
-                                             v
-                                  +----------------------+
-                                  | Continue Execution   |
-                                  +----------------------+
+                                   +---------------------------------------+
+                                   |       Evaluate Conditional Test       |
+                                   +---------------------------------------+
+                                                       |
+                                                       v
+                                            /---------------------\
+                                           /     Is Condition      \
+                                          <      True or False?     >
+                                           \                       /
+                                            \---------------------/
+                                               /               \
+                                        True  /                 \  False
+                                             /                   \
+                                            v                     v
+                                 +--------------------+   +--------------------+
+                                 |  Execute Indented  |   | Skip Block / Check |
+                                 |   Code Block(s)    |   |  Next elif / else  |
+                                 +--------------------+   +--------------------+
+                                            |                     |
+                                            +----------+----------+
+                                                       |
+                                                       v
+                                            +----------------------+
+                                            | Continue Execution   |
+                                            +----------------------+
 ```
 
 This guide covers:
