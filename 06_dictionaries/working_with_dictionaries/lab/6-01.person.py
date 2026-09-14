@@ -1,6 +1,12 @@
 # 6-01: Person
 
-person = {'first_name': 'Shreyas', 'last_name': 'Iyer', 'age': 32, 'city': 'Mumbai'}   # Declare Dictionaries
+# Declare Dictionaries
+person = {
+  'first_name': 'Shreyas',
+  'last_name': 'Iyer',
+  'age': 32,
+  'city': 'Mumbai'
+}
 
 print(person['first_name'])
 print(person['last_name'])
