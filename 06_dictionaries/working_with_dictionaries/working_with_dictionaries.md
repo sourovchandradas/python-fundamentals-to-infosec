@@ -226,9 +226,9 @@ Create a programming glossary using a dictionary. Store 5 terms as keys and thei
 
 ## Related Topics
 
-- [Lists](../03_lists/lists.md) - Learn about ordered, mutable sequences
-- [If Statements](../05_if_statements/if_statements.md) - Learn how to execute conditional blocks of code
-- [Looping through Dictionaries](../06_dictionaries/looping.md) - Learn how to iterate through keys, values, and items
+- [Lists](../nesting/nesting.md) - Learn about ordered, mutable sequences
+- [If Statements](../../05_if_statements/if_statements/if_statements.md) - Learn how to execute conditional blocks of code
+- [Looping through Dictionaries](../looping_through_a_dictionary/looping_through_a_dictionary.md) - Learn how to iterate through keys, values, and items
 
 ---
 
