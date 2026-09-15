@@ -54,7 +54,6 @@ print(alien_0['color'])   # Output: green
 
 new_points = alien_0['points']
 print(f"You just earned {new_points} points!")
-
 ```
 
 **Output:**
@@ -62,7 +61,6 @@ print(f"You just earned {new_points} points!")
 ```
 green
 You just earned 5 points!
-
 ```
 
 ---
@@ -80,14 +78,12 @@ alien_0['x_position'] = 0
 alien_0['y_position'] = 25
 
 print(alien_0)
-
 ```
 
 **Output:**
 
 ```python
 {'color': 'green', 'points': 5, 'x_position': 0, 'y_position': 25}
-
 ```
 
 ### Starting with an Empty Dictionary
@@ -98,7 +94,6 @@ Empty dictionaries are useful when collecting user input or generating data prog
 alien_0 = {}
 alien_0['color'] = 'green'
 alien_0['points'] = 5
-
 ```
 
 ### Modifying Values
@@ -108,7 +103,6 @@ To change an existing value, reassign a new value to the corresponding key:
 ```python
 alien_0 = {'color': 'green'}
 alien_0['color'] = 'yellow'  # Updates color from green to yellow
-
 ```
 
 ### Practical Example: Tracking Position
@@ -127,14 +121,12 @@ else:
 # Update x_position
 alien_0['x_position'] = alien_0['x_position'] + x_increment
 print(f"New x-position: {alien_0['x_position']}")
-
 ```
 
 **Output:**
 
 ```
 New x-position: 2
-
 ```
 
 ---
@@ -150,14 +142,12 @@ alien_0 = {'color': 'green', 'points': 5}
 
 del alien_0['points']
 print(alien_0)
-
 ```
 
 **Output:**
 
 ```python
 {'color': 'green'}
-
 ```
 
 > **Note:** Deleted key-value pairs are removed permanently.
@@ -180,14 +170,12 @@ favorite_languages = {
 
 sarah_lang = favorite_languages['sarah'].title()
 print(f"Sarah's favorite language is {sarah_lang}.")
-
 ```
 
 **Output:**
 
 ```
 Sarah's favorite language is C.
-
 ```
 
 ---
@@ -212,7 +200,6 @@ print(person['first_name'])
 print(person['last_name'])
 print(person['age'])
 print(person['city'])
-
 ```
 
 ### Exercise 6-2: Favorite Numbers
