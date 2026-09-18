@@ -7,12 +7,14 @@ person_01 = {
         'age': 32,
         'city': 'mumbai',
 }
+
 person_02 = {
         'first_name': 'abhishek',
         'last_name': 'sharma',
         'age': 26,
         'city': 'amritshar',
 }
+
 person_03 = {
         'first_name': 'sanju',
         'last_name': 'samson',
