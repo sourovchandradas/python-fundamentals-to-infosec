@@ -1,6 +1,6 @@
 # Exercise 7-02: Restaurant Seating
 
-# User input
+# User input take
 people_number = input("How many people are in your dinner group? ")
 
 # String input convert into integer value.
