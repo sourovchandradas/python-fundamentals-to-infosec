@@ -1,6 +1,6 @@
 # Exercise 7-8: Deli
 
-#List of sandwich orders
+# List of sandwich orders
 sandwich_orders = ['tuna', 'turkey', 'club', 'chicken', 'veggie']
 
 # Empty list for finished sandwiches
