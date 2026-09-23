@@ -40,11 +40,14 @@ An **integer** is a whole number without a decimal point. Python supports basic 
 Python uses the `**` operator to represent exponents:
 
 ```python
->>> 3 ** 2
+3 ** 2
+3 ** 3
+10 ** 6
+```
+## Outpur
+```python
 9
->>> 3 ** 3
 27
->>> 10 ** 6
 1000000
 ```
 
