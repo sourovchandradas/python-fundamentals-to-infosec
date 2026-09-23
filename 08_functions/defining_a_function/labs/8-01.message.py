@@ -1,4 +1,4 @@
-# Exercise 8-01:
+# Exercise 8-01: Message
 
 def display_message():
     print("In this chapter, I am learning about Python functions!")
