@@ -38,7 +38,6 @@ user_0 = {
 for key, value in user_0.items():
     print(f"\nKey: {key}")
     print(f"Value: {value}")
-
 ```
 
 **Output:**
@@ -52,7 +51,6 @@ Value: enrico
 
 Key: last
 Value: fermi
-
 ```
 
 ### Using Descriptive Variable Names
@@ -69,7 +67,6 @@ favorite_languages = {
 
 for name, language in favorite_languages.items():
     print(f"{name.title()}'s favorite language is {language.title()}.")
-
 ```
 
 **Output:**
@@ -79,7 +76,6 @@ Jen's favorite language is Python.
 Sarah's favorite language is C.
 Edward's favorite language is Ruby.
 Phil's favorite language is Python.
-
 ```
 
 ---
@@ -100,7 +96,6 @@ favorite_languages = {
 
 for name in favorite_languages.keys():
     print(name.title())
-
 ```
 
 **Output:**
@@ -110,7 +105,6 @@ Jen
 Sarah
 Edward
 Phil
-
 ```
 
 **Note:** Looping through keys is the default behavior in Python. Writing `for name in favorite_languages:` gives the exact same result as `for name in favorite_languages.keys():`.
@@ -133,7 +127,6 @@ for name in favorite_languages.keys():
     print(name.title())
     if name in friends:
         print(f"  Hi {name.title()}, I see your favorite language is {favorite_languages[name].title()}!")
-
 ```
 
 **Output:**
@@ -145,7 +138,6 @@ Sarah
 Edward
 Phil
   Hi Phil, I see your favorite language is Python!
-
 ```
 
 ### Checking Key Membership
@@ -155,14 +147,12 @@ The `.keys()` method is also useful for checking whether a specific key exists i
 ```python
 if 'erin' not in favorite_languages.keys():
     print("Erin, please take our poll!")
-
 ```
 
 **Output:**
 
 ```text
 Erin, please take our poll!
-
 ```
 
 ---
@@ -183,7 +173,6 @@ favorite_languages = {
 
 for name in sorted(favorite_languages.keys()):
     print(f"{name.title()}, thank you for taking the poll.")
-
 ```
 
 **Output:**
@@ -193,7 +182,6 @@ Edward, thank you for taking the poll.
 Jen, thank you for taking the poll.
 Phil, thank you for taking the poll.
 Sarah, thank you for taking the poll.
-
 ```
 
 ---
@@ -215,7 +203,6 @@ favorite_languages = {
 print("The following languages have been mentioned:")
 for language in favorite_languages.values():
     print(language.title())
-
 ```
 
 **Output:**
@@ -226,7 +213,6 @@ Python
 C
 Ruby
 Python
-
 ```
 
 ### Removing Duplicates with set()
@@ -244,7 +230,6 @@ favorite_languages = {
 print("The following languages have been mentioned:")
 for language in set(favorite_languages.values()):
     print(language.title())
-
 ```
 
 **Output:**
@@ -254,7 +239,6 @@ The following languages have been mentioned:
 Python
 C
 Ruby
-
 ```
 
 ---
