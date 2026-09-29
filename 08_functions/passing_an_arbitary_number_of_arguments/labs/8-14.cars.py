@@ -10,7 +10,7 @@ def make_car(manufacturer, model, **car_info):
 
 # Example call with required info + two extra details
 car = make_car(
-    'Mercedes-benz',
+    'Mercedes-Benz',
     'C-Class',
     color='Black',
     sunroof=True
