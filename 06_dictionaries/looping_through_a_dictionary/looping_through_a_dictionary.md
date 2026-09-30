@@ -282,7 +282,7 @@ Use the code in `favorite_languages.py`.
 
 ## Related Topics
 
-* [Dictionaries Overview](../06_dictionaries/dictionaries.md) - Basic key-value pair creation and access
+* [Working with dictionaries](../working_with_dictionaries/working_with_dictionaries.md) - Basic key-value pair creation and access
 * [Lists and Sets](https://www.google.com/search?q=../../03_data_structures/sets.md) - Working with sets and unique collections
 * [For Loops](https://www.google.com/search?q=../../04_control_flow/for_loops.md) - Understanding Python iteration logic
 
