@@ -291,7 +291,7 @@ Use the code in `favorite_languages.py`.
 
 ## Additional Resources
 
-* [Python Official Documentation: Dictionaries](https://www.google.com/search?q=https://docs.python.org/3/tutorial/datastructures.html%23dictionaries)
+* [Python Official Documentation: Dictionaries](https://docs.python.org/3/tutorial/datastructures.html)
 * [Real Python: Defining and Using Dictionaries](https://www.google.com/search?q=https://realpython.com/python-dicts/)
 
 ---
