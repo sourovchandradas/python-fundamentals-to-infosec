@@ -284,7 +284,7 @@ Use the code in `favorite_languages.py`.
 
 * [Working with dictionaries](../working_with_dictionaries/working_with_dictionaries.md) - Basic key-value pair creation and access
 * [Nesting](../nesting/nesting.md)
-* [While loops with lists and dictionaries](../../while_loops_with_lists_and_dictionaries/while_loops_with_lists_and_dictionaries.md)
+* [Introducing while loops](../../07_user_input_and_while_loops/introducing_while_loops/introducing_while_loops.md)
 
 ---
 
