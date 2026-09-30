@@ -30,9 +30,9 @@ When you need to work with both the key and its corresponding value, use the `.i
 
 ```python
 user_0 = {
-    'username': 'efermi',
-    'first': 'enrico',
-    'last': 'fermi',
+    'username': 'sourav',
+    'first': 'sourov',
+    'last': 'das',
 }
 
 for key, value in user_0.items():
@@ -44,13 +44,13 @@ for key, value in user_0.items():
 
 ```text
 Key: username
-Value: efermi
+Value: sourav
 
 Key: first
-Value: enrico
+Value: sourov
 
 Key: last
-Value: fermi
+Value: das
 ```
 
 ### Using Descriptive Variable Names
@@ -283,8 +283,9 @@ Use the code in `favorite_languages.py`.
 ## Related Topics
 
 * [Working with dictionaries](../working_with_dictionaries/working_with_dictionaries.md) - Basic key-value pair creation and access
-* [Nesting](../nesting/nesting.md)
-* [Introducing while loops](../../07_user_input_and_while_loops/introducing_while_loops/introducing_while_loops.md)
+* [Nesting](../nesting/nesting.md) - Storing dictionaries inside lists and dictionaries
+* [Introducing while loops](../../07_user_input_and_while_loops/introducing_while_loops/introducing_while_loops.md) - Automating repetition based on user
+  input
 
 ---
 
