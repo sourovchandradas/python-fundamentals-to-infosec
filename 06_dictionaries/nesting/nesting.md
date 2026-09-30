@@ -1,9 +1,7 @@
-=====================================================================================================================================================
-                                                                      NESTING
-=====================================================================================================================================================
+# NESTING in Pyhton
 
-OVERVIEW
------------------------------------------------------------------------------------------------------------------------------------------------------
+## OVERVIEW
+---
 Sometimes you'll want to store a set of dictionaries inside a list, or a list of items inside a dictionary. This is known as nesting. You can nest 
 a list of dictionaries, a list of items inside a dictionary, or even a dictionary inside another dictionary. Nesting allows you to model complex 
 real-world data structures efficiently.
