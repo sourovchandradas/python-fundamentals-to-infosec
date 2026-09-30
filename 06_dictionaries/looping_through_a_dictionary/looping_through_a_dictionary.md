@@ -283,8 +283,8 @@ Use the code in `favorite_languages.py`.
 ## Related Topics
 
 * [Working with dictionaries](../working_with_dictionaries/working_with_dictionaries.md) - Basic key-value pair creation and access
-* [Lists and Sets](https://www.google.com/search?q=../../03_data_structures/sets.md) - Working with sets and unique collections
-* [For Loops](https://www.google.com/search?q=../../04_control_flow/for_loops.md) - Understanding Python iteration logic
+* [Nesting](../nesting/nesting.md)
+* [While loops with lists and dictionaries](../../while_loops_with_lists_and_dictionaries/while_loops_with_lists_and_dictionaries.md)
 
 ---
 
