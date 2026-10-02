@@ -1,1 +1,148 @@
+=====================================================================================================================================================
+                                                        USER INPUT AND WHILE LOOPS
+=====================================================================================================================================================
 
+OVERVIEW
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+Most programs are written to solve an end user's problem, which usually requires getting information from the user. 
+Python uses the input() function to accept user input. Python reads all input as strings, so you will learn how to 
+use int() for numerical values and the modulo operator (%) to work with remainders and numerical logic.
+
+
+1. HOW THE input() FUNCTION WORKS
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+* Definition: The input() function pauses your program and waits for the user to enter some text. Once received, 
+  Python stores that input in a variable for later use.
+
+* Argument: The input() function takes one argument: the prompt (instructions displayed to the user).
+
+Code Example (parrot.py):
+message = input("Tell me something, and I will repeat it back to you: ")
+print(message)
+
+* Execution Flow: When Python runs input(), it displays the prompt and halts execution until the user types a response 
+  and presses Enter. The response is assigned as a string to the variable.
+
+* Note on Text Editors: Sublime Text and some limited IDLE runners cannot accept interactive user input. Programs 
+  requiring input() should be executed directly inside a terminal / command prompt window.
+
+
+2. WRITING CLEAR PROMPTS
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+* Best Practice: Always include a trailing space at the end of your prompt (after colons or question marks) to separate 
+  the prompt text from the user's response.
+
+Code Example (greeter.py):
+name = input("Please enter your name: ")
+print("Hello, " + name + "!")
+
+Output:
+Please enter your name: Eric
+Hello, Eric!
+
+* Multi-line Prompts: When a prompt is too long for a single line, store the message in a variable and build it across 
+  multiple lines using the string addition assignment operator (+=).
+
+Code Example (greeter.py with multi-line prompt):
+prompt = "If you tell us who you are, we can personalize the messages you see."
+prompt += "\nWhat is your first name? "
+
+name = input(prompt)
+print("\nHello, " + name + "!")
+
+Output:
+If you tell us who you are, we can personalize the messages you see.
+What is your first name? Eric
+
+Hello, Eric!
+
+
+3. USING int() TO ACCEPT NUMERICAL INPUT
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+* Problem: Python interprets EVERYTHING entered into the input() function as a string value ('21' instead of 21).
+
+Incorrect Code Example:
+age = input("How old are you? ")
+How old are you? 21
+age >= 18
+
+* Error Output:
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unorderable types: str() >= int()
+
+* Explanation: Python produces a TypeError because it cannot compare a string ('21') directly to an integer value (18).
+
+* Solution: Convert the string representation of the number into an actual integer using the int() function before 
+  performing comparisons or mathematical operations.
+
+Correct Code Example (rollercoaster.py):
+height = input("How tall are you, in inches? ")
+height = int(height)
+
+if height >= 36:
+    print("\nYou're tall enough to ride!")
+else:
+    print("\nYou'll be able to ride when you're a little older.")
+
+Output:
+How tall are you, in inches? 71
+
+You're tall enough to ride!
+
+
+4. THE MODULO OPERATOR (%)
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+* Definition: The modulo operator (%) divides one number by another number and returns ONLY the remainder.
+
+Code Example:
+>>> 4 % 3
+1
+>>> 5 % 3
+2
+>>> 6 % 3
+0
+>>> 7 % 3
+1
+
+* Practical Application (Even vs. Odd Check): When a number is divisible by another, the remainder is 0. 
+  Since even numbers are always divisible by 2, (number % 2 == 0) evaluates to True for even numbers and False for odd numbers.
+
+Code Example (even_or_odd.py):
+number = input("Enter a number, and I'll tell you if it's even or odd: ")
+number = int(number)
+
+if number % 2 == 0:
+    print("\nThe number " + str(number) + " is even.")
+else:
+    print("\nThe number " + str(number) + " is odd.")
+
+Output:
+Enter a number, and I'll tell you if it's even or odd: 42
+
+The number 42 is even.
+
+
+5. ACCEPTING INPUT IN PYTHON 2.7 (Legacy Information)
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+* Python 2.7 Difference: In Python 2.7, use raw_input() to prompt for user input as a string.
+
+* Security/Behavior Difference: Python 2.7 also had an input() function, but it evaluated the user's input as raw 
+  Python code, which presented severe security vulnerabilities. Always use raw_input() if working in Python 2.7 legacy systems.
+
+
+6. TRY IT YOURSELF EXERCISES
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+File naming standard: Use descriptive, lowercase snake_case names (e.g., rental_car.py, restaurant_seating.py, multiples_of_ten.py).
+
+- 7-1. Rental Car:
+  Write a program that asks the user what kind of rental car they would like.
+  Print a message about that car, such as "Let me see if I can find you a Subaru."
+
+- 7-2. Restaurant Seating:
+  Write a program that asks the user how many people are in their dinner group.
+  If the answer is more than eight, print a message saying they'll have to wait for a table.
+  Otherwise, report that their table is ready.
+
+- 7-3. Multiples of Ten:
+  Ask the user for a number, and then report whether the number is a multiple of 10 or not.
