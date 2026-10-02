@@ -271,7 +271,3 @@ The number 50 is a multiple of 10.
 ---
 
 *Last Updated: 2026-10-02*
-
-```
-
-```
