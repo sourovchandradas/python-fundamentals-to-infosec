@@ -4,9 +4,9 @@
 
 OVERVIEW
 -----------------------------------------------------------------------------------------------------------------------------------------------------
-Most programs are written to solve an end user's problem, which usually requires getting information from the user. 
-Python uses the input() function to accept user input. Python reads all input as strings, so you will learn how to 
-use int() for numerical values and the modulo operator (%) to work with remainders and numerical logic.
+Most programs are written to solve an end user's problem, which usually requires getting information from the user. Python uses the input()
+function to accept user input. Python reads all input as strings, so you will learn how to use int() for numerical values and the modulo 
+operator (%) to work with remainders and numerical logic.
 
 
 1. HOW THE input() FUNCTION WORKS
