@@ -267,9 +267,9 @@ Write a loop that never ends, run it, and terminate it using `Ctrl + C`.
 
 ## Related Topics
 
-* [User Input](https://www.google.com/search?q=../user_input/user_input.md) - Accepting input using `input()`
-* [If Statements](https://www.google.com/search?q=../if_statements/if_statements.md) - Conditional decision-making
-* [For Loops](https://www.google.com/search?q=../loops/for_loops.md) - Iterating over sequences and collections
+* [User Input](../how_the_input_function_works/how_the_input_function_works.md) - Accepting input using `input()`
+* [If Statements](../../05_if_statements/if_statements/if_statements.md) - Conditional decision-making
+* [Looping through an entire list](../../04_working_with_lists/lopping_through_an_entire_list/looping_through_an_entire_list.md) - Iterating over sequences and collections
 
 ---
 
