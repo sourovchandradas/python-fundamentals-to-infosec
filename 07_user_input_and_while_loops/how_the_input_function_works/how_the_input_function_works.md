@@ -69,10 +69,15 @@ name = input("Please enter your name: ")
 print("Hello, " + name + "!")
 ```
 
-**Output:**
+**Input**
 
 ```
 Please enter your name: Eric
+```
+
+**Output:**
+
+```
 Hello, Eric!
 ```
 
@@ -88,12 +93,15 @@ name = input(prompt)
 print("\nHello, " + name + "!")
 ```
 
-**Output:**
-
+**Input**
 ```
 If you tell us who you are, we can personalize the messages you see.
 What is your first name? Eric
+```
 
+**Output:**
+
+```
 Hello, Eric!
 ```
 
@@ -138,11 +146,14 @@ else:
     print("\nYou'll be able to ride when you're a little older.")
 ```
 
+**Input**
+```
+How tall are you, in inches? 71
+```
+
 **Output:**
 
 ```
-How tall are you, in inches? 71
-
 You're tall enough to ride!
 ```
 
@@ -155,13 +166,17 @@ You're tall enough to ride!
 The modulo operator (`%`) divides one number by another and returns **only the remainder**:
 
 ```python
->>> 4 % 3
+print(4 % 3)
+print(5 % 3)
+print(6 % 3)
+print(7 % 3)
+```
+
+**Output**
+```
 1
->>> 5 % 3
 2
->>> 6 % 3
 0
->>> 7 % 3
 1
 ```
 
@@ -179,11 +194,13 @@ else:
     print("\nThe number " + str(number) + " is odd.")
 ```
 
-**Output:**
-
+**Input**
 ```
 Enter a number, and I'll tell you if it's even or odd: 42
+```
 
+**Output:**
+```
 The number 42 is even.
 ```
 
@@ -261,9 +278,9 @@ The number 50 is a multiple of 10.
 
 ## Related Topics
 
-* [Variables](https://www.google.com/search?q=../variables/variables.md) - Learn how to store and manage user data
-* [If Statements](https://www.google.com/search?q=../if_statements/if_statements.md) - Make decisions based on user input
-* [While Loops](https://www.google.com/search?q=./while_loops.md) - Run programs continuously using user input
+* [Variables](../../02_variables_and_simple_data_types/variables/variables.md) - Learn how to store and manage user data
+* [If Statements](../../05_if_statements/if_statements/if_statements.md) - Make decisions based on user input
+* [While Loops](../introducing_while_loops/introducing_while_loops.md) - Run programs continuously using user input
 
 ---
 
