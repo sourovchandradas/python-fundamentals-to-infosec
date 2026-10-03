@@ -1,1 +1,171 @@
+=====================================================================================================================================================
+                                                            INTRODUCING WHILE LOOPS
+=====================================================================================================================================================
 
+OVERVIEW
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+While for loops execute a block of code once for each item in a collection, while loops run as long as, or while, 
+a certain condition remains true. They are essential for programs that need to run continuously until a user decides 
+to quit or until a specific event triggers program termination.
+
+
+1. THE WHILE LOOP IN ACTION
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+* Definition: A while loop continuously executes a code block as long as its conditional test evaluates to True.
+
+* Mechanism: The variable controlling the loop must be initialized prior to entering the loop. Inside the loop body, 
+  the variable value must be updated to eventually evaluate to False and terminate execution.
+
+Code Example (counting.py):
+current_number = 1
+while current_number <= 5:
+    print(current_number)
+    current_number += 1
+
+Output:
+1
+2
+3
+4
+5
+
+* Explanation: The variable current_number starts at 1. The loop prints current_number and increments it by 1 using 
+  the += operator (shorthand for current_number = current_number + 1) until current_number exceeds 5.
+
+
+2. LETTING THE USER CHOOSE WHEN TO QUIT
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+* Interactive Programs: By wrapping interactive user prompts inside a while loop, programs can run continuously 
+  until the user enters a designated quit value (e.g., 'quit').
+
+* Initializing Variables: The variable tested in the while condition must be given an initial default value 
+  (such as an empty string "") before entering the loop so Python can evaluate the initial conditional test.
+
+Code Example (parrot.py):
+prompt = "\nTell me something, and I will repeat it back to you:"
+prompt += "\nEnter 'quit' to end the program. "
+
+message = ""
+while message != 'quit':
+    message = input(prompt)
+    if message != 'quit':
+        print(message)
+
+Output:
+Tell me something, and I will repeat it back to you:
+Enter 'quit' to end the program. Hello everyone!
+Hello everyone!
+
+Tell me something, and I will repeat it back to you:
+Enter 'quit' to end the program. quit
+
+
+3. USING A FLAG
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+* Definition: A flag is a boolean variable (True/False) that acts as a central signal to determine whether or not 
+  the entire program should remain active.
+
+* Application: Useful in complex programs (such as games or security applications) where multiple different events 
+  or conditions could cause the program to stop running.
+
+Code Example (parrot.py with flag):
+prompt = "\nTell me something, and I will repeat it back to you:"
+prompt += "\nEnter 'quit' to end the program. "
+
+active = True
+while active:
+    message = input(prompt)
+    
+    if message == 'quit':
+        active = False
+    else:
+        print(message)
+
+* Advantage: Simplifies the main while statement condition down to checking `while active:`. Any event inside 
+  the loop can set `active = False` to terminate execution cleanly.
+
+
+4. USING BREAK TO EXIT A LOOP
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+* Definition: The break statement immediately exits a loop without executing any remaining code inside it, 
+  regardless of the conditional test result.
+
+* Infinite Loops (while True): A loop that starts with `while True` runs indefinitely until a break statement is executed.
+
+Code Example (cities.py):
+prompt = "\nPlease enter the name of a city you have visited:"
+prompt += "\n(Enter 'quit' when you are finished.) "
+
+while True:
+    city = input(prompt)
+    
+    if city == 'quit':
+        break
+    else:
+        print("I'd love to go to " + city.title() + "!")
+
+* Scope: The break statement can be used in both while loops and for loops across Python programs.
+
+
+5. USING CONTINUE IN A LOOP
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+* Definition: The continue statement skips the remainder of the current iteration inside a loop and returns directly 
+  to the beginning of the loop to re-evaluate the conditional test.
+
+Code Example (counting.py - printing odd numbers):
+current_number = 0
+while current_number < 10:
+    current_number += 1
+    if current_number % 2 == 0:
+        continue
+    print(current_number)
+
+Output:
+1
+3
+5
+7
+9
+
+* Explanation: When current_number is divisible by 2 (`current_number % 2 == 0`), continue skips the print() 
+  statement and immediately starts the next loop iteration.
+
+
+6. AVOIDING INFINITE LOOPS
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+* Problem: If a loop's conditional test never evaluates to False, or if it lacks a reachable break statement, 
+  it will execute endlessly in an infinite loop.
+
+Incorrect Code Example (Missing Increment):
+# Infinite loop!
+x = 1
+while x <= 5:
+    print(x)
+    # Missing: x += 1
+
+* Troubleshooting:
+  - If a terminal gets stuck in an infinite loop, press Ctrl + C or close the terminal window.
+  - Always test loops carefully to verify there is at least one execution path that makes the condition False or reaches a break statement.
+
+
+7. TRY IT YOURSELF EXERCISES
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+File naming standard: Use descriptive, lowercase snake_case names (e.g., pizza_toppings.py, movie_tickets.py).
+
+- 7-4. Pizza Toppings:
+  Write a loop that prompts the user to enter a series of pizza toppings until they enter a 'quit' value.
+  As they enter each topping, print a message saying you'll add that topping to their pizza.
+
+- 7-5. Movie Tickets:
+  A movie theater charges different ticket prices depending on a person's age. If a person is under the age of 3, 
+  the ticket is free; if they are between 3 and 12, the ticket is $10; and if they are over age 12, the ticket is $15. 
+  Write a loop in which you ask users their age, and then tell them the cost of their movie ticket.
+
+- 7-6. Three Exits:
+  Write different versions of either Exercise 7-4 or Exercise 7-5 that do each of the following at least once:
+  * Use a conditional test in the while statement to stop the loop.
+  * Use an active variable (flag) to control how long the loop runs.
+  * Use a break statement to exit the loop when the user enters a 'quit' value.
+
+- 7-7. Infinity:
+  Write a loop that never ends, and run it. (To end the loop, press Ctrl + C or close the output window.)
