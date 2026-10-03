@@ -25,7 +25,6 @@ This guide covers:
 6. [Quick Reference](#quick-reference)
 7. [Related Topics](#related-topics)
 8. [Additional Resources](#additional-resources)
-9. [Last Modified](#last-modified)
 
 ---
 
@@ -309,14 +308,6 @@ Write a polling program that asks users: "If you could visit one place in the wo
 
 ---
 
-## Why This Matters
-
-While loops with lists and dictionaries are important because they let programs handle dynamic and changing input. In real applications, data often arrives in batches, users keep entering responses, and list contents need to be updated as work is processed.
-
-Without `while` loops, many real-world tasks would be much harder to implement. They are used in queues, user surveys, filtering logic, data cleanup, and many interactive programs.
-
----
-
 ## Additional Resources
 
 - [Python Official Documentation: Data Structures](https://docs.python.org/3/tutorial/datastructures.html)
@@ -325,17 +316,6 @@ Without `while` loops, many real-world tasks would be much harder to implement. 
 
 ---
 
-## Last Modified
 
-**October 3, 2026**
+*Last Modified: 3rd October, 2026*
 
----
-
-## Key Takeaways
-
-- Use a `while` loop when you need to modify a list while processing it.
-- `while my_list:` is a clean way to keep looping until the list is empty.
-- `while 'value' in my_list:` is useful for removing all duplicate occurrences.
-- `while` loops work well for collecting repeated user input into dictionaries.
-- Truthy and falsy values make list and dictionary checks simple and readable.
-- This pattern is common in real-world data processing and user-driven programs.
