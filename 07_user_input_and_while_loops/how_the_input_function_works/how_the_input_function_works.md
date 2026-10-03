@@ -235,8 +235,8 @@ Write a program that asks the user what kind of rental car they would like. Prin
 **Expected output:**
 
 ```
-What kind of rental car would you like? Subaru
-Let me see if I can find you a Subaru.
+What kind of rental car would you like? mercedes-benz
+Let me see if I can find you a Mercedes-Benz.
 ```
 
 ### Exercise 7-2: Restaurant Seating
@@ -247,7 +247,7 @@ Write a program that asks the user how many people are in their dinner group. If
 
 ```
 How many people are in your dinner group? 9
-I'm sorry, you'll have to wait for a table.
+Your group wait for a table.
 ```
 
 ### Exercise 7-3: Multiples of Ten
