@@ -38,7 +38,6 @@ current_number = 1
 while current_number <= 5:
     print(current_number)
     current_number += 1
-
 ```
 
 **Output:**
@@ -49,7 +48,6 @@ while current_number <= 5:
 3
 4
 5
-
 ```
 
 ### Execution Flow
@@ -76,7 +74,6 @@ while message != 'quit':
     message = input(prompt)
     if message != 'quit':
         print(message)
-
 ```
 
 **Output:**
@@ -88,7 +85,6 @@ Hello everyone!
 
 Tell me something, and I will repeat it back to you:
 Enter 'quit' to end the program. quit
-
 ```
 
 ### Key Considerations
@@ -120,7 +116,6 @@ while active:
         active = False
     else:
         print(message)
-
 ```
 
 ### Benefits of Flags
@@ -147,7 +142,6 @@ while True:
         break
     else:
         print(f"I'd love to go to {city.title()}!")
-
 ```
 
 **Output:**
@@ -159,7 +153,6 @@ I'd love to go to New York!
 
 Please enter the name of a city you have visited:
 (Enter 'quit' when you are finished.) quit
-
 ```
 
 **Note:** A loop starting with `while True` will run indefinitely unless it encounters a `break` statement.
@@ -180,7 +173,6 @@ while current_number < 10:
         continue
 
     print(current_number)
-
 ```
 
 **Output:**
@@ -191,7 +183,6 @@ while current_number < 10:
 5
 7
 9
-
 ```
 
 ---
@@ -210,7 +201,6 @@ x = 1
 while x <= 5:
     print(x)
     # Missing: x += 1
-
 ```
 
 ### Handling an Infinite Loop
@@ -280,4 +270,4 @@ Write a loop that never ends, run it, and terminate it using `Ctrl + C`.
 
 ---
 
-*Last Updated: 2026-10-03*
+*Last Updated: 3rd October, 2026*
