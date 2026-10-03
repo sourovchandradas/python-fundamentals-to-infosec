@@ -2,15 +2,16 @@
 
 ## Overview
 
-While `for` loops are great for going through a sequence, you should never modify a list while looping over it with a `for` loop. Python keeps track of list positions using indexes. If you add or remove items during iteration, the index positions shift and you may skip elements or get unexpected behavior.
+A `for` loop is useful when you want to iterate over a collection without changing it. But when the collection itself must be modified while you are processing it, a `while` loop is often the better choice.
 
-To safely move, remove, or organize items in a collection, use a `while` loop. Combining `while` loops with lists and dictionaries lets you collect, transform, and store user data dynamically.
+This is especially important with lists and dictionaries, which often change as user input is collected, items are validated, or data is moved between containers. In Python, modifying a list during a `for` loop can cause skipped or repeated items because Python keeps track of indexes internally. A `while` loop avoids that problem by checking a condition each time before continuing.
 
 This guide covers:
 - moving items from one list to another
-- removing all duplicate values from a list
+- removing repeated values from a list safely
 - collecting user input in a dictionary
-- using truthiness with collections
+- using truthiness with lists and dictionaries
+- common mistakes to avoid when working with `while` loops
 
 ---
 
@@ -32,18 +33,30 @@ This guide covers:
 
 ### Why Use a while Loop?
 
-Web applications often work with queues. For example, newly registered users may need to move from an `unconfirmed_users` list to a `confirmed_users` list. A `while` loop is a natural choice because it keeps running until a condition is no longer true.
+In many real programs, data is processed in batches. For example, a user registration system may keep a list of unconfirmed users and move each one to a confirmed list after verification. Because the size of the list changes during processing, a `while` loop is a natural fit.
+
+A `while` loop keeps running as long as a condition is true. This makes it ideal when the loop depends on the current state of a list rather than a fixed number of iterations.
 
 ### Truthy / Falsy List Evaluation
 
-In Python, an empty list `[]` evaluates to `False`, while a list with elements evaluates to `True`. That means this works as expected:
+In Python, empty collections are considered falsy, while non-empty collections are truthy. This means:
 
 ```python
 while unconfirmed_users:
     ...
 ```
 
-The loop continues while the list still has items.
+works because the loop runs only while the list still contains items. When the list becomes empty, the condition becomes `False` and the loop ends.
+
+This idea also applies to dictionaries:
+
+```python
+responses = {}
+while responses:
+    ...
+```
+
+The loop runs only while the dictionary has entries.
 
 ### Implementation Example
 
@@ -92,13 +105,23 @@ Alice
 
 The `.pop()` method removes the last item from a list and returns it. This is called LIFO behavior (Last In, First Out). It is useful when you want to process the newest item first.
 
+For example, if a user queue is stored in a list, popping the last item often means the most recently added item is processed next.
+
 ---
 
 ## Removing All Instances of Specific Values from a List
 
 ### Limitation of `list.remove()`
 
-The `remove()` method removes only the first matching value. If a list contains repeated values, one call will remove only one instance.
+The `remove()` method removes only the first matching value. If a list contains repeated values, one call removes only one instance.
+
+```python
+pets = ['dog', 'cat', 'dog', 'goldfish', 'cat', 'rabbit', 'cat']
+pets.remove('cat')
+print(pets)
+```
+
+This would leave one or more `'cat'` values still in the list.
 
 ### Solution Strategy
 
@@ -109,7 +132,7 @@ while 'value' in my_list:
     my_list.remove('value')
 ```
 
-This continues until no more matching values remain.
+This continues until no matching values remain.
 
 ### Implementation Example
 
@@ -138,7 +161,9 @@ Updated list:
 
 ### Why This Works
 
-Each time the loop runs, Python checks whether `'cat'` still exists in the list. If yes, it removes one instance. It continues until no `'cat'` remains.
+Each time the loop runs, Python checks whether `'cat'` still exists in the list. If it does, the code removes one instance. The loop keeps running until no `'cat'` values remain.
+
+This pattern is helpful when cleaning data, removing rejected values, or filtering user submissions.
 
 ---
 
@@ -147,6 +172,8 @@ Each time the loop runs, Python checks whether `'cat'` still exists in the list.
 ### Mapping Linked Inputs
 
 A `while` loop can gather multiple related pieces of input and store them as key-value pairs in a dictionary.
+
+This is useful for creating a survey, poll, or record of user responses. Instead of storing a single answer in a variable, you can save each answer under a unique key.
 
 ### Implementation Example
 
@@ -198,19 +225,22 @@ This pattern is perfect for:
 - survey systems
 - short registrations
 - building dictionaries from repeated user input
+- storing dynamic user-generated data
+
+A dictionary lets you map one piece of information to another. In this case, the person's name is the key and their mountain choice is the value.
 
 ---
 
 ## Common Mistakes
 
-### Mistake 1: Modifying a List While Using a for Loop
+### Mistake 1: Modifying a List While Using a `for` Loop
 
 ```python
 for item in items:
     items.remove(item)
 ```
 
-This is unsafe because the list is changing while Python is still iterating over it.
+This is unsafe because the list is changing while Python is still iterating over it. The loop may skip items or behave unexpectedly.
 
 ### Mistake 2: Using `remove()` Without a Loop
 
@@ -218,7 +248,7 @@ This is unsafe because the list is changing while Python is still iterating over
 items.remove('cat')
 ```
 
-This removes only the first match. If the list contains multiple `'cat'` entries, you need a `while` loop.
+This removes only the first match. If the list contains multiple `'cat'` entries, you need a `while` loop to remove all of them.
 
 ### Mistake 3: Forgetting to Update the Loop Condition
 
@@ -229,6 +259,16 @@ while polling_active:
 
 If you forget to change `polling_active` to `False`, the loop will run forever.
 
+### Mistake 4: Forgetting to Change the Loop Variable
+
+```python
+x = 1
+while x <= 5:
+    print(x)
+```
+
+This creates an infinite loop because `x` never changes. In most loops, you need to update the variable inside the loop so the condition eventually becomes `False`.
+
 ---
 
 ## Exercises
@@ -237,15 +277,15 @@ Use descriptive lowercase names with underscores, such as `deli.py`.
 
 ### Exercise 7-8: Deli
 
-Make a list called `sandwich_orders` and fill it with sandwiches such as `'tuna'`, `'turkey'`, and `'cheese'`. Make an empty list called `finished_sandwiches`. Use a `while` loop to process each order and move it to the finished list. Print a message for each sandwich as it is completed, then print a summary of the finished sandwiches.
+Make a list called `sandwich_orders` and fill it with sandwiches such as `'tuna'`, `'turkey'`, and `'cheese'`. Make an empty list called `finished_sandwiches`. Use a `while` loop to process each sandwich order, moving each item from `sandwich_orders` to `finished_sandwiches` as it is completed.
 
 ### Exercise 7-9: No Pastrami
 
-Use the `sandwich_orders` list from Exercise 7-8. Ensure `'pastrami'` appears at least three times in the list. Add code at the start to print a message saying the deli has run out of pastrami. Then use `while 'pastrami' in sandwich_orders:` to remove all occurrences of `'pastrami'`. Make sure no pastrami sandwiches are processed or added to `finished_sandwiches`.
+Use the `sandwich_orders` list from Exercise 7-8. Ensure `'pastrami'` appears at least three times in the list. Add code at the start to print a message saying the deli has run out of pastrami. Then use a `while` loop to remove all occurrences of `'pastrami'` from `sandwich_orders`.
 
 ### Exercise 7-10: Dream Vacation
 
-Write a polling program that asks users: "If you could visit one place in the world, where would you go?" Store the results in a dictionary where the name is the key and the destination is the value. Include a prompt to continue or stop entering responses. Then print a complete summary of all the results.
+Write a polling program that asks users: "If you could visit one place in the world, where would you go?" Store the results in a dictionary where the name is the key and the destination is the value. Keep asking until the user decides to stop.
 
 ---
 
@@ -257,6 +297,7 @@ Write a polling program that asks users: "If you could visit one place in the wo
 | Move items between lists | `item = source.pop(); destination.append(item)` | Transfers data from one list to another |
 | Remove all duplicates of one value | `while 'item' in my_list: my_list.remove('item')` | Deletes every matching value |
 | Save user input in a dictionary | `responses[name] = answer` | Stores key-value data from repeated prompts |
+| Check if a dictionary is non-empty | `while responses:` | Continues while the dictionary has entries |
 
 ---
 
@@ -270,7 +311,9 @@ Write a polling program that asks users: "If you could visit one place in the wo
 
 ## Why This Matters
 
-While loops with lists and dictionaries are important because they let programs handle dynamic and changing input. In real applications, users often keep entering data, data queues keep changing, and lists need to be updated during processing. This is a core pattern in automation, data entry, and user-driven systems.
+While loops with lists and dictionaries are important because they let programs handle dynamic and changing input. In real applications, data often arrives in batches, users keep entering responses, and list contents need to be updated as work is processed.
+
+Without `while` loops, many real-world tasks would be much harder to implement. They are used in queues, user surveys, filtering logic, data cleanup, and many interactive programs.
 
 ---
 
@@ -294,4 +337,5 @@ While loops with lists and dictionaries are important because they let programs 
 - `while my_list:` is a clean way to keep looping until the list is empty.
 - `while 'value' in my_list:` is useful for removing all duplicate occurrences.
 - `while` loops work well for collecting repeated user input into dictionaries.
+- Truthy and falsy values make list and dictionary checks simple and readable.
 - This pattern is common in real-world data processing and user-driven programs.
