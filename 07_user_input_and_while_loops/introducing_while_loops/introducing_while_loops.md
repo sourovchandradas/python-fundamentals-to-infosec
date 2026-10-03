@@ -296,9 +296,9 @@ KeyboardInterrupt
 
 ## Related Topics
 
-* [User Input](../how_the_input_function_works/how_the_input_function_works.md) - Accepting input using `input()`
-* [if Statements](../../05_if_statements/if_statements/if_statements.md) - Conditional decision-making
-* [Looping through an entire list](../../04_working_with_lists/looping_through_an_entire_list/looping_through_an_entire_list.md) - Iterating over sequences and collections
+* [User Input](../how_the_input_function_works/how_the_input_function_works.md)
+* [if Statements](../../05_if_statements/if_statements/if_statements.md)
+* [Looping through an entire list](../../04_working_with_lists/looping_through_an_entire_list/looping_through_an_entire_list.md)
 
 ---
 
