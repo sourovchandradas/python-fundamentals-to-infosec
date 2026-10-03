@@ -248,7 +248,7 @@ Sarah would like to visit Japan.
 
 ## Additional Resources
 
-* [Python Official Documentation: Data Structures](https://www.google.com/search?q=https://docs.python.org/3/tutorial/datastructures.html)
+* [Python Official Documentation: Data Structures](https://docs.python.org/3/tutorial/datastructures.html)
 * [Real Python: Python's list.remove() and list.pop()](https://www.google.com/search?q=https://realpython.com/python-pop-list-element/)
 
 ---
