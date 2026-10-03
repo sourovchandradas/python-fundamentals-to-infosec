@@ -276,7 +276,7 @@ Write a loop that never ends, run it, and terminate it using `Ctrl + C`.
 ## Additional Resources
 
 * [Python Official Documentation: while Statements](https://docs.python.org/3/reference/compound_stmts.html)
-* [Real Python: Python "while" Loops](https://www.google.com/search?q=https://realpython.com/python-while-loop/)
+* [Real Python: Python "while" Loops](https://realpython.com/python-while-loop/)
 
 ---
 
