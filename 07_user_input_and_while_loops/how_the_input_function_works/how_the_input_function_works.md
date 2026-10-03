@@ -40,11 +40,15 @@ The `input()` function pauses your program and waits for the user to enter text 
 message = input("Tell me something, and I will repeat it back to you: ")
 print(message)
 ```
+**Input**
+
+```
+Tell me something, and I will repeat it back to you: Hello everyone!
+```
 
 **Output:**
 
 ```
-Tell me something, and I will repeat it back to you: Hello everyone!
 Hello everyone!
 ```
 
