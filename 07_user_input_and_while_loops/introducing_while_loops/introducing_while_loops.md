@@ -261,7 +261,8 @@ Write different versions of Exercise 7-4 or 7-5 that achieve termination by:
 2. Using an `active` variable (flag).
 3. Using a `break` statement.
 
-**Expected Output**
+**Expected Output:**
+
 (The runtime output remains identical to Exercise 7-4 or 7-5 depending on the version implemented, demonstrating different loop control mechanisms under the hood.)
 
 ### Exercise 7-7: Infinity
