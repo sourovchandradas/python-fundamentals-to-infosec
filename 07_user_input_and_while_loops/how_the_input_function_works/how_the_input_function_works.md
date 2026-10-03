@@ -286,8 +286,8 @@ The number 50 is a multiple of 10.
 
 ## Additional Resources
 
-* [Python Official Documentation: input()](https://www.google.com/search?q=https://docs.python.org/3/library/functions.html%23input)
-* [Real Python: Basic Input and Output](https://www.google.com/search?q=https://realpython.com/python-input-output/)
+* [Python Official Documentation: input()](https://docs.python.org/3/tutorial/inputoutput.html)
+* [Real Python: Basic Input and Output](https://realpython.com/python-input-output/)
 
 ---
 
