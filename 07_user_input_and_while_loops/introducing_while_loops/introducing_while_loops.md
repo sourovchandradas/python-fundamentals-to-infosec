@@ -218,6 +218,17 @@ File naming convention: Use descriptive, lowercase names with underscores (e.g.,
 
 Write a loop that prompts the user to enter a series of pizza toppings until they enter a `'quit'` value. As each topping is entered, print a message stating that the topping will be added to their pizza.
 
+**Expected Output**
+```
+Enter a pizza topping (or 'quit' to finish): pepperoni
+I'll add pepperoni to your pizza!
+
+Enter a pizza topping (or 'quit' to finish): mushrooms
+I'll add mushrooms to your pizza!
+
+Enter a pizza topping (or 'quit' to finish): quit
+```
+
 ### Exercise 7-5: Movie Tickets
 
 A movie theater charges different ticket prices depending on age:
@@ -225,6 +236,20 @@ A movie theater charges different ticket prices depending on age:
 * Under 3: Free
 * Age 3 to 12: $10
 * Over 12: $15
+
+**Expected Output**
+```
+Please enter your age (or 'quit' to exit): 2
+Your ticket is free!
+
+Please enter your age (or 'quit' to exit): 8
+Your ticket is $10.
+
+Please enter your age (or 'quit' to exit): 25
+Your ticket is $15.
+
+Please enter your age (or 'quit' to exit): quit
+```
 
 Write a loop that prompts users for their age and displays their ticket cost.
 
@@ -236,10 +261,23 @@ Write different versions of Exercise 7-4 or 7-5 that achieve termination by:
 2. Using an `active` variable (flag).
 3. Using a `break` statement.
 
+**Expected Output**
+(The runtime output remains identical to Exercise 7-4 or 7-5 depending on the version implemented, demonstrating different loop control mechanisms under the hood.)
+
 ### Exercise 7-7: Infinity
 
 Write a loop that never ends, run it, and terminate it using `Ctrl + C`.
 
+**Expected Output**
+```
+Looping forever...
+Looping forever...
+Looping forever...
+^C
+Traceback (most recent call last):
+  File "infinity.py", line 2, in <module>
+KeyboardInterrupt
+```
 ---
 
 ## Quick Reference
