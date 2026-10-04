@@ -19,7 +19,8 @@ This guide covers:
 2. [Passing Information to a Function](#passing-information-to-a-function)
 3. [Arguments and Parameters](#arguments-and-parameters)
 4. [Exercises](#exercises)
-
+5. [Related Topics](#related-topics)
+6. [Additional Resources](#additional-resources)
 ---
 
 ## Defining a Function
