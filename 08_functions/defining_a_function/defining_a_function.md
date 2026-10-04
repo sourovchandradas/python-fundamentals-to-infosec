@@ -155,9 +155,9 @@ One of my favorite books is Alice in Wonderland.
 
 ## Related Topics
 
-* [While Loops](https://www.google.com/search?q=../while_loops/while_loops.md) - Repetitive execution and control flow
-* [Dictionaries](https://www.google.com/search?q=../dictionaries/dictionaries.md) - Storing key-value pairs
-* [Passing Arguments](https://www.google.com/search?q=./passing_arguments.md) - Positional and keyword arguments
+* [Introducing while Loops](../../07_user_input_and_while_loops/introducing_while_loops/introducing_while_loops.md)
+* [Dictionaries](../../06_dictionaries/working_with_dictionaries/working_with_dictionaries.md)
+* [Passing Arguments](../passing_arguments/passing_arguments.md)
 
 ---
 
