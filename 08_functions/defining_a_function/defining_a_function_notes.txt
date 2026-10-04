@@ -4,8 +4,8 @@
 
 OVERVIEW
 -----------------------------------------------------------------------------------------------------------------------------------------------------
-Functions are named blocks of code designed to perform one specific job. When you want to execute a task defined inside a function, you call 
-that function by name. Writing functions allows you to divide your program into reusable, organized components that execute whenever invoked.
+Functions are named blocks of code designed to perform one specific job. When you want to execute a task defined inside a function, you call that
+function by name. Writing functions allows you to divide your program into reusable, organized components that execute whenever invoked.
 
 
 1. DEFINING A FUNCTION
@@ -13,8 +13,8 @@ that function by name. Writing functions allows you to divide your program into 
 * Definition Breakdown:
   - Keyword `def`: Informs Python that you are defining a new function.
   - Function Name: Placed immediately after `def` (e.g., `greet_user`), telling Python the name of the function.
-  - Parentheses `()`: Hold any information the function needs to perform its task. Even if the function requires no information, 
-    the parentheses are strictly required.
+  - Parentheses `()`: Hold any information the function needs to perform its task. Even if the function requires no information, the parentheses
+    are strictly required.
   - Colon `:`: The function definition line must end with a colon.
   - Function Body: Any indented lines of code that follow `def greet_user():` form the body of the function.
 
@@ -81,7 +81,7 @@ Hello, Sarah!
   - When calling `greet_user('jesse')`, the argument `'jesse'` is passed to the function call and stored in the parameter `username`.
 
 * Terminology Note:
-  - Parameters and arguments are frequently spoken of interchangeably in casual programming context. You may occasionally see variables in a 
+  - Parameters and arguments are frequently spoken of interchangeably in casual programming context. You may occasionally see variables in a
     function definition referred to as arguments, or variables in a function call referred to as parameters.
 
 
@@ -90,8 +90,8 @@ Hello, Sarah!
 File naming standard: Use descriptive, lowercase snake_case names (e.g., message.py, favorite_book.py).
 
 - 8-1. Message:
-  Write a function called `display_message()` that prints one sentence telling everyone what you are learning about in this chapter. 
-  Call the function, and make sure the message displays correctly.
+  Write a function called `display_message()` that prints one sentence telling everyone what you are learning about in this chapter. Call the
+  function, and make sure the message displays correctly.
 
 - 8-2. Favorite Book:
   Write a function called `favorite_book()` that accepts one parameter, `title`. The function should print a message, such as "One of my favorite
