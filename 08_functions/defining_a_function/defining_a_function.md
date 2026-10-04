@@ -23,7 +23,6 @@ This guide covers:
 6. [Quick Reference](#quick-reference)
 7. [Related Topics](#related-topics)
 8. [Additional Resources](#additional-resources)
-9. [Last Modified](#last-modified)
 
 ---
 
@@ -212,9 +211,7 @@ Functions are one of the most important ideas in Python. They allow you to break
 
 ---
 
-## Last Modified
-
-**October 4, 2026**
+*Last Updated : 4th October, 2026*
 
 ---
 
