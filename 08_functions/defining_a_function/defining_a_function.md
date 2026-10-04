@@ -163,7 +163,7 @@ One of my favorite books is Alice in Wonderland.
 
 ## Additional Resources
 
-* [Python Official Documentation: Defining Functions](https://www.google.com/search?q=https://docs.python.org/3/tutorial/controlflow.html%23defining-functions)
+* [Python Official Documentation: Defining Functions](https://docs.python.org/3/tutorial/controlflow.html)
 * [Real Python: Defining Your Own Python Function](https://www.google.com/search?q=https://realpython.com/defining-your-own-python-function/)
 
 ---
