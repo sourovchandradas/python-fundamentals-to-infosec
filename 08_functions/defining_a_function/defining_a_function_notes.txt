@@ -1,1 +1,98 @@
+=====================================================================================================================================================
+                                                                 DEFINING A FUNCTION
+=====================================================================================================================================================
 
+OVERVIEW
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+Functions are named blocks of code designed to perform one specific job. When you want to execute a task defined inside a function, you call 
+that function by name. Writing functions allows you to divide your program into reusable, organized components that execute whenever invoked.
+
+
+1. DEFINING A FUNCTION
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+* Definition Breakdown:
+  - Keyword `def`: Informs Python that you are defining a new function.
+  - Function Name: Placed immediately after `def` (e.g., `greet_user`), telling Python the name of the function.
+  - Parentheses `()`: Hold any information the function needs to perform its task. Even if the function requires no information, 
+    the parentheses are strictly required.
+  - Colon `:`: The function definition line must end with a colon.
+  - Function Body: Any indented lines of code that follow `def greet_user():` form the body of the function.
+
+* Docstrings:
+  - A comment enclosed in triple quotes (`"""..."""`) placed at the beginning of the function body.
+  - It describes what the function does.
+  - Python automatically searches for docstrings when generating documentation for functions in your programs.
+
+Code Example (greeter.py):
+>>> def greet_user():
+>>>     """Display a simple greeting."""
+>>>     print("Hello!")
+
+>>> greet_user()
+
+Output:
+Hello!
+
+* Function Execution & Calling:
+  - Defining a function only establishes its structure; it does not execute the code inside it.
+  - To execute the function, you must call it by entering the function name followed by parentheses: `greet_user()`.
+  - Calling the function instructs Python to execute the indented lines in its body, printing "Hello!".
+
+
+2. PASSING INFORMATION TO A FUNCTION
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+* Dynamic Inputs:
+  - A function can be modified to accept specific data so it can customize its response each time it is executed.
+
+* Mechanism:
+  - By entering a variable name (e.g., `username`) inside the parentheses of the function definition header (`def greet_user(username):`), 
+    you allow the function to accept any value you specify.
+  - The function now expects you to provide a value for `username` every time it is called.
+
+Code Example:
+>>> def greet_user(username):
+>>>     """Display a simple greeting."""
+>>>     print("Hello, " + username.title() + "!")
+
+>>> greet_user('jesse')
+>>> greet_user('sarah')
+
+Output:
+Hello, Jesse!
+Hello, Sarah!
+
+* Behavior:
+  - Calling `greet_user('jesse')` passes `'jesse'` to the function, which is assigned to `username` and formatted as "Hello, Jesse!".
+  - Calling `greet_user('sarah')` passes `'sarah'`, outputting "Hello, Sarah!".
+  - You can call the function as many times as needed with different inputs to produce predictable, custom output every time.
+
+
+3. ARGUMENTS AND PARAMETERS
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+* Parameter:
+  - A variable listed inside the parentheses of a function's definition header (e.g., `username`).
+  - It represents a piece of information the function requires to complete its task.
+
+* Argument:
+  - A concrete value passed from a function call into the function (e.g., `'jesse'`).
+  - It is the specific data placed in parentheses when calling the function.
+
+* Execution Logic:
+  - When calling `greet_user('jesse')`, the argument `'jesse'` is passed to the function call and stored in the parameter `username`.
+
+* Terminology Note:
+  - Parameters and arguments are frequently spoken of interchangeably in casual programming context. You may occasionally see variables in a 
+    function definition referred to as arguments, or variables in a function call referred to as parameters.
+
+
+4. TRY IT YOURSELF EXERCISES
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+File naming standard: Use descriptive, lowercase snake_case names (e.g., message.py, favorite_book.py).
+
+- 8-1. Message:
+  Write a function called `display_message()` that prints one sentence telling everyone what you are learning about in this chapter. 
+  Call the function, and make sure the message displays correctly.
+
+- 8-2. Favorite Book:
+  Write a function called `favorite_book()` that accepts one parameter, `title`. The function should print a message, such as "One of my favorite
+  books is Alice in Wonderland." Call the function, making sure to include a book title as an argument in the function call.
