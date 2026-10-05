@@ -214,7 +214,7 @@ Write a function that accepts a list of items a person wants on a sandwich. The 
 
 Start with a copy of `user_profile.py`. Build a profile of yourself by calling `build_profile()`, using your first and last names and three other key-value pairs that describe you.
 
-**Solution:** [Exercise 8-13: User Profile](labs/8-12.user_profile.py)
+**Solution:** [Exercise 8-13: User Profile](labs/8-13.user_profile.py)
 
 ### Exercise 8-14: Cars
 
@@ -226,7 +226,7 @@ car = make_car('subaru', 'outback', color='blue', tow_package=True)
 
 Print the returned dictionary to make sure all information was stored correctly.
 
-**Solution:** [Exercise 8-14: Cars](labs/8-12.cars.py)
+**Solution:** [Exercise 8-14: Cars](labs/8-14.cars.py)
 
 ---
 
