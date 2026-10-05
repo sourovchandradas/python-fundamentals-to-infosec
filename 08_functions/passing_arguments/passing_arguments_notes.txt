@@ -1,1 +1,166 @@
+=====================================================================================================================================================
+                                                                 PASSING ARGUMENTS
+=====================================================================================================================================================
 
+OVERVIEW
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+Because a function definition can have multiple parameters, a function call may need multiple arguments. Arguments can be passed to functions 
+in a number of ways: using positional arguments (matched in the same order the parameters were written), keyword arguments (where each argument 
+consists of a variable name and a value), default values, and lists or dictionaries of values.
+
+
+1. POSITIONAL ARGUMENTS
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+* Definition: When calling a function, Python matches each argument in the function call with a parameter in the function definition based on the 
+  order of arguments provided. Values matched this way are called positional arguments.
+
+Code Example (pets.py):
+def describe_pet(animal_type, pet_name):
+    """Display information about a pet."""
+    print("\nI have a " + animal_type + ".")
+    print("My " + animal_type + "'s name is " + pet_name.title() + ".")
+
+describe_pet('hamster', 'harry')
+
+Output:
+I have a hamster.
+My hamster's name is Harry.
+
+* Multiple Function Calls:
+  You can call a function as many times as needed. Describing a second, different pet requires just one more call to describe_pet(). 
+  Calling a function multiple times is very efficient because the code is written once in the function, allowing new items to be described 
+  in just one line.
+
+Code Example:
+describe_pet('hamster', 'harry')
+describe_pet('dog', 'willie')
+
+Output:
+I have a hamster.
+My hamster's name is Harry.
+
+I have a dog.
+My dog's name is Willie.
+
+* Order Matters in Positional Arguments:
+  Mixing up argument order produces unexpected results because Python matches values strictly by position.
+
+Code Example (incorrect order):
+describe_pet('harry', 'hamster')
+
+Output:
+I have a harry.
+My harry's name is Hamster.
+
+
+2. KEYWORD ARGUMENTS
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+* Definition: A keyword argument is a name-value pair passed directly to a function call. You explicitly associate the parameter name and value 
+  within the argument, eliminating positional confusion.
+
+* Benefits:
+  - Frees you from having to worry about correct argument ordering in function calls.
+  - Clarifies the role of each value in the function call.
+
+Code Example:
+def describe_pet(animal_type, pet_name):
+    """Display information about a pet."""
+    print("\nI have a " + animal_type + ".")
+    print("My " + animal_type + "'s name is " + pet_name.title() + ".")
+
+describe_pet(animal_type='hamster', pet_name='harry')
+describe_pet(pet_name='harry', animal_type='hamster')
+
+* Note: When using keyword arguments, be sure to use the exact names of the parameters defined in the function's definition.
+
+
+3. DEFAULT VALUES
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+* Concept: When writing a function, you can define a default value for each parameter. If an argument for a parameter is provided in the 
+  function call, Python uses that argument value. If omitted, Python uses the parameter's default value.
+
+* Parameter Order Requirement:
+  When using default values, any parameter with a default value MUST be listed after all parameters that do NOT have default values. 
+  Because Python interprets positional arguments in order, non-default parameters must come first so positional arguments match up correctly.
+
+Code Example:
+def describe_pet(pet_name, animal_type='dog'):
+    """Display information about a pet."""
+    print("\nI have a " + animal_type + ".")
+    print("My " + animal_type + "'s name is " + pet_name.title() + ".")
+
+# Calling with default value ('dog')
+describe_pet('willie')
+describe_pet(pet_name='willie')
+
+# Overriding default value
+describe_pet(pet_name='harry', animal_type='hamster')
+
+Output (for describe_pet('willie')):
+I have a dog.
+My dog's name is Willie.
+
+
+4. EQUIVALENT FUNCTION CALLS
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+* Concept: Because positional arguments, keyword arguments, and default values can all be used together, you often have several equivalent ways 
+  to call a single function.
+
+* Function Header: `def describe_pet(pet_name, animal_type='dog'):`
+
+* Equivalent Calls List:
+  - A dog named Willie:
+    describe_pet('willie')
+    describe_pet(pet_name='willie')
+
+  - A hamster named Harry:
+    describe_pet('harry', 'hamster')
+    describe_pet(pet_name='harry', animal_type='hamster')
+    describe_pet(animal_type='hamster', pet_name='harry')
+
+* Note: As long as your function calls produce the intended output, use the style you find easiest to understand.
+
+
+5. AVOIDING ARGUMENT ERRORS
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+* Unmatched Arguments: Occur when a function call provides fewer or more arguments than the function parameters require.
+
+Code Example (Missing Arguments):
+def describe_pet(animal_type, pet_name):
+    """Display information about a pet."""
+    print("\nI have a " + animal_type + ".")
+    print("My " + animal_type + "'s name is " + pet_name.title() + ".")
+
+describe_pet()
+
+Traceback Error Analysis:
+Traceback (most recent call last):
+  File "pets.py", line 6, in <module>
+    describe_pet()
+TypeError: describe_pet() missing 2 required positional arguments: 'animal_type' and 'pet_name'
+
+* Traceback Breakdown:
+  - Location line: Identifies the file name and line number where the issue occurred.
+  - Offending line: Displays the exact function call that caused the error (`describe_pet()`).
+  - Error type & detail: Reports missing arguments and explicitly names the required parameters (`'animal_type'` and `'pet_name'`).
+
+* Value of Descriptive Naming: Using clear, descriptive parameter and function names makes Python's traceback error messages much easier to read and debug.
+
+
+6. TRY IT YOURSELF EXERCISES
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+File naming standard: Use descriptive, lowercase snake_case names (e.g., make_shirt.py, cities.py).
+
+- 8-3. T-Shirt:
+  Write a function called `make_shirt()` that accepts a size and the text of a message that should be printed on the shirt. 
+  The function should print a sentence summarizing the size of the shirt and the message printed on it. 
+  Call the function once using positional arguments to make a shirt. Call the function a second time using keyword arguments.
+
+- 8-4. Large Shirts:
+  Modify the `make_shirt()` function so that shirts are large by default with a message that reads "I love Python". 
+  Make a large shirt and a medium shirt with the default message, and a shirt of any size with a different message.
+
+- 8-5. Cities:
+  Write a function called `describe_city()` that accepts the name of a city and its country. 
+  The function should print a simple sentence, such as "Reykjavik is in Iceland." Give the parameter for the country a default value. 
+  Call your function for three different cities, at least one of which is not in the default country.
