@@ -299,9 +299,9 @@ Write a function called `describe_city()` that accepts the name of a city and it
 
 ## Related Topics
 
-* [Defining a Function](https://www.google.com/search?q=../defining_a_function/defining_a_function.md)
-* [Introducing While Loops](https://www.google.com/search?q=../../07_user_input_and_while_loops/introducing_while_loops/introducing_while_loops.md)
-* [Working with Dictionaries](https://www.google.com/search?q=../../06_dictionaries/working_with_dictionaries/working_with_dictionaries.md)
+* [Defining a Function](../defining_a_function/defining_a_function.md)
+* [Introducing While Loops](../../07_user_input_and_while_loops/introducing_while_loops/introducing_while_loops.md)
+* [Working with Dictionaries](../../06_dictionaries/working_with_dictionaries/working_with_dictionaries.md)
 
 ---
 
@@ -318,7 +318,7 @@ Understanding argument passing mechanisms empowers you to write adaptable and cl
 
 ---
 
-*Last Updated : 5th October, 2026*
+*Last Updated : October 5, 2026*
 
 ---
 
