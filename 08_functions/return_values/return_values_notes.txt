@@ -1,1 +1,146 @@
+=====================================================================================================================================================
+                                                                    RETURN VALUES
+=====================================================================================================================================================
 
+OVERVIEW
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+A function does not always have to display its output directly using print(). Instead, it can process data and return a value or set of values 
+back to the line that called it using the return statement. Return values allow you to move data processing into functions, simplifying main 
+program code and separating logic from presentation.
+
+
+1. RETURNING A SIMPLE VALUE
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+* Definition: A return statement takes a value from inside a function and sends it back to the line that called the function.
+
+Code Example (formatted_name.py):
+>>> def get_formatted_name(first_name, last_name):
+>>>     """Return a full name, neatly formatted."""
+>>>     full_name = first_name + ' ' + last_name
+>>>     return full_name.title()
+
+>>> musician = get_formatted_name('jimi', 'hendrix')
+>>> print(musician)
+
+Output:
+Jimi Hendrix
+
+* Execution Flow:
+  1. The function get_formatted_name() is called with 'jimi' and 'hendrix'.
+  2. The function combines the two names with a space into full_name.
+  3. The title() method converts the string to title case, and return sends it back to the calling line.
+  4. The returned value is assigned to the variable musician and printed.
+
+
+2. MAKING AN ARGUMENT OPTIONAL
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+* Concept: Default values can be used to make an argument optional so users can provide extra information only if desired.
+
+* Placement Rule: Any parameter with a default value must be listed after all parameters that do not have default values.
+
+Code Example:
+>>> def get_formatted_name(first_name, last_name, middle_name=''):
+>>>      """Return a full name, neatly formatted."""
+>>>     if middle_name:
+>>>         full_name = first_name + ' ' + middle_name + ' ' + last_name
+>>>     else:
+>>>        full_name = first_name + ' ' + last_name
+>>>     return full_name.title()
+
+>>> # Call without middle name
+>>> musician = get_formatted_name('jimi', 'hendrix')
+>>> print(musician)
+
+>>> # Call with middle name
+>>> musician = get_formatted_name('john', 'hooker', 'lee')
+>>> print(musician)
+
+Output:
+Jimi Hendrix
+John Lee Hooker
+
+* Logic Note: Python interprets non-empty strings as True and empty strings ('') as False in conditional checks.
+
+
+3. RETURNING A DICTIONARY
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+* Concept: Functions can return complex data structures like dictionaries to package and label data logically.
+
+Code Example (Basic Dictionary - person.py):
+>>> def build_person(first_name, last_name):
+>>>     """Return a dictionary of information about a person."""
+>>>     person = {'first': first_name, 'last': last_name}
+>>>     return person
+
+>>> musician = build_person('jimi', 'hendrix')
+>>> print(musician)
+
+Output:
+{'first': 'jimi', 'last': 'hendrix'}
+
+Code Example (Extending with Optional Parameter):
+>>> def build_person(first_name, last_name, age=''):
+>>>     """Return a dictionary of information about a person."""
+>>>     person = {'first': first_name, 'last': last_name}
+>>>     if age:
+>>>         person['age'] = age
+>>>    return person
+
+>>> musician = build_person('jimi', 'hendrix', age=27)
+>>> print(musician)
+
+Output:
+{'first': 'jimi', 'last': 'hendrix', 'age': 27}
+
+
+4. USING A FUNCTION WITH A WHILE LOOP
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+* Concept: Functions returning values can be integrated into interactive control flows like while loops to format user inputs dynamically.
+
+Code Example (greeter.py):
+>>> def get_formatted_name(first_name, last_name):
+>>>     """Return a full name, neatly formatted."""
+>>>     full_name = first_name + ' ' + last_name
+>>>     return full_name.title()
+
+>>> while True:
+>>>     print("\nPlease tell me your name:")
+>>>     print("(enter 'q' at any time to quit)")
+    
+>>>     f_name = input("First name: ")
+>>>     if f_name == 'q':
+>>>         break
+        
+>>>     l_name = input("Last name: ")
+>>>     if l_name == 'q':
+>>>         break
+        
+>>>     formatted_name = get_formatted_name(f_name, l_name)
+>>>     print("\nHello, " + formatted_name + "!")
+
+
+5. COMMON MISTAKES AND ERRORS
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+* Discarded Return Value: Calling a returning function without storing its result in a variable or passing it to print() discards the value.
+* Missing return Keyword: Omitting the return statement inside a function causes Python to implicitly return None.
+* Unreachable Code: Any code placed directly after a return statement inside a function block will never be executed.
+
+
+6. TRY IT YOURSELF EXERCISES
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+File naming standard: Use descriptive, lowercase snake_case names (e.g., city_names.py, album.py).
+
+- 8-6. City Names:
+  Write a function called `city_country()` that takes in the name of a city and its country. 
+  The function should return a string formatted like "Santiago, Chile". 
+  Call your function with at least three city-country pairs, and print the value that's returned.
+
+- 8-7. Album:
+  Write a function called `make_album()` that builds a dictionary describing a music album. 
+  The function should take in an artist name and an album title, and return a dictionary containing these two pieces of information. 
+  Make three dictionaries representing different albums and print each return value. 
+  Add an optional parameter for the number of tracks and make at least one call specifying tracks.
+
+- 8-8. User Albums:
+  Start with Exercise 8-7. Write a while loop allowing users to enter an album's artist and title interactively. 
+  Call `make_album()` with the user's input, print the created dictionary, and include a quit condition in the loop.
