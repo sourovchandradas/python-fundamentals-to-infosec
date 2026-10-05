@@ -258,7 +258,7 @@ Arbitrary argument packing enables software interfaces to accept flexible user i
 
 ## Additional Resources
 
-* [GeeksforGeeks](https://www.geeksforgeeks.org/python/args-kwargs-python/)
+* [GeeksforGeeks: Python *args and **kwargs](https://www.geeksforgeeks.org/python/args-kwargs-python/)
 * [Real Python: Python args and kwargs Demystified](https://realpython.com/python-kwargs-and-args/)
 
 ---
