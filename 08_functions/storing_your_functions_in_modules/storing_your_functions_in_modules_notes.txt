@@ -105,7 +105,8 @@ Target Directory: `labs/`
   - Import functions into `8-15.printing_models.py` and execute simulation.
 
 * Exercise 8-16: Imports (`labs/8-16.imports.py`)
-  - Call a custom function using all 5 import variations (`import mod`, `from mod import func`, `from mod import func as fn`, `import mod as mn`, `from mod import *`).
+  - Call a custom function using all 5 import variations 
+    (`import mod`, `from mod import func`, `from mod import func as fn`, `import mod as mn`, `from mod import *`).
 
 * Exercise 8-17: Styling Functions (`labs/8-17.styling.py`)
   - Refactor 3 previous programs to follow PEP 8 formatting, docstring, and parameter rules.
