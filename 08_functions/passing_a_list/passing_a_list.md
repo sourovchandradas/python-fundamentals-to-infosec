@@ -299,7 +299,7 @@ Passing lists to functions allows programs to handle data processing in bulk wit
 ## Additional Resources
 
 * [Python Official Documentation: More on Lists](https://docs.python.org/3/tutorial/datastructures.html)
-* [Real Python: Pass-by-Reference vs Pass-by-Value in Python](https://realpython.com/python-pass-by-reference/)
+* [GeeksforGeeks: Pass by Reference vs Pass by Value](https://www.geeksforgeeks.org/python/pass-by-reference-vs-value-in-python/)
 
 ---
 
