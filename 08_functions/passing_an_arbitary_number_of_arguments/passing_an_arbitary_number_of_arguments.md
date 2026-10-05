@@ -246,7 +246,7 @@ Print the returned dictionary to make sure all information was stored correctly.
 * [Defining a Function](../defining_a_function/defining_a_function.md)
 * [Passing Arguments](../passing_arguments/passing_arguments.md)
 * [Return Values](../return_values/return_values.md)
-* [Dictionaries](../../06_dictionaries/user_input_and_while_loops.md)
+* [Dictionaries](../../06_dictionaries/working_with_dictionaries/working_with_dictionaries.md)
 
 ---
 
@@ -258,8 +258,8 @@ Arbitrary argument packing enables software interfaces to accept flexible user i
 
 ## Additional Resources
 
-* [Python Documentation: Defining Functions](https://www.google.com/search?q=https://docs.python.org/3/tutorial/controlflow.html%23more-on-defining-functions)
-* [Real Python: Python args and kwargs Demystified](https://www.google.com/search?q=https://realpython.com/python-kwargs-and-args/)
+* [GeeksforGeeks](https://www.geeksforgeeks.org/python/args-kwargs-python/)
+* [Real Python: Python args and kwargs Demystified](https://realpython.com/python-kwargs-and-args/)
 
 ---
 
