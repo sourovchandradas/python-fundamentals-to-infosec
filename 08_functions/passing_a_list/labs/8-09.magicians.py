@@ -1,4 +1,4 @@
-# Exercise 8-09: 
+# Exercise 8-09: Magicians
 
 def show_magicians(magicians):
     for magician in magicians:
