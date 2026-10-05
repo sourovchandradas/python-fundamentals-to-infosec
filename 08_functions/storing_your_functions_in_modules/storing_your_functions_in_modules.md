@@ -322,7 +322,7 @@ Modules are the foundation of code organization in professional software develop
 ## Additional Resources
 
 * [Python Documentation: Modules](https://docs.python.org/3/tutorial/modules.html)
-* [PEP 8: Style Guide for Python Code](https://www.google.com/search?q=https://peps.python.org/pep-0008/)
+* [PEP 8: Style Guide for Python Code](https://peps.python.org/pep-0008/)
 
 ---
 
