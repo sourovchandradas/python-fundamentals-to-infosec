@@ -1,1 +1,121 @@
+=====================================================================================================================================================
+                                                   STORING YOUR FUNCTIONS IN MODULES
+=====================================================================================================================================================
 
+CHAPTER OVERVIEW
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+Storing functions in separate files called modules separates program logic from main application execution. Importing modules allows code reuse,
+hides implementation details, simplifies debugging, and enables the use of external Python libraries.
+
+Key Topics Covered:
+1. Importing an entire module using standard `import` statements and dot notation.
+2. Importing specific functions directly from a module.
+3. Using aliases (`as`) to rename functions or modules to prevent naming conflicts.
+4. Importing all functions from a module using wildcard imports (`*`).
+5. PEP 8 styling conventions for function definitions, parameters, and import placement.
+
+
+1. IMPORTING AN ENTIRE MODULE
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+A module is a `.py` file containing executable code and function definitions.
+
+* Concept:
+  - `import module_name` loads all functions into the program namespace behind the scenes.
+  - Access functions using dot notation: `module_name.function_name()`.
+
+* Code Example:
+  Module File (pizza.py):
+>>>  def make_pizza(size, *toppings):
+>>>      """Summarize the pizza we are about to make."""
+>>>      print("\nMaking a " + str(size) + "-inch pizza with the following toppings:")
+>>>      for topping in toppings:
+>>>          print("- " + topping)
+
+>>>  Main Program File (making_pizzas.py):
+>>>  import pizza
+
+>>>  pizza.make_pizza(16, 'pepperoni')
+>>>  pizza.make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
+
+
+2. IMPORTING SPECIFIC FUNCTIONS
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+You can import individual functions directly into your main program file.
+
+* Syntax:
+  from module_name import function_name
+  from module_name import function_0, function_1, function_2
+
+* Code Example:
+  from pizza import make_pizza
+
+  make_pizza(16, 'pepperoni')
+  make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
+
+* Note: Functions imported with `from ... import ...` do NOT require dot notation when called.
+
+
+3. USING ALIASES FOR FUNCTIONS AND MODULES
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+Use the `as` keyword to assign short nicknames or resolve naming collisions with existing local code.
+
+* Giving a Function an Alias:
+  from pizza import make_pizza as mp
+
+  mp(16, 'pepperoni')
+  mp(12, 'mushrooms', 'green peppers', 'extra cheese')
+
+* Giving a Module an Alias:
+>>>  import pizza as p
+
+>>>  p.make_pizza(16, 'pepperoni')
+>>>  p.make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
+
+
+4. IMPORTING ALL FUNCTIONS IN A MODULE (WILDCARD)
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+Import every function in a module without using dot notation by using an asterisk (`*`).
+
+* Syntax:
+  from module_name import *
+
+* Warning:
+  Avoid using wildcard imports in large programs. If module functions share names with your local variables or functions, Python will silently 
+  overwrite local definitions.
+
+
+5. STYLING FUNCTIONS (PEP 8 GUIDELINES)
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+- Naming: Lowercase with underscores (`snake_case`) for functions and module names.
+- Docstrings: Immediate concise docstring explanations inside every function body.
+- Arguments & Parameters: Do NOT use spaces around `=` for default values or keyword args.
+  Correct   : `def func(param='default'):`
+  Incorrect : `def func(param = 'default'):`
+- Line Length: Limit lines to 79 characters. Use double-tab indentation for multiline parameter definitions.
+- Blank Lines: Use TWO blank lines between functions to keep code structured.
+- Import Statements: Place ALL `import` statements at the very top of the script file.
+
+
+6. EXERCISES & LAB SPECIFICATIONS
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+Target Directory: `labs/`
+
+* Exercise 8-15: Printing Models (`labs/8-15.printing_models.py` & `labs/printing_functions.py`)
+  - Move 3D printing helper functions to `printing_functions.py`.
+  - Import functions into `8-15.printing_models.py` and execute simulation.
+
+* Exercise 8-16: Imports (`labs/8-16.imports.py`)
+  - Call a custom function using all 5 import variations (`import mod`, `from mod import func`, `from mod import func as fn`, `import mod as mn`, `from mod import *`).
+
+* Exercise 8-17: Styling Functions (`labs/8-17.styling.py`)
+  - Refactor 3 previous programs to follow PEP 8 formatting, docstring, and parameter rules.
+
+
+7. QUICK SUMMARY
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+- Full import    : `import pizza` -> `pizza.make_pizza()`
+- Specific import: `from pizza import make_pizza` -> `make_pizza()`
+- Function Alias : `from pizza import make_pizza as mp` -> `mp()`
+- Module Alias   : `import pizza as p` -> `p.make_pizza()`
+- Wildcard       : `from pizza import *` (Use with caution)
+=====================================================================================================================================================
