@@ -314,7 +314,7 @@ Understanding argument passing mechanisms empowers you to write adaptable and cl
 ## Additional Resources
 
 * [Python Official Documentation: More on Defining Functions](https://docs.python.org/3/tutorial/controlflow.html)
-* [Real Python: Python Function Arguments](https://www.google.com/search?q=https://realpython.com/defining-your-own-python-function/%23argument-passing-summary)
+* [Real Python: Python Function Arguments](https://realpython.com/defining-your-own-python-function/)
 
 ---
 
