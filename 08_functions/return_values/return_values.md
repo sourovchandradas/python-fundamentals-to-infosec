@@ -308,7 +308,7 @@ Write a function called `make_album()` that builds a dictionary describing a mus
 
 Add an optional parameter to `make_album()` that allows you to store the number of tracks on an album. If the calling line includes a value for the number of tracks, add that value to the album's dictionary. Make at least one new function call that includes the number of tracks on an album.
 
-**Solution:** [Exercise 8-7: Album](../labs/8-07.album.py)
+**Solution:** [Exercise 8-7: Album](labs/8-07.album.py)
 
 ### Exercise 8-8: User Albums
 
