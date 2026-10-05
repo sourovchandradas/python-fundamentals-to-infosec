@@ -1,1 +1,127 @@
+=====================================================================================================================================================
+                                                   PASSING AN ARBITRARY NUMBER OF ARGUMENTS
+=====================================================================================================================================================
 
+CHAPTER OVERVIEW
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+Python allows functions to collect an arbitrary number of arguments when the exact count is unknown prior to execution. Using single-asterisk
+syntax (`*args`) packs variable positional arguments into a tuple, while double-asterisk syntax (`**kwargs`) packs variable keyword arguments
+into a dictionary.
+
+1. ARBITRARY POSITIONAL ARGUMENTS (*args)
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+When a parameter begins with an asterisk (`*`), Python packs all additional positional arguments passed to the function call into a single tuple.
+
+* Syntax & Behavior:
+  - Parameter definition: `def make_pizza(*toppings):`
+  - Python creates an empty tuple named `toppings`.
+  - Values passed in the call are packed into `toppings`.
+
+* Code Example (make_pizza.py):
+>>>  def make_pizza(*toppings):
+>>>      """Summarize the pizza we are about to make."""
+>>>      print("\nMaking a pizza with the following toppings:")
+>>>      for topping in toppings:
+>>>          print("- " + topping)
+
+>>>  make_pizza('pepperoni')
+>>>  make_pizza('mushrooms', 'green peppers', 'extra cheese')
+
+* Key Details:
+  - Even if only one value is passed, Python packs it into a single-element tuple: `('pepperoni',)`.
+  - The parameter can accept zero, one, or dozens of arguments without changing function definitions.
+
+
+2. MIXING POSITIONAL AND ARBITRARY ARGUMENTS
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+When mixing regular positional parameters with arbitrary positional parameters, place the parameter that accepts arbitrary arguments LAST.
+
+* Ordering Rule:
+  - Python fills fixed positional parameters first in left-to-right order.
+  - Any remaining positional arguments are packed into the arbitrary parameter tuple.
+
+* Code Example (pizza_size.py):
+>>>  def make_pizza(size, *toppings):
+>>>      """Summarize the pizza we are about to make."""
+>>>      print("\nMaking a " + str(size) + "-inch pizza with the following toppings:")
+>>>      for topping in toppings:
+>>>          print("- " + topping)
+
+>>>  make_pizza(16, 'pepperoni')
+>>>  make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
+
+* Execution Flow:
+  - Call 1: `16` -> stored in `size`. `'pepperoni'` -> packed in `toppings` as `('pepperoni',)`.
+  - Call 2: `12` -> stored in `size`. Remaining values packed in `toppings` as `('mushrooms', 'green peppers', 'extra cheese')`.
+
+
+3. ARBITRARY KEYWORD ARGUMENTS (**kwargs)
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+When you do not know what kind of information will be passed, use double asterisks (`**`) before a parameter name to collect key-value pairs into a dictionary.
+
+* Syntax & Behavior:
+  - Parameter definition: `def build_profile(first, last, **user_info):`
+  - Python creates an empty dictionary named `user_info`.
+  - Unmatched name=value keyword arguments are packed as key-value pairs inside `user_info`.
+
+* Code Example (user_profile.py):
+>>>  def build_profile(first, last, **user_info):
+>>>      """Build a dictionary containing everything we know about a user."""
+>>>      profile = {}
+>>>      profile['first_name'] = first
+>>>      profile['last_name'] = last
+>>>      for key, value in user_info.items():
+>>>          profile[key] = value
+>>>      return profile
+
+>>>  user_profile = build_profile(
+>>>      'albert', 
+>>>      'einstein',
+>>>      location='princeton',
+>>>      field='physics'
+>>>  )
+>>>  print(user_profile)
+
+* Output:
+  {'first_name': 'albert', 'last_name': 'einstein', 'location': 'princeton', 'field': 'physics'}
+
+
+4. PARAMETER ORDERING RULES IN PYTHON
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+When defining complex functions with multiple parameter types, follow Python's strict parameter order:
+
+1. Positional / Default Parameters   : `def func(a, b=10, ...)`
+2. Arbitrary Positional (`*args`)    : `def func(a, *args, ...)`
+3. Keyword-Only / Arbitrary Keyword (`**kwargs`) : `def func(a, *args, **kwargs)`
+
+Valid Combination Signature:
+def process_data(required_arg, default_arg=True, *extra_args, **extra_kwargs):
+
+
+5. COMMON MISTAKES AND ERRORS
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+1. Placing `*args` before required positional arguments:
+   - Placing `*args` first causes it to consume positional arguments, raising missing argument errors for required parameters.
+
+2. Passing positional arguments to `**kwargs`:
+   - Calling `make_car('subaru', 'outback', 'blue')` without parameter names raises `TypeError` because `**kwargs` expects named keyword arguments.
+
+3. Mixing up tuple (`*`) vs dictionary (`**`) outputs:
+   - `*args` creates a `tuple`.
+   - `**kwargs` creates a `dictionary`.
+
+
+6. EXERCISES & LAB SPECIFICATIONS
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+Target Directory: `labs/`
+
+* Exercise 8-12: Sandwiches (`labs/8-12.sandwiches.py`)
+  - Write a function accepting `*items` to collect sandwich toppings.
+  - Call the function 3 times with different numbers of arguments.
+
+* Exercise 8-13: User Profile (`labs/8-13.user_profile.py`)
+  - Adapt `user_profile.py` to build a profile of yourself using `first`, `last`, and 3 custom key-value pairs.
+
+* Exercise 8-14: Cars (`labs/8-14.cars.py`)
+  - Write `make_car(manufacturer, model, **car_info)` returning a populated dictionary.
+  - Call with required info plus two optional keyword features (e.g., `color='blue'`, `tow_package=True`).
