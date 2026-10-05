@@ -343,7 +343,7 @@ Return values disconnect internal computation from display logic. By returning p
 
 ## Additional Resources
 
-* [Python Official Documentation: The return Statement](https://www.google.com/search?q=https://docs.python.org/3/reference/simple_stmts.html%23the-return-statement)
+* [Python Official Documentation: The return Statement](https://docs.python.org/3/reference/simple_stmts.html)
 * [Real Python: Defining Your Own Python Function (Return Values)](https://www.google.com/search?q=https://realpython.com/defining-your-own-python-function/%23the-return-statement)
 
 ---
