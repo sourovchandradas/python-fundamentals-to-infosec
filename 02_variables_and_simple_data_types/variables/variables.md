@@ -242,7 +242,7 @@ If you get a `NameError`:
 
 ## Common Mistakes
 
-### Never start a variable name with a number.
+**1. Never start a variable name with a number.**
 * Incorrect Approache
 ```python
 # ❌ Starting with number
