@@ -11,7 +11,12 @@ Variables are containers for storing data values. They are the foundation of pro
 1. [Using Variables](#using-variables)
 2. [Naming and Using Variables](#naming-and-using-variables)
 3. [Avoiding Name Errors](#avoiding-name-errors-when-using-variables)
-4. [Exercises](#exercises)
+4. [Common Mistakes](#common-mistakes)
+5. [Exercises](#exercises)
+6. [Quick Reference](#quick-reference)
+7. [Related Topics](#related-topics)
+8. [Additional Resources](#additional-resources)
+9. [Key Takeaways](#key-takeaways)
 
 ---
 
@@ -235,70 +240,18 @@ If you get a `NameError`:
 
 ---
 
-## Exercises
+## Common Mistakes
 
-File naming convention: Use descriptive, lowercase names with underscores (e.g., `simple_message.py`)
-
-### Exercise 2-1: Simple Message
-
-**Task:**
-1. Store a message in a variable
-2. Print that message
-
-**Example:**
-```python
-message = "Python is awesome!"
-print(message)
-```
-
-**Output:**
-```
-Python is awesome!
-```
-
-### Exercise 2-2: Simple Messages
-
-**Task:**
-1. Store a message in a variable
-2. Print that message
-3. Change the value to a new message
-4. Print the new message
-
-**Example:**
-```python
-message = "Hello, Python!"
-print(message)
-
-message = "I'm learning to code!"
-print(message)
-```
-
-**Output:**
-```
-Hello, Python!
-I'm learning to code!
-```
-
----
-
-## Quick Reference
-
-| Concept | Example | Notes |
-|---------|---------|-------|
-| Assign variable | `name = "John"` | Creates a variable |
-| Use variable | `print(name)` | References the value |
-| Change value | `name = "Jane"` | Reassigns variable |
-| Valid name | `first_name` | Letters, numbers, underscores |
-| Invalid name | `first-name` | Hyphens not allowed |
-| Case sensitive | `name` ≠ `Name` | Different variables |
-
----
-
-## Common Mistakes to Avoid
-
+### Never start a variable name with a number.
+* Incorrect Approache
 ```python
 # ❌ Starting with number
 1_name = "John"
+```
+* Correct Approache
+```python
+name_1 = "John"
+```
 
 # ❌ Using spaces
 first name = "John"
@@ -324,6 +277,43 @@ print(age)
 
 ---
 
+## Exercises
+
+File naming convention: Use descriptive, lowercase names with underscores (e.g., `simple_message.py`)
+
+### Exercise 2-1: Simple Message
+
+**Task:**
+1. Store a message in a variable
+2. Print that message
+
+* **Solution:** [Exercise 2-1: Simple Message](labs/2.1_simple_message.py)
+
+### Exercise 2-2: Simple Messages
+
+**Task:**
+1. Store a message in a variable
+2. Print that message
+3. Change the value to a new message
+4. Print the new message
+
+* **Solution:** [Exercise 2-2: Simple Message](labs/2.2_simple_message.py)
+
+---
+
+## Quick Reference
+
+| Concept | Example | Notes |
+|---------|---------|-------|
+| Assign variable | `name = "John"` | Creates a variable |
+| Use variable | `print(name)` | References the value |
+| Change value | `name = "Jane"` | Reassigns variable |
+| Valid name | `first_name` | Letters, numbers, underscores |
+| Invalid name | `first-name` | Hyphens not allowed |
+| Case sensitive | `name` ≠ `Name` | Different variables |
+
+---
+
 ## Related Topics
 
 - [Numbers](../numbers/numbers.md) - Learn about integers and floats
@@ -340,4 +330,14 @@ print(age)
 
 ---
 
-*Last Updated: 2026-09-01*
+## Key Takeaways
+
+* **Variables are labels, not boxes:** Instead of thinking of variables as containers, think of them as name tags you attach to your data.
+* **Values can change anytime:** You can update a variable's value whenever you want. Python will only remember the most recent one.
+* **Stick to the naming rules:** Use only lowercase letters, numbers, and underscores (`_`). Never use spaces, and never start a variable name with a number.
+* **Python is case-sensitive:** Spelling and capitalization matter. Python sees `message`, `Message`, and `MESSAGE` as completely different variables.
+* **NameErrors are usually just typos:** If your code crashes with a `NameError`, don't panic. It almost always means you spelled a variable wrong or tried to use it before actually creating it.
+
+---
+
+*Last Updated: November 19, 2026*
