@@ -245,7 +245,6 @@ If you get a `NameError`:
 **1. Never start a variable name with a number.**
 * Incorrect Approache
 ```python
-# ❌ Starting with number
 1_name = "John"
 ```
 * Correct Approache
@@ -253,24 +252,48 @@ If you get a `NameError`:
 name_1 = "John"
 ```
 
-# ❌ Using spaces
+**2. You cannot put spaces inside a variable name. If you want to separate words, use an underscore instead.**
+
+* Incorrect Approache
+```python
 first name = "John"
+```
+* Correct Approache
+```python
+first_name = "John"
+```
 
-# ❌ Using reserved keyword
+**3.You cannot use Python's special built-in words (like `print`, `if`, or `for`) as your own variable names. Python needs these words to run its own commands..**
+
+* Incorrect Approache
+```python
 print = "text"
+```
+* Correct Approache
+```python
+my_print = "text"
+```
 
-# ❌ Using hyphens
+**4. You cannot use a hyphen or dash (`-`) in a variable name. Python will get confused and think you are trying to do math (subtraction). Always use an underscore instead.**
+
+* Incorrect Approache
+```python
 first-name = "John"
+```
+* Correct Approache
+```python
+first_name = "John"
+```
 
-# ❌ Forgetting to define before use
+**5. You cannot use or print a variable before you actually create it. You must give `age` a value first, and then you can ask Python to print it.**
+
+* Incorrect Approache
+```python
 print(age)              # NameError
 age = 25
-
-# ✅ Correct approaches
-name_1 = "John"
-first_name = "John"
-my_print = "text"
-first_name = "John"
+```
+* Correct Approache
+```python
 age = 25
 print(age)
 ```
