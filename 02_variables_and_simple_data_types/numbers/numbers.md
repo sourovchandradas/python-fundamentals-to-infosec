@@ -18,7 +18,12 @@ This guide covers:
 2. [Floats](#floats)
 3. [Type Errors with str()](#type-errors-with-str)
 4. [Python 2 Legacy](#python-2-legacy)
-5. [Exercises](#exercises)
+5. [Common Mistake](#common-mistake)
+6. [Exercises](#exercises)
+7. [Quick Reference](#quick-reference)
+8. [Related Topics](#related-topics)
+9. [Additional Resources](#additiona-resources)
+10. [Key Takeaway](#key-takeaway)
 
 ---
 
@@ -59,7 +64,7 @@ Python follows the standard order of operations (PEMDAS). You can use parenthese
 print(2 + 3 * 4)
 print((2 + 3) * 4)
 ```
-## Outpur
+## Outcome
 ```python
 14
 20
@@ -78,13 +83,16 @@ A **float** is any number with a decimal point. The term "float" refers to the f
 ### Basic Float Operations
 
 ```python
->>> 0.1 + 0.1
+print(0.1 + 0.1)
+print(0.2 + 0.2)
+print(2 * 0.1)
+print(2 * 0.2)
+```
+## Outcome
+```python
 0.2
->>> 0.2 + 0.2
 0.4
->>> 2 * 0.1
 0.2
->>> 2 * 0.2
 0.4
 ```
 
@@ -93,16 +101,17 @@ A **float** is any number with a decimal point. The term "float" refers to the f
 Be aware that you may sometimes get an arbitrary number of decimal places in your results:
 
 ```python
->>> 0.2 + 0.1
+print(0.2 + 0.1)
+print(3 * 0.1)
+```
+## Outcome
+```python
 0.30000000000000004
->>> 3 * 0.1
 0.30000000000000004
 ```
 
 **Why does this happen?**  
 This occurs in all programming languages. Computers represent numbers internally using binary, which sometimes cannot represent decimal values exactly. Python tries to find the most precise representation possible.
-
-**For now:** Simply ignore the extra decimal places. You'll learn how to handle them properly when working with projects later.
 
 ---
 
@@ -163,15 +172,20 @@ Python 2 handled integer division differently than Python 3:
 
 ```python
 # Python 2.7
->>> 3 / 2
-1
+print(3 / 2)
 
 # Python 3.x
->>> 3 / 2
+print(3 / 2)
+```
+### Outcome
+```python
+1
 1.5
 ```
 
-In Python 2, dividing two integers returns an integer with the remainder truncated (not rounded).
+> In Python 2, dividing two integers returns an integer with the remainder truncated (not rounded).
+>
+> 
 
 ### Workaround in Python 2
 
@@ -179,19 +193,31 @@ To ensure float division in Python 2, make at least one operand a float:
 
 ```python
 # Python 2.7
->>> 3 / 2
+print(3 / 2)
+print(3.0 / 2)
+print(3 / 2.0)
+print(3.0 / 2.0)
+```
+### Outcome
+```python
 1
->>> 3.0 / 2
 1.5
->>> 3 / 2.0
 1.5
->>> 3.0 / 2.0
 1.5
 ```
 
 ### Why This Matters
 
 This is a common source of confusion when switching between Python 2 and Python 3. If you work with legacy code using Python 2, be careful when mixing integers and floats.
+
+---
+
+## Common Mistake
+
+* **Mixing text and numbers:** You cannot combine text (strings) and numbers directly.
+* **Code that crashes:** `print("I am " + 25 + " years old.")` (Python gets confused because it can't add math to words).
+* **The easy fix:** Always use `str()` to turn the number into text first.
+* **Correct code:** `print("I am " + str(25) + " years old.")`
 
 ---
 
@@ -203,29 +229,15 @@ File naming convention: Use descriptive, lowercase names with underscores (e.g.,
 
 Write addition, subtraction, multiplication, and division operations that each result in the number 8. Use `print()` statements to display the results.
 
-**Expected output:**
-```
-8
-8
-8
-8
-```
+* **Solution:** [Exercise 2-8: Number Eight](labs/2.8_number_eight.py)
 
-**Example:**
-```python
-print(5 + 3)
-```
-
-### Exercise 2-9: Favorite Number
+### Exercise 2-9: Favourite Number
 
 1. Store your favorite number in a variable
 2. Create a message that reveals your favorite number
 3. Print the message
 
-**Example output:**
-```
-My favorite number is 7!
-```
+* **Solution:** [Exercise 2-9: Favorite Number](labs/2.9_favourite_number.py)
 
 ---
 
@@ -244,9 +256,9 @@ My favorite number is 7!
 
 ## Related Topics
 
-- [Variables](../variables/variables.md) - Learn how to store and manage data
-- [Strings](../strings/strings.md) - Learn about text data and string manipulation
-- [Data Types](../../03_data_structures/) - Explore more complex data structures
+- [Variables](../variables/variables.md)
+- [Strings](../strings/strings.md)
+- [Data Types](../../03_data_structures/)
 
 ---
 
@@ -257,4 +269,11 @@ My favorite number is 7!
 
 ---
 
-*Last Updated: 2026-09-01*
+## Key Takeaway
+* **Text vs. Math:** Python treats numbers (for math) and strings (for text) as two completely different things.
+* **Use `str()` for sentences:** Whenever you want to print a number inside a sentence, you must wrap it in `str()`.
+* **Weird decimals are normal:** If you add decimals (floats) and get a answer like `0.30000000000000004`. It is not an error. This is just how computers calculate decimal numbers behind the scenes.
+
+---
+
+*Last Updated: November 20, 2026*
