@@ -56,9 +56,12 @@ print(10 ** 6)
 Python follows the standard order of operations (PEMDAS). You can use parentheses to modify the evaluation order:
 
 ```python
->>> 2 + 3*4
+print(2 + 3 * 4)
+print((2 + 3) * 4)
+```
+## Outpur
+```python
 14
->>> (2 + 3) * 4
 20
 ```
 
