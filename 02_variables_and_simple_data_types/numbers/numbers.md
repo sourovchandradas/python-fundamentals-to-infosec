@@ -156,7 +156,7 @@ print(message)
 Happy 23rd Birthday!
 ```
 
-### Key Takeaway
+### Key Points
 
 When working with numbers in Python, if you get unexpected results, check whether Python is interpreting your numbers correctly:
 - As a **numerical value** (for calculations)
