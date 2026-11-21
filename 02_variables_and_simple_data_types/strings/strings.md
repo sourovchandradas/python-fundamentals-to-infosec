@@ -354,21 +354,21 @@ Python thinks the string ends at the apostrophe!
 ```python
 # CORRECT - Use double quotes
 message = "One of Python's strengths is its diverse community."
-print(message)
+print(message) # One of Python's strengths is its diverse community.
 ```
 
 **Solution 2: Escape the Apostrophe**
 ```python
 # CORRECT - Escape with backslash
 message = 'One of Python\'s strengths is its diverse community.'
-print(message)
+print(message) # One of Python's strengths is its diverse community.
 ```
 
 **Solution 3: Use a Raw String (for some cases)**
 ```python
 # CORRECT - Different approach
 message = """One of Python's strengths is its diverse community."""
-print(message)
+print(message) # One of Python's strengths is its diverse community.
 ```
 
 ### Quick Reference Table
@@ -383,7 +383,7 @@ print(message)
 
 ## Common Mistakes
 
-**1.If your text has an apostrophe inside it (like It's), wrap the whole sentence in double quotes (`" "`). If you use single quotes (`' '`), Python will get confused and crash.**
+**1. If your text has an apostrophe inside it (like It's), wrap the whole sentence in double quotes (`" "`). If you use single quotes (`' '`), Python will get confused and crash.**
 * Incorrect Approache
 ```python
 # Mixing quotes incorrectly
