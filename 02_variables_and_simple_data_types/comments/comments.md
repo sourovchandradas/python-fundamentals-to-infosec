@@ -100,6 +100,12 @@ File naming convention: Use descriptive, lowercase names with underscores (e.g.,
 
 ---
 
-*Last Updated: 2026-09-02*
+## Key Takeaways
+* **The `#` symbol makes a note:** Anything you type after a `#` sign is completely ignored by Python. It is just a helpful note for humans to read.
+ * **Explain the "Why", not the "What":** Good comments tell people why you wrote the code a certain way or the purpose behind it. They shouldn't just repeat what the code is obviously doing.
+ * **Don't state the obvious:** If your code is very simple to read (like print("Hello")), you don't need a comment right next to it explaining that it prints "Hello".
+ * **Be kind to your future self:** Writing good notes in your code makes it much easier for you (or your teammates) to understand your work when you look at it again weeks or months later.
 
 ---
+
+*Last Updated: November 21, 2026*
