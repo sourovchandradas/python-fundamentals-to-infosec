@@ -14,7 +14,12 @@ Strings are one of the simplest data types in Python. They represent text data a
 4. [Adding Whitespace](#adding-whitespace-to-strings-with-tabs-or-newlines)
 5. [Stripping Whitespace](#stripping-whitespace)
 6. [Avoiding Syntax Errors](#avoiding-syntax-errors-with-strings)
-7. [Exercises](#exercises)
+7. [Common Mistakes](#common-mistakes)
+8. [Exercises](#exercises)
+9. [Quick References](#quick-references)
+10. [Related Topics](#related-topics)
+11. [Additional Resources](#additional-resources)
+12. [Key Takeaways](#key-takeaways)
 
 ---
 
@@ -36,6 +41,13 @@ print(quote_1)
 
 quote_2 = "One of Python's strengths is its diverse community."
 print(quote_2)
+```
+### Outcome
+```python
+This is a string.
+This is also a string.
+I told my friend, "Python is my favorite language!"
+One of Python's strengths is its diverse community.
 ```
 
 ### Quote Flexibility
@@ -99,6 +111,10 @@ user_input = "JoHn"          # Mixed case
 standardized = user_input.lower()  # "john"
 
 print(f"Welcome, {standardized.title()}!")  # "Welcome, John!"
+```
+### Outcome
+```python
+Welcome, John!
 ```
 
 **Why this matters:**
@@ -210,6 +226,19 @@ print("Line 1\n\nLine 2")  # Empty line between
 print("Path:\n\t/home/\n\tusr/\n\tbin")
 ```
 
+### Outcome
+```python
+Name:   John
+Age:    25
+Line 1
+
+Line 2
+Path:
+        /home/
+        usr/
+        bin
+```
+
 ---
 
 ## Stripping Whitespace
@@ -223,6 +252,10 @@ name1 = "python"
 name2 = "python "  # Has trailing space
 
 print(name1 == name2)  # False - they're different!
+```
+### Outcome
+```python
+False
 ```
 
 ### Why This Matters
@@ -348,6 +381,50 @@ print(message)
 
 ---
 
+## Common Mistakes
+
+**1.If your text has an apostrophe inside it (like It's), wrap the whole sentence in double quotes (`" "`). If you use single quotes (`' '`), Python will get confused and crash.**
+* Incorrect Approache
+```python
+# Mixing quotes incorrectly
+message = 'It's a beautiful day'          # SyntaxError
+```
+* Correct Approache
+```python
+# Fix it
+message = "It's a beautiful day"          # Use double quotes
+message = 'It\'s a beautiful day'         # Or escape
+```
+**2. Cleaning up extra spaces using `name.strip()` is only temporary. To make the change permanent, you must save it back to the variable by writing `name = name.strip()`.**
+* Incorrect Approache
+```python
+# Forgetting strip() is temporary
+name = "  John  "
+name.strip()
+print(name)  # Still has spaces!
+```
+* Correct Approache
+```python
+# Reassign to make it permanent
+name = name.strip()
+print(name)  # Now clean
+```
+**3. Python does not automatically add spaces when you join text together (`"John" + "Doe"` becomes `"JohnDoe"`). You have to add the space yourself manually, like this: `first + " " + last`.
+* Incorrect Approache
+```python
+# Concatenating without spaces
+first = "John"
+last = "Doe"
+full = first + last                        # "JohnDoe"
+```
+* Correct Approache
+```python
+# Add spaces
+full = first + " " + last                  # "John Doe"
+```
+
+---
+
 ## Exercises
 
 File naming convention: Use descriptive, lowercase names with underscores (e.g., `personal_message.py`)
@@ -372,7 +449,7 @@ Store a person's name in a variable, then print it in lowercase, uppercase, and 
 Find a quote from a famous person. Print the quote and author name, including quotation marks in the output.
 Steve Jobs once said, "The only way to do great work is to love what you do."
 
-* **Solution:** [Exercise 2-5: Famous Quote](labbs/2.5_famous_quote.py)
+* **Solution:** [Exercise 2-5: Famous Quote](labs/2.5_famous_quote.py)
 
 ### Exercise 2-6: Famous Quote 2
 
@@ -386,7 +463,7 @@ Repeat Exercise 2-5, but store the author's name in a variable `famous_person` a
 **Task:**
 Store a person's name with leading/trailing whitespace. Print the name with whitespace, then print it using `.lstrip()`, `.rstrip()`, and `.strip()`.
 
-* **Solution:** [Exercise 2-7: Stripping Names](2.7_stripping_names.py)
+* **Solution:** [Exercise 2-7: Stripping Names](labs/2.7_stripping_names.py)
 
 ---
 
@@ -408,50 +485,21 @@ Store a person's name with leading/trailing whitespace. Print the name with whit
 
 ---
 
-## Common Mistakes to Avoid
-
-```python
-# ❌ Mixing quotes incorrectly
-message = 'It's a beautiful day'          # SyntaxError
-
-# ✅ Fix it
-message = "It's a beautiful day"          # Use double quotes
-message = 'It\'s a beautiful day'         # Or escape
-
-# ❌ Forgetting strip() is temporary
-name = "  John  "
-name.strip()
-print(name)  # Still has spaces!
-
-# ✅ Reassign to make it permanent
-name = name.strip()
-print(name)  # Now clean
-
-# ❌ Concatenating without spaces
-first = "John"
-last = "Doe"
-full = first + last                        # "JohnDoe"
-
-# ✅ Add spaces
-full = first + " " + last                  # "John Doe"
-```
-
----
-
 ## Related Topics
 
-- [Variables](../variables/variables.md) - Learn how to store and manage data
-- [Numbers](../numbers/numbers.md) - Learn about integers and floats
-- [Data Types](../../03_data_structures/) - Explore more complex data structures
+- [Variables](../variables/variables.md)
+- [Numbers](../numbers/numbers.md)
+- [Comments](../comments/comments.md)
 
 ---
 
 ## Additional Resources
 
-- [Python Official Documentation: Strings](https://docs.python.org/3/tutorial/introduction.html#strings)
-- [Real Python: Strings](https://realpython.com/python-strings/)
+- [Python Official Documentation](https://docs.python.org/3/tutorial/introduction.html#strings)
+- [Real Python](https://realpython.com/python-strings/)
 - [Python String Methods](https://docs.python.org/3/library/stdtypes.html#string-methods)
+- [Python Crash Course](https://www.kea.nu/files/textbooks/humblepy/pythoncrashcourse.pdf)
 
 ---
 
-*Last Updated: 2026-09-01*
+*Last Updated : November 21, 2026*
