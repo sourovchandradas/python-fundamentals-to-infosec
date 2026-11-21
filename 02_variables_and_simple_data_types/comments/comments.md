@@ -20,6 +20,7 @@ This guide covers:
 4. [Quick Reference](#quick-reference)
 5. [Related Topics](#related-topics)
 6. [Additional Resources](#additional-resources)
+7. [Key Takeaways](#key-takeaways)
 
 ---
 
@@ -70,19 +71,8 @@ File naming convention: Use descriptive, lowercase names with underscores (e.g.,
 2. Add at least one descriptive comment to each file.
 3. If the code is too simple, include your name, the current date at the top, and one sentence explaining the script's core functionality.
 
-* **Solution:** [Exercise 2-10: Adding Comments](labs/2.10_adding_comments.py)
-
-**Example:**
-
-```python
-# Author: Developer
-# Date: 2026-09-02
-# Description: Demonstrates basic string formatting with f-strings.
-
-name = "Ankita"
-print("Hello, " + name + "!")
-
-```
+* **Solution:** [Exercise 2-10.1: Adding Comments(Favorite Number)](labs/2.10.1_favourite_number.py)
+* **Solution:** [Exercise 2.10.2: Addinng Comments(Number Eight)](labs/2.10.2_number_eight.py)
 
 ---
 
