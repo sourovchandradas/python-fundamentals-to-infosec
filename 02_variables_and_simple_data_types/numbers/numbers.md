@@ -22,7 +22,7 @@ This guide covers:
 6. [Exercises](#exercises)
 7. [Quick Reference](#quick-reference)
 8. [Related Topics](#related-topics)
-9. [Additional Resources](#additiona-resources)
+9. [Additional Resources](#additional-resources)
 10. [Key Takeaway](#key-takeaway)
 
 ---
