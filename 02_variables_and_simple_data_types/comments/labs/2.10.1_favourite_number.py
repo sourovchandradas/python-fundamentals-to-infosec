@@ -1,3 +1,5 @@
+# Exercise 2-10.1: Favourite Number
+
 # Author: Developer
 # Date: 2026-09-02
 # This program stores a favorite number in a variable and prints a message revealing it.
