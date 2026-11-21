@@ -1,3 +1,5 @@
+# Exercise 2-7: Stripping Names
+
 person_name = "\t\nAnkita Modak\n\t"
 
 print("Orginal (with whitespace):")
