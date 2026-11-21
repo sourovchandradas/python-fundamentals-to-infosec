@@ -60,7 +60,7 @@ The primary purpose of comments is to summarize your approach and explain **why*
 > **Developer Decision Rule:**
 > If you had to evaluate multiple solutions before picking one, write a comment explaining your final choice. It is always easier to clean up unnecessary comments later than to document a sparsely commented codebase froscratc Mistake
 
-## Common Mistake
+## Common Mistakes
 
  * **Stating the obvious:** The most common mistake beginners make is writing comments that just repeat exactly what the code says.
  * **Useless comment:** `print("Hello")  # This prints Hello (Anyone reading the code already knows it prints "Hello"!)`.
