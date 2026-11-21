@@ -1,3 +1,5 @@
+# Exercise 2-10.2: Number Eight
+
 # Author: Developer
 # Date: 2026-09-02
 # This program demonstrates basic arithmetic operations that each evaluate to 8.
