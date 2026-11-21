@@ -16,11 +16,12 @@ This guide covers:
 
 1. [Writing Comments](#writing-comments)
 2. [Best Practices](#best-practices)
-3. [Exercises](#exercises)
-4. [Quick Reference](#quick-reference)
-5. [Related Topics](#related-topics)
-6. [Additional Resources](#additional-resources)
-7. [Key Takeaways](#key-takeaways)
+3. [Common Mistakes](#common-mistakes)
+4. [Exercises](#exercises)
+5. [Quick Reference](#quick-reference)
+6. [Related Topics](#related-topics)
+7. [Additional Resources](#additional-resources)
+8. [Key Takeaways](#key-takeaways)
 
 ---
 
@@ -57,7 +58,13 @@ The primary purpose of comments is to summarize your approach and explain **why*
 ### When to Write Comments
 
 > **Developer Decision Rule:**
-> If you had to evaluate multiple solutions before picking one, write a comment explaining your final choice. It is always easier to clean up unnecessary comments later than to document a sparsely commented codebase from scratch.
+> If you had to evaluate multiple solutions before picking one, write a comment explaining your final choice. It is always easier to clean up unnecessary comments later than to document a sparsely commented codebase froscratc Mistake
+
+## Common Mistake
+
+ * **Stating the obvious:** The most common mistake beginners make is writing comments that just repeat exactly what the code says.
+ * **Useless comment:** `print("Hello")  # This prints Hello (Anyone reading the code already knows it prints "Hello"!)`.
+ * **The easy fix:** Instead of explaining what the code is doing, explain why it is there. A better comment would be: # Greeting the new user after they log in.
 
 ---
 
