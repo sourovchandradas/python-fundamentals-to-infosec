@@ -42,7 +42,7 @@ print(quote_1)
 quote_2 = "One of Python's strengths is its diverse community."
 print(quote_2)
 ```
-### Outcome
+**Outcome**
 ```python
 This is a string.
 This is also a string.
@@ -92,7 +92,7 @@ print(name.upper())
 print(name.lower())
 ```
 
-**Output:**
+**Outcome:**
 ```
 Information Technology
 INFORMATION TECHNOLOGY
@@ -112,7 +112,7 @@ standardized = user_input.lower()  # "john"
 
 print(f"Welcome, {standardized.title()}!")  # "Welcome, John!"
 ```
-### Outcome
+**Outcome:**
 ```python
 Welcome, John!
 ```
@@ -138,7 +138,7 @@ full_name = first_name + " " + last_name
 print(full_name)
 ```
 
-**Output:**
+**Outcome:**
 ```
 John Doe
 ```
@@ -155,7 +155,7 @@ message = "Hello, " + full_name.title() + "!"
 print(message)
 ```
 
-**Output:**
+**Outcome:**
 ```
 Hello, Information Technology!
 ```
@@ -204,7 +204,7 @@ message = f"Hello, {full_name.title()}!"
 print("Languages:\n\tPython\n\tC\n\tJavaScript")
 ```
 
-**Output:**
+**Outcome:**
 ```
 Languages:
     Python
@@ -226,7 +226,7 @@ print("Line 1\n\nLine 2")  # Empty line between
 print("Path:\n\t/home/\n\tusr/\n\tbin")
 ```
 
-### Outcome
+**Outcome:**
 ```python
 Name:   John
 Age:    25
@@ -253,7 +253,7 @@ name2 = "python "  # Has trailing space
 
 print(name1 == name2)  # False - they're different!
 ```
-### Outcome
+**Outcome:**
 ```python
 False
 ```
@@ -291,7 +291,7 @@ print("Left:", repr(favorite_language.lstrip()))
 print("Right:", repr(favorite_language.rstrip()))
 ```
 
-**Output:**
+**Outcome:**
 ```
 Original: '  python  '
 Stripped: 'python'
@@ -499,6 +499,13 @@ Store a person's name with leading/trailing whitespace. Print the name with whit
 - [Real Python](https://realpython.com/python-strings/)
 - [Python String Methods](https://docs.python.org/3/library/stdtypes.html#string-methods)
 - [Python Crash Course](https://www.kea.nu/files/textbooks/humblepy/pythoncrashcourse.pdf)
+
+---
+
+## Key Takeaways
+* **Choose your quotes wisely:** If your text has an apostrophe inside (like "Don't"), always wrap the whole sentence in double quotes (`" "`) so Python doesn't get confused.
+* **Always save your changes:** String tools (like `.strip()`, `.lower()`, or `.upper()`) only show you a temporary result. If you want to keep the cleaned-up text, you must save it back into the variable (e.g., `name = name.strip()`).
+* **Python is very literal:** When you join words together using the `+` sign, Python does exactly what you tell it to do. It will not add a space for you unless you type it out yourself (like `" "`).
 
 ---
 
