@@ -88,8 +88,8 @@ File naming convention: Use descriptive, lowercase names with underscores (e.g.,
 
 ## Related Topics
 
-* [Variables](../variables/variables.md) - Storing values efficiently
-* [Strings](../strings/strings.md) - Formatting text output
+* [Variables](../variables/variables.md)
+* [Strings](../strings/strings.md)
 
 ---
 
