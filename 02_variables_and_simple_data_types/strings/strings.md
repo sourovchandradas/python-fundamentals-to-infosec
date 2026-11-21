@@ -294,7 +294,7 @@ A **syntax error** occurs when Python cannot recognize code as valid Python synt
 ### Common Cause: Improper Quote Nesting
 
 ```python
-# ❌ WRONG - Apostrophe inside single quotes
+# WRONG - Apostrophe inside single quotes
 message = 'One of Python's strengths is its diverse community.'
 ```
 
@@ -312,21 +312,21 @@ Python thinks the string ends at the apostrophe!
 
 **Solution 1: Use Different Quotes**
 ```python
-# ✅ CORRECT - Use double quotes
+# CORRECT - Use double quotes
 message = "One of Python's strengths is its diverse community."
 print(message)
 ```
 
 **Solution 2: Escape the Apostrophe**
 ```python
-# ✅ CORRECT - Escape with backslash
+# CORRECT - Escape with backslash
 message = 'One of Python\'s strengths is its diverse community.'
 print(message)
 ```
 
 **Solution 3: Use a Raw String (for some cases)**
 ```python
-# ✅ CORRECT - Different approach
+# CORRECT - Different approach
 message = """One of Python's strengths is its diverse community."""
 print(message)
 ```
@@ -350,94 +350,36 @@ File naming convention: Use descriptive, lowercase names with underscores (e.g.,
 **Task:**
 Store a person's name in a variable and print a personalized message.
 
-**Example:**
-```python
-name = "Eric"
-message = f"Hello {name}, would you like to learn some Python today?"
-print(message)
-```
-
-**Output:**
-```
-Hello Eric, would you like to learn some Python today?
-```
+* **Solution:** [Exercise 2-3: Personal Message](labs/2.3_personal_message.py)
 
 ### Exercise 2-4: Name Cases
 
 **Task:**
 Store a person's name in a variable, then print it in lowercase, uppercase, and titlecase.
 
-**Example:**
-```python
-name = "Ada Lovelace"
-print(name.lower())
-print(name.upper())
-print(name.title())
-```
-
-**Output:**
-```
-ada lovelace
-ADA LOVELACE
-Ada Lovelace
-```
+* **Solution:** [Exercise 2-4: Name Cases](labs/2.4_name_cases.py)
 
 ### Exercise 2-5: Famous Quote
 
 **Task:**
 Find a quote from a famous person. Print the quote and author name, including quotation marks in the output.
-
-**Example:**
-```python
-author = "Steve Jobs"
-quote = "The only way to do great work is to love what you do."
-print(f'{author} once said, "{quote}"')
-```
-
-**Output:**
-```
 Steve Jobs once said, "The only way to do great work is to love what you do."
-```
+
+* **Solution:** [Exercise 2-5: Famous Quote](labbs/2.5_famous_quote.py)
 
 ### Exercise 2-6: Famous Quote 2
 
 **Task:**
 Repeat Exercise 2-5, but store the author's name in a variable `famous_person` and the quote in a variable `message`. Print the message.
 
-**Example:**
-```python
-famous_person = "Albert Einstein"
-message = "Imagination is more important than knowledge."
-print(f'{famous_person} once said, "{message}"')
-```
-
-**Output:**
-```
-Albert Einstein once said, "Imagination is more important than knowledge."
-```
+* **Solution:** [Exercise 2-6: Famous Quate](labs/2.6_famous_quote_2.py)
 
 ### Exercise 2-7: Stripping Names
 
 **Task:**
 Store a person's name with leading/trailing whitespace. Print the name with whitespace, then print it using `.lstrip()`, `.rstrip()`, and `.strip()`.
 
-**Example:**
-```python
-name = "\t\n  Python  \n\t"
-
-print(f"Original: {repr(name)}")
-print(f"Stripped: {repr(name.strip())}")
-print(f"Left: {repr(name.lstrip())}")
-print(f"Right: {repr(name.rstrip())}")
-```
-
-**Output:**
-```
-Original: '\t\n  Python  \n\t'
-Stripped: 'Python'
-Left: 'Python  \n\t'
-Right: '\t\n  Python'
-```
+* **Solution:** [Exercise 2-7: Stripping Names](2.7_stripping_names.py)
 
 ---
 
