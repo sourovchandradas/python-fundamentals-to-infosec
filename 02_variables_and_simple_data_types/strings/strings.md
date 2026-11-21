@@ -26,9 +26,16 @@ A **string** is simply a series of characters. Anything inside single (`'...'`) 
 
 ```python
 string_1 = "This is a string."
+print(string_1)
+
 string_2 = 'This is also a string.'
+print(string_2)
+
 quote_1 = 'I told my friend, "Python is my favorite language!"'
+print(quote_1)
+
 quote_2 = "One of Python's strengths is its diverse community."
+print(quote_2)
 ```
 
 ### Quote Flexibility
