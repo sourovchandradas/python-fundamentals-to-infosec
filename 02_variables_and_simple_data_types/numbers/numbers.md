@@ -49,7 +49,7 @@ print(3 ** 2)
 print(3 ** 3)
 print(10 ** 6)
 ```
-## Outpur
+**Outcome**
 ```python
 9
 27
@@ -64,7 +64,7 @@ Python follows the standard order of operations (PEMDAS). You can use parenthese
 print(2 + 3 * 4)
 print((2 + 3) * 4)
 ```
-## Outcome
+**Outcome**
 ```python
 14
 20
@@ -88,7 +88,7 @@ print(0.2 + 0.2)
 print(2 * 0.1)
 print(2 * 0.2)
 ```
-## Outcome
+**Outcome**
 ```python
 0.2
 0.4
@@ -104,7 +104,7 @@ Be aware that you may sometimes get an arbitrary number of decimal places in you
 print(0.2 + 0.1)
 print(3 * 0.1)
 ```
-## Outcome
+**Outcome**
 ```python
 0.30000000000000004
 0.30000000000000004
@@ -127,7 +127,7 @@ message = "Happy " + age + "rd Birthday!"
 print(message)
 ```
 
-**Error Output:**
+**Error Outcome:**
 ```
 Traceback (most recent call last):
   File "birthday.py", line 2, in <module>
@@ -150,8 +150,7 @@ age = 23
 message = "Happy " + str(age) + "rd Birthday!"
 print(message)
 ```
-
-**Output:**
+**Outcome**
 ```
 Happy 23rd Birthday!
 ```
@@ -177,7 +176,7 @@ print(3 / 2)
 # Python 3.x
 print(3 / 2)
 ```
-### Outcome
+**Outcome**
 ```python
 1
 1.5
@@ -198,7 +197,7 @@ print(3.0 / 2)
 print(3 / 2.0)
 print(3.0 / 2.0)
 ```
-### Outcome
+**Outcome**
 ```python
 1
 1.5
@@ -266,6 +265,7 @@ Write addition, subtraction, multiplication, and division operations that each r
 
 - [Python Official Documentation: Numbers](https://docs.python.org/3/tutorial/introduction.html#numbers)
 - [Real Python: Python Numbers](https://realpython.com/python-numbers/)
+- **Python Crash Course by Eric Matthes**
 
 ---
 
