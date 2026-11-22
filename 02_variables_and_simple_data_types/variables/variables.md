@@ -236,7 +236,7 @@ If you get a `NameError`:
 
 ### Learning Tip
 
-✨ **Typos happen to all programmers!** Don't get frustrated. Even experienced developers make these mistakes. The key is learning to read error messages carefully to identify and fix them.
+**Typos happen to all programmers!** Don't get frustrated. Even experienced developers make these mistakes. The key is learning to read error messages carefully to identify and fix them.
 
 ---
 
