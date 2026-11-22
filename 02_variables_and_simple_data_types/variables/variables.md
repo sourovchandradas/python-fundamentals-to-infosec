@@ -341,7 +341,7 @@ File naming convention: Use descriptive, lowercase names with underscores (e.g.,
 
 - [Numbers](../numbers/numbers.md)
 - [Strings](../strings/strings.md)
-- [Data Types](../../03_data_structures/)
+- [Comments](../comments/comments.md)
 
 ---
 
