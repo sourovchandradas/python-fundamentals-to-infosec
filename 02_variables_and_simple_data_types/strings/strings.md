@@ -409,7 +409,7 @@ print(name)  # Still has spaces!
 name = name.strip()
 print(name)  # Now clean
 ```
-**3. Python does not automatically add spaces when you join text together (`"John" + "Doe"` becomes `"JohnDoe"`). You have to add the space yourself manually, like this: `first + " " + last`.
+**3. Python does not automatically add spaces when you join text together (`"John" + "Doe"` becomes `"JohnDoe"`). You have to add the space yourself manually, like this: `first + " " + last`.**
 * Incorrect Approache
 ```python
 # Concatenating without spaces
@@ -498,7 +498,7 @@ Store a person's name with leading/trailing whitespace. Print the name with whit
 - [Python Official Documentation](https://docs.python.org/3/tutorial/introduction.html#strings)
 - [Real Python](https://realpython.com/python-strings/)
 - [Python String Methods](https://docs.python.org/3/library/stdtypes.html#string-methods)
-- [Python Crash Course](https://www.kea.nu/files/textbooks/humblepy/pythoncrashcourse.pdf)
+- **Python Crash Course by Eric Matthes**
 
 ---
 
