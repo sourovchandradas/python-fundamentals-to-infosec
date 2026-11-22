@@ -257,7 +257,7 @@ Write addition, subtraction, multiplication, and division operations that each r
 
 - [Variables](../variables/variables.md)
 - [Strings](../strings/strings.md)
-- [Data Types](../../03_data_structures/)
+- [Comments](../comments/comments.md)
 
 ---
 
