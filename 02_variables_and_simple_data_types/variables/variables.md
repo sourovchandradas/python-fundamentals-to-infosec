@@ -339,9 +339,9 @@ File naming convention: Use descriptive, lowercase names with underscores (e.g.,
 
 ## Related Topics
 
-- [Numbers](../numbers/numbers.md) - Learn about integers and floats
-- [Strings](../strings/strings.md) - Learn about text data and string manipulation
-- [Data Types](../../03_data_structures/) - Explore more complex data structures
+- [Numbers](../numbers/numbers.md)
+- [Strings](../strings/strings.md)
+- [Data Types](../../03_data_structures/)
 
 ---
 
@@ -350,6 +350,7 @@ File naming convention: Use descriptive, lowercase names with underscores (e.g.,
 - [Python Official Documentation: Variables](https://docs.python.org/3/tutorial/introduction.html#an-informal-introduction-to-python)
 - [Real Python: Variables in Python](https://realpython.com/python-variables/)
 - [PEP 8: Python Naming Conventions](https://www.python.org/dev/peps/pep-0008/#naming-conventions)
+- **Python Crash Course by Eric Matthes**
 
 ---
 
