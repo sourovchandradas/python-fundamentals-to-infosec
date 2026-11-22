@@ -383,7 +383,7 @@ print(message) # One of Python's strengths is its diverse community.
 
 ## Common Mistakes
 
-**1. If your text has an apostrophe inside it (like It's), wrap the whole sentence in double quotes (`" "`). If you use single quotes (`' '`), Python will get confused and crash.**
+**1.** If your text has an apostrophe inside it (like It's), wrap the whole sentence in double quotes (`" "`). If you use single quotes (`' '`), Python will get confused and crash.
 * Incorrect Approache
 ```python
 # Mixing quotes incorrectly
@@ -395,7 +395,7 @@ message = 'It's a beautiful day'          # SyntaxError
 message = "It's a beautiful day"          # Use double quotes
 message = 'It\'s a beautiful day'         # Or escape
 ```
-**2. Cleaning up extra spaces using `name.strip()` is only temporary. To make the change permanent, you must save it back to the variable by writing `name = name.strip()`.**
+**2.** Cleaning up extra spaces using `name.strip()` is only temporary. To make the change permanent, you must save it back to the variable by writing `name = name.strip()`.
 * Incorrect Approache
 ```python
 # Forgetting strip() is temporary
@@ -409,7 +409,7 @@ print(name)  # Still has spaces!
 name = name.strip()
 print(name)  # Now clean
 ```
-**3. Python does not automatically add spaces when you join text together (`"John" + "Doe"` becomes `"JohnDoe"`). You have to add the space yourself manually, like this: `first + " " + last`.**
+**3.** Python does not automatically add spaces when you join text together (`"John" + "Doe"` becomes `"JohnDoe"`). You have to add the space yourself manually, like this: `first + " " + last`.
 * Incorrect Approache
 ```python
 # Concatenating without spaces
