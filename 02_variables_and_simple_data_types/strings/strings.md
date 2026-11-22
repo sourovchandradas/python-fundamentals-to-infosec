@@ -456,7 +456,7 @@ Steve Jobs once said, "The only way to do great work is to love what you do."
 **Task:**
 Repeat Exercise 2-5, but store the author's name in a variable `famous_person` and the quote in a variable `message`. Print the message.
 
-* **Solution:** [Exercise 2-6: Famous Quate](labs/2.6_famous_quote_2.py)
+* **Solution:** [Exercise 2-6: Famous Quate 2](labs/2.6_famous_quote_2.py)
 
 ### Exercise 2-7: Stripping Names
 
